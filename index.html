@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stundenplan-Planer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Fächerwahl</h2>
+                <button onclick="resetSchedule()">Reset</button>
+            </div>
+            <div id="accordion-container">
+                <div class="category">
+                    <button class="accordion-header main-cat" onclick="toggleAccordion('pflicht-content')">Pflichtfächer</button>
+                    <div id="pflicht-content" class="accordion-content"></div>
+                </div>
+                <div class="category">
+                    <button class="accordion-header main-cat" onclick="toggleAccordion('frei-content')">Freigegenstände</button>
+                    <div id="frei-content" class="accordion-content"></div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <div id="combination-controls" class="combo-ui hidden">
+                    <div class="combo-nav">
+                        <button onclick="prevCombo()">❮</button>
+                        <span id="combo-info">Kombinationen</span>
+                        <button onclick="nextCombo()">❯</button>
+                    </div>
+                    <button class="btn-apply" onclick="applyCurrentCombo()">Diese Auswahl übernehmen</button>
+                </div>
+                <div id="current-status">Wähle Module oder "Beliebiges..."</div>
+            </header>
+
+            <div class="schedule-container">
+                <div class="schedule-grid" id="schedule-grid">
+                    <div class="grid-cell header">Zeit</div>
+                    <div class="grid-cell header">Mo</div>
+                    <div class="grid-cell header">Di</div>
+                    <div class="grid-cell header">Mi</div>
+                    <div class="grid-cell header">Do</div>
+                    <div class="grid-cell header">Fr</div>
+                    </div>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
