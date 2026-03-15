@@ -11,7 +11,10 @@
         <aside class="sidebar">
             <div class="sidebar-header">
                 <h2>Fächerwahl</h2>
-                <button onclick="resetSchedule()">Reset</button>
+                <div style="display: flex; gap: 8px;">
+                    <button class="btn-pdf" onclick="exportPDF()">PDF</button>
+                    <button class="btn-reset" onclick="resetSchedule()">Reset</button>
+                </div>
             </div>
             <div id="accordion-container">
                 <div class="category">
@@ -47,6 +50,12 @@
                     <div class="grid-cell header">Do</div>
                     <div class="grid-cell header">Fr</div>
                     </div>
+            </div>
+
+            <!-- NEU: Container für die Liste im PDF -->
+            <div id="pdf-module-list">
+                <h3>Gewählte Module</h3>
+                <ul id="print-modules"></ul>
             </div>
         </main>
     </div>
