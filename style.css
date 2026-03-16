@@ -1,6 +1,6 @@
 :root {
-            --primary: #2563eb;
-            --accent: #10b981;
+            --primary: #315bb4;
+            --accent: #00a79e;
             --border: #e2e8f0;
         }
 
@@ -67,7 +67,7 @@
         }
 
         /* Grid & Rest */
-        .main-content { flex: 1; padding: 20px; display: flex; flex-direction: column; gap: 15px; min-height: 560px;}
+        .main-content { flex: 1; padding: 20px; display: flex; flex-direction: column; gap: 15px; min-height: 600px;}
         .schedule-container { flex: 1; background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); overflow: hidden; }
 
         .schedule-grid {
@@ -98,10 +98,10 @@
         .combo-ui { background: #1e293b; color: white; padding: 10px; border-radius: 8px; display: flex; align-items: center; gap: 15px; }
         
         /* Buttons der Kombinationen optisch ansprechend machen */
-        .combo-nav button { background: var(--primary); color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
-        .combo-nav button:hover { background: #1d4ed8; }
+        .combo-nav button { background: var(--accent); color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
+        .combo-nav button:hover { background: #196e68;; }
         .btn-apply { background: var(--accent); color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
-        .btn-apply:hover { background: #059669; }
+        .btn-apply:hover { background: #196e68; }
 
         .hidden { display: none !important; }
 
@@ -109,7 +109,7 @@
 
         /* Button Styling */
         .btn-pdf { background: var(--primary); color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
-        .btn-pdf:hover { background: #1d4ed8; }
+        .btn-pdf:hover { background: #283b70; }
         .btn-reset { background: transparent; color: #ef4444; border: 1px solid #ef4444; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: all 0.2s; }
         .btn-reset:hover { background: #ef4444; color: white; }
 
