@@ -67,7 +67,7 @@
         }
 
         /* Grid & Rest */
-        .main-content { flex: 1; padding: 20px; display: flex; flex-direction: column; gap: 15px; }
+        .main-content { flex: 1; padding: 20px; display: flex; flex-direction: column; gap: 15px; min-height: 560px;}
         .schedule-container { flex: 1; background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); overflow: hidden; }
 
         .schedule-grid {
@@ -147,7 +147,7 @@
             }
             .main-content {
                 padding: 10px;
-                height: 600px; /* Feste Mindesthöhe für den Plan auf Mobile */
+                height: 400px; /* Feste Mindesthöhe für den Plan auf Mobile */
                 flex: none;
             }
             .schedule-grid {
