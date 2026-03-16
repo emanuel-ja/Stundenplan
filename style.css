@@ -1,4 +1,4 @@
-        :root {
+:root {
             --primary: #2563eb;
             --accent: #10b981;
             --border: #e2e8f0;
@@ -89,25 +89,34 @@
             z-index: 10;
             overflow: hidden;
         }
+        
+        /* GEÄNDERT: Dynamische Höhenberechnung für Desktop, damit sich nichts überlappt */
         .full-unit { bottom: 4px; }
-        .half-unit { height: 40%; } 
-        .half-unit-bottom { top: 52% !important; bottom: 4px; }
+        .half-unit { bottom: 51%; height: auto; } 
+        .half-unit-bottom { top: 51% !important; bottom: 4px; height: auto; }
 
         .combo-ui { background: #1e293b; color: white; padding: 10px; border-radius: 8px; display: flex; align-items: center; gap: 15px; }
+        
+        /* Buttons der Kombinationen optisch ansprechend machen */
+        .combo-nav button { background: var(--primary); color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
+        .combo-nav button:hover { background: #1d4ed8; }
+        .btn-apply { background: var(--accent); color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
+        .btn-apply:hover { background: #059669; }
+
         .hidden { display: none !important; }
 
         #current-status { margin-top: 10px; }
 
-        /* NEU: Button Styling */
+        /* Button Styling */
         .btn-pdf { background: var(--primary); color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
         .btn-pdf:hover { background: #1d4ed8; }
         .btn-reset { background: transparent; color: #ef4444; border: 1px solid #ef4444; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: all 0.2s; }
         .btn-reset:hover { background: #ef4444; color: white; }
 
-        /* NEU: Versteckter Bereich für die Modulliste im PDF */
+        /* Versteckter Bereich für die Modulliste im PDF */
         #pdf-module-list { display: none; }
 
-        /* NEU: Print/PDF Styles */
+        /* Print/PDF Styles */
         @media print {
             body { overflow: visible !important; height: auto !important; background: white !important; }
             .app-container { display: block !important; height: auto !important; }
@@ -121,7 +130,7 @@
             * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
         }
 
-        /* NEU: Mobile Optimierung */
+        /* Mobile Optimierung */
         @media (max-width: 768px) {
             body {
                 overflow-y: auto; /* Erlaubt das Scrollen auf Handys */
@@ -143,5 +152,15 @@
             }
             .schedule-grid {
                 font-size: 0.8rem;
+                /* Schmalere Spalte für die Zeiten (45px statt 80px) */
+                grid-template-columns: 45px repeat(5, 1fr); 
             }
+            /* Verhindert das Überlappen halber Stunden und optimiert den Platz */
+            .module-block {
+                padding: 2px;
+                font-size: 0.65rem;
+                left: 2px; 
+                right: 2px;
+            }
+
         }
