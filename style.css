@@ -151,7 +151,7 @@
             }
             .main-content {
                 padding: 10px;
-                height: 480px; /* Feste Mindesthöhe für den Plan auf Mobile */
+                height: 65dvh; /* Feste Mindesthöhe für den Plan auf Mobile */
                 flex: none;
             }
             .schedule-grid {
