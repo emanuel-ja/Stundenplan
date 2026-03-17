@@ -1,6 +1,4 @@
-* {
-  box-sizing: border-box;
-}
+
 
 :root {
             --primary: #315bb4;
@@ -151,23 +149,14 @@
             }
             .main-content {
                 padding: 10px;
-                min-height: 75dvh; /* GEÄNDERT: min-height statt height */
-                height: auto;      /* NEU: Erlaubt das vertikale Mitwachsen */
+                height: 550px; /* Feste Mindesthöhe für den Plan auf Mobile */
                 flex: none;
-        }
-/* NEU: Macht den weißen Kasten zum Flex-Container */
-        .schedule-container {
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* ANGEPASST: Nutzt jetzt Flexbox zum Wachsen statt 100% */
-        .schedule-grid {
-            flex: 1;
-            height: auto; /* Überschreibt die 100% vom Desktop */
-            font-size: 0.8rem;
-            grid-template-columns: 45px repeat(5, 1fr); 
-        }
+            }
+            .schedule-grid {
+                font-size: 0.8rem;
+                /* Schmalere Spalte für die Zeiten (45px statt 80px) */
+                grid-template-columns: 45px repeat(5, 1fr); 
+            }
             /* Verhindert das Überlappen halber Stunden und optimiert den Platz */
             .module-block {
                 padding: 2px;
