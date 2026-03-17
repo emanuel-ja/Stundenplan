@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
             --primary: #315bb4;
             --accent: #00a79e;
@@ -67,16 +71,15 @@
         }
 
         /* Grid & Rest */
-.main-content { flex: 1; padding: 20px; display: flex; flex-direction: column; gap: 15px; min-height: 0; }
+        .main-content { flex: 1; padding: 20px; display: flex; flex-direction: column; gap: 15px;}
+        .schedule-container { flex: 1; background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); overflow: hidden; }
 
-.schedule-container { flex: 1; background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); overflow: hidden; min-height: 0; }
-
-.schedule-grid {
-    display: grid;
-    grid-template-columns: 80px repeat(5, 1fr);
-    grid-template-rows: 40px repeat(6, minmax(0, 1fr)); 
-    height: 100%; gap: 1px; background: #cbd5e1;
-}
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: 80px repeat(5, 1fr);
+            grid-template-rows: 40px repeat(6, 1fr); 
+            height: 100%; gap: 1px; background: #cbd5e1;
+        }
 
         .grid-cell { background: white; position: relative; padding: 5px; }
         .grid-cell.header { background: #f8fafc; font-weight: bold; display: flex; align-items: center; justify-content: center; }
