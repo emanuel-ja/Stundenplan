@@ -1,168 +1,166 @@
-
-
 :root {
-            --primary: #315bb4;
-            --accent: #00a79e;
-            --border: #e2e8f0;
-        }
+    --primary: #315bb4;
+    --accent: #00a79e;
+    --border: #e2e8f0;
+}
 
-        body { font-family: sans-serif; margin: 0; background: #f1f5f9; height: 100dvh; overflow: hidden; }
-        .app-container { display: flex; height: 100dvh; }
+body { font-family: sans-serif; margin: 0; background: #f1f5f9; height: 100dvh; overflow: hidden; }
+.app-container { display: flex; height: 100dvh; }
 
-        /* Sidebar */
-        .sidebar { width: 300px; background: white; border-right: 1px solid var(--border); display: flex; flex-direction: column; }
-        .sidebar-header { padding: 15px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; }
-        #accordion-container { flex: 1; overflow-y: auto; padding: 10px; }
+/* Sidebar */
+.sidebar { width: 300px; background: white; border-right: 1px solid var(--border); display: flex; flex-direction: column; }
+.sidebar-header { padding: 15px; border-bottom: 1px solid var(--border); display: flex; flex-direction: column; gap: 12px; }
+.sidebar-header-top { display: flex; justify-content: space-between; align-items: center; }
+.sidebar-header-bottom { display: flex; align-items: center; gap: 8px; }
 
-        /* Basis-Styling für alle Header */
-        .accordion-header { 
-            width: 100%; 
-            text-align: left; 
-            padding: 10px; 
-            border: none; 
-            cursor: pointer; 
-            border-radius: 4px; 
-            margin-top: 5px; 
-            font-weight: bold; 
-            transition: background 0.2s;
-        }
+#accordion-container { flex: 1; overflow-y: auto; padding: 10px; }
 
-        /* Ebene 1: Hauptkategorien (Pflichtfächer / Freigegenstände) */
-        .main-cat { 
-            background: #e2e8f0; 
-            border-bottom: 2px solid var(--primary);
-        }
+/* Basis-Styling für alle Header */
+.accordion-header { 
+    width: 100%; 
+    text-align: left; 
+    padding: 10px; 
+    border: none; 
+    cursor: pointer; 
+    border-radius: 4px; 
+    margin-top: 5px; 
+    font-weight: bold; 
+    transition: background 0.2s;
+}
 
-        /* Ebene 2: Fächer (z.B. Mathematik) */
-        .accordion-content .accordion-header { 
-            background: #f1f5f9; 
-            font-size: 0.9rem;
-            margin-left: 5px;
-            width: calc(100% - 5px);
-        }
+/* Ebene 1: Hauptkategorien (Pflichtfächer / Freigegenstände) */
+.main-cat { 
+    background: #e2e8f0; 
+    border-bottom: 2px solid var(--primary);
+}
 
-        /* Ebene 3: Stufen (z.B. Stufe 1) */
-        .accordion-content .accordion-content .accordion-header { 
-            background: #f8fafc; 
-            font-size: 0.85rem;
-            font-weight: normal;
-            margin-left: 10px;
-            width: calc(100% - 10px);
-            border-left: 3px solid var(--accent);
-        }
+/* Ebene 2: Fächer (z.B. Mathematik) */
+.accordion-content .accordion-header { 
+    background: #f1f5f9; 
+    font-size: 0.9rem;
+    margin-left: 5px;
+    width: calc(100% - 5px);
+}
 
-        .accordion-content { display: none; padding-left: 5px; }
-        .accordion-content.active { display: block; }
+/* Ebene 3: Stufen (z.B. Stufe 1) */
+.accordion-content .accordion-content .accordion-header { 
+    background: #f8fafc; 
+    font-size: 0.85rem;
+    font-weight: normal;
+    margin-left: 10px;
+    width: calc(100% - 10px);
+    border-left: 3px solid var(--accent);
+}
 
-        .item-list { list-style: none; padding: 0; margin-left: 18px; border-left: 2px dashed var(--border); padding-left: 10px; margin-top: 5px; }
-        .item-list li { padding: 8px; margin: 2px 0; cursor: pointer; border-radius: 4px; font-size: 0.85rem; border: 1px solid transparent; position: relative; }
-        .item-list li::before { content: ''; position: absolute; left: -12px; top: 16px; width: 10px; height: 2px; background: var(--border); }
-        .item-list li:hover { background: #eff6ff; }
-        .item-list li.selected { background: #dcfce7; border-color: var(--accent); font-weight: bold; }
-        .item-list li.wildcard-active { background: #dbeafe; border-color: var(--primary); }
+.accordion-content { display: none; padding-left: 5px; }
+.accordion-content.active { display: block; }
 
-        .item-list li.conflict { 
-            opacity: 0.4; 
-            cursor: not-allowed; 
-            text-decoration: line-through; 
-            pointer-events: none; 
-        }
+.item-list { list-style: none; padding: 0; margin-left: 18px; border-left: 2px dashed var(--border); padding-left: 10px; margin-top: 5px; }
+.item-list li { padding: 8px; margin: 2px 0; cursor: pointer; border-radius: 4px; font-size: 0.85rem; border: 1px solid transparent; position: relative; }
+.item-list li::before { content: ''; position: absolute; left: -12px; top: 16px; width: 10px; height: 2px; background: var(--border); }
+.item-list li:hover { background: #eff6ff; }
+.item-list li.selected { background: #dcfce7; border-color: var(--accent); font-weight: bold; }
+.item-list li.wildcard-active { background: #dbeafe; border-color: var(--primary); }
 
-        /* Grid & Rest */
-        .main-content { flex: 1; padding: 20px; display: flex; flex-direction: column; gap: 15px;}
-        .schedule-container { flex: 1; background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); overflow: hidden; }
+.item-list li.conflict { 
+    opacity: 0.4; 
+    cursor: pointer; 
+    text-decoration: line-through; 
+}
 
-        .schedule-grid {
-            display: grid;
-            grid-template-columns: 80px repeat(5, 1fr);
-            grid-template-rows: 40px repeat(6, 1fr); 
-            height: 100%; gap: 1px; background: #cbd5e1;
-        }
+/* Grid & Rest */
+.main-content { flex: 1; padding: 20px; display: flex; flex-direction: column; gap: 15px;}
+.schedule-container { flex: 1; background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); overflow: hidden; }
 
-        .grid-cell { background: white; position: relative; padding: 5px; }
-        .grid-cell.header { background: #f8fafc; font-weight: bold; display: flex; align-items: center; justify-content: center; }
-        .time-label { display: flex; align-items: center; justify-content: center; text-align: center; font-size: 0.8rem; background: #f8fafc; font-weight: bold; }
+.schedule-grid {
+    display: grid;
+    grid-template-columns: 80px repeat(5, 1fr);
+    grid-template-rows: 40px repeat(6, 1fr); 
+    height: 100%; gap: 1px; background: #cbd5e1;
+}
 
-        .module-block {
-            position: absolute; left: 4px; right: 4px; top: 4px;
-            background: var(--primary); color: white; border-radius: 4px;
-            padding: 6px; font-size: 0.75rem; line-height: 1.2;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            z-index: 10;
-            overflow: hidden;
-        }
-        
-        /* GEÄNDERT: Dynamische Höhenberechnung für Desktop, damit sich nichts überlappt */
-        .full-unit { bottom: 4px; }
-        .half-unit { bottom: 51%; height: auto; } 
-        .half-unit-bottom { top: 51% !important; bottom: 4px; height: auto; }
+.grid-cell { background: white; position: relative; padding: 5px; }
+.grid-cell.header { background: #f8fafc; font-weight: bold; display: flex; align-items: center; justify-content: center; }
+.time-label { display: flex; align-items: center; justify-content: center; text-align: center; font-size: 0.8rem; background: #f8fafc; font-weight: bold; }
 
-        .combo-ui { background: #1e293b; color: white; padding: 10px; border-radius: 8px; display: flex; align-items: center; gap: 15px; }
-        
-        /* Buttons der Kombinationen optisch ansprechend machen */
-        .combo-nav button { background: var(--accent); color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
-        .combo-nav button:hover { background: #196e68;; }
-        .btn-apply { background: var(--accent); color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
-        .btn-apply:hover { background: #196e68; }
+.module-block {
+    position: absolute; left: 4px; right: 4px; top: 4px;
+    background: var(--primary); color: white; border-radius: 4px;
+    padding: 6px; font-size: 0.75rem; line-height: 1.2;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    z-index: 10;
+    overflow: hidden;
+}
 
-        .hidden { display: none !important; }
+/* Vorschau-Schraffur für Konflikt-Module */
+.module-preview-frame {
+    position: absolute; left: 4px; right: 4px; top: 4px; /* Geändert: Abstände wieder auf 4px */
+    /* Diagonales Streifenmuster (Schraffur) in Rot */
+    background: repeating-linear-gradient(
+        45deg,
+        rgba(215, 215, 215, 0.5),
+        rgba(215, 215, 215, 0.5) 8px,
+        rgba(104, 104, 104, 0.5) 8px,
+        rgba(104, 104, 104, 0.5) 16px
+    );
+    border: 1px solid rgba(104, 104, 104, 0.8);
+    box-sizing: border-box;
+    border-radius: 4px;
+    z-index: 20; /* Liegt über den normalen Blöcken */
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+    opacity: 1;
+}
+.module-preview-frame.fade-out {
+    opacity: 0;
+}
 
-        #current-status { margin-top: 10px; }
+/* Dynamische Höhenberechnung für Desktop */
+.full-unit { bottom: 4px; }
+.half-unit { bottom: 51%; height: auto; } 
+.half-unit-bottom { top: 51% !important; bottom: 4px; height: auto; }
 
-        /* Button Styling */
-        .btn-pdf { background: var(--primary); color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
-        .btn-pdf:hover { background: #283b70; }
-        .btn-reset { background: transparent; color: #ef4444; border: 1px solid #ef4444; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: all 0.2s; }
-        .btn-reset:hover { background: #ef4444; color: white; }
+.combo-ui { background: #1e293b; color: white; padding: 10px; border-radius: 8px; display: flex; align-items: center; gap: 15px; }
 
-        /* Versteckter Bereich für die Modulliste im PDF */
-        #pdf-module-list { display: none; }
+/* Buttons der Kombinationen optisch ansprechend machen */
+.combo-nav button { background: var(--accent); color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
+.combo-nav button:hover { background: #196e68;; }
+.btn-apply { background: var(--accent); color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
+.btn-apply:hover { background: #196e68; }
 
-        /* Print/PDF Styles */
-        @media print {
-            body { overflow: visible !important; height: auto !important; background: white !important; }
-            .app-container { display: block !important; height: auto !important; }
-            .sidebar, header { display: none !important; }
-            .main-content { padding: 0 !important; display: block !important; height: auto !important; }
-            .schedule-container { box-shadow: none !important; height: auto !important; overflow: visible !important; border: 1px solid #cbd5e1; }
-            .schedule-grid { height: 600px !important; }
-            .module-block { box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2) !important; }
-            #pdf-module-list { display: block !important; margin-top: 30px; font-family: sans-serif; }
-            #pdf-module-list ul { margin-left: 20px; line-height: 1.6; }
-            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
-        }
+.hidden { display: none !important; }
 
-        /* Mobile Optimierung */
-        @media (max-width: 768px) {
-            body {
-                overflow-y: auto; /* Erlaubt das Scrollen auf Handys */
-            }
-            .app-container {
-                flex-direction: column-reverse; /* Tauscht Sidebar und Main-Content */
-                height: auto;
-            }
-            .sidebar {
-                width: 100%;
-                border-right: none;
-                border-top: 1px solid var(--border);
-                height: auto;
-            }
-            .main-content {
-                padding: 10px;
-                height: 550px; /* Feste Mindesthöhe für den Plan auf Mobile */
-                flex: none;
-            }
-            .schedule-grid {
-                font-size: 0.8rem;
-                /* Schmalere Spalte für die Zeiten (45px statt 80px) */
-                grid-template-columns: 45px repeat(5, 1fr); 
-            }
-            /* Verhindert das Überlappen halber Stunden und optimiert den Platz */
-            .module-block {
-                padding: 2px;
-                font-size: 0.65rem;
-                left: 2px; 
-                right: 2px;
-            }
+#current-status { margin-top: 10px; }
 
-        }
+/* Button Styling */
+.btn-pdf { background: var(--primary); color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
+.btn-pdf:hover { background: #283b70; }
+.btn-reset { background: transparent; color: #ef4444; border: 1px solid #ef4444; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: all 0.2s; }
+.btn-reset:hover { background: #ef4444; color: white; }
+
+/* Versteckter Bereich für die Modulliste im PDF */
+#pdf-module-list { display: none; }
+
+/* Print/PDF Styles */
+@media print {
+    body { overflow: visible !important; height: auto !important; background: white !important; }
+    .app-container { display: block !important; height: auto !important; }
+    .sidebar, header { display: none !important; }
+    .main-content { padding: 0 !important; display: block !important; height: auto !important; }
+    .schedule-container { box-shadow: none !important; height: auto !important; overflow: visible !important; border: 1px solid #cbd5e1; }
+    .schedule-grid { height: 600px !important; }
+    .module-block { box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2) !important; }
+    #pdf-module-list { display: block !important; margin-top: 30px; font-family: sans-serif; }
+    #pdf-module-list ul { margin-left: 20px; line-height: 1.6; }
+    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
+}
+
+/* Mobile Optimierung */
+@media (max-width: 768px) {
+    body { overflow-y: auto; }
+    .app-container { flex-direction: column-reverse; height: auto; }
+    .sidebar { width: 100%; border-right: none; border-top: 1px solid var(--border); height: auto; }
+    .main-content { padding: 10px; height: 550px; flex: none; }
+    .schedule-grid { font-size: 0.8rem; grid-template-columns: 45px repeat(5, 1fr); }
+    .module-block { padding: 2px; font-size: 0.65rem; left: 2px; right: 2px; }
+}

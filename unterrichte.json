@@ -278,30 +278,6 @@
                     "pflicht": "ja",
                     "bitmask": "54043195532378304",
                     "bitmask_binary": "000011000000000000000000000000000000001111000000000011000000"
-                },
-                {
-                    "name": "CH1p",
-                    "fach_lang": "Chemie",
-                    "stufe": 1,
-                    "lehrer": "PREK",
-                    "klassen": [
-                        "4P"
-                    ],
-                    "schedule": [
-                        {
-                            "tag": 0,
-                            "beginn": "17:32",
-                            "ist_halbe_stunde": true
-                        },
-                        {
-                            "tag": 0,
-                            "beginn": "17:55",
-                            "ist_halbe_stunde": false
-                        }
-                    ],
-                    "pflicht": "ja",
-                    "bitmask": "504403158265495552",
-                    "bitmask_binary": "011100000000000000000000000000000000000000000000000000000000"
                 }
             ],
             "2": [
@@ -367,30 +343,6 @@
                     "pflicht": "ja",
                     "bitmask": "54043195532378304",
                     "bitmask_binary": "000011000000000000000000000000000000001111000000000011000000"
-                },
-                {
-                    "name": "CH2s",
-                    "fach_lang": "Chemie",
-                    "stufe": 2,
-                    "lehrer": "MATS",
-                    "klassen": [
-                        "5S"
-                    ],
-                    "schedule": [
-                        {
-                            "tag": 1,
-                            "beginn": "17:10",
-                            "ist_halbe_stunde": false
-                        },
-                        {
-                            "tag": 1,
-                            "beginn": "17:55",
-                            "ist_halbe_stunde": true
-                        }
-                    ],
-                    "pflicht": "ja",
-                    "bitmask": "246290604621824",
-                    "bitmask_binary": "000000000000111000000000000000000000000000000000000000000000"
                 }
             ]
         },
@@ -1216,7 +1168,7 @@
                     "name": "E1e",
                     "fach_lang": "Englisch",
                     "stufe": 1,
-                    "lehrer": "NN",
+                    "lehrer": "KOCD",
                     "klassen": [
                         "1E"
                     ],
@@ -3610,44 +3562,6 @@
                     "pflicht": "ja",
                     "bitmask": "211106232532992",
                     "bitmask_binary": "000000000000110000000000000000000000000000000000000000000000"
-                },
-                {
-                    "name": "LPK1t",
-                    "fach_lang": "Lernen, Präsentieren, Kommunizieren",
-                    "stufe": 1,
-                    "lehrer": "LENK",
-                    "klassen": [
-                        "1S"
-                    ],
-                    "schedule": [
-                        {
-                            "tag": 1,
-                            "beginn": "17:10",
-                            "ist_halbe_stunde": false
-                        }
-                    ],
-                    "pflicht": "ja",
-                    "bitmask": "211106232532992",
-                    "bitmask_binary": "000000000000110000000000000000000000000000000000000000000000"
-                },
-                {
-                    "name": "LPK1u",
-                    "fach_lang": "Lernen, Präsentieren, Kommunizieren",
-                    "stufe": 1,
-                    "lehrer": "LENK",
-                    "klassen": [
-                        "1S"
-                    ],
-                    "schedule": [
-                        {
-                            "tag": 1,
-                            "beginn": "17:10",
-                            "ist_halbe_stunde": false
-                        }
-                    ],
-                    "pflicht": "ja",
-                    "bitmask": "211106232532992",
-                    "bitmask_binary": "000000000000110000000000000000000000000000000000000000000000"
                 }
             ]
         },
@@ -5324,21 +5238,11 @@
                             "tag": 0,
                             "beginn": "18:45",
                             "ist_halbe_stunde": false
-                        },
-                        {
-                            "tag": 1,
-                            "beginn": "17:55",
-                            "ist_halbe_stunde": false
-                        },
-                        {
-                            "tag": 1,
-                            "beginn": "18:45",
-                            "ist_halbe_stunde": false
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "270281948339896320",
-                    "bitmask_binary": "001111000000001111000000000000000000000000000000000000000000"
+                    "bitmask": "270215977642229760",
+                    "bitmask_binary": "001111000000000000000000000000000000000000000000000000000000"
                 },
                 {
                     "name": "ÖKO1e",
@@ -5353,21 +5257,11 @@
                             "tag": 0,
                             "beginn": "19:30",
                             "ist_halbe_stunde": false
-                        },
-                        {
-                            "tag": 1,
-                            "beginn": "19:30",
-                            "ist_halbe_stunde": false
-                        },
-                        {
-                            "tag": 2,
-                            "beginn": "17:55",
-                            "ist_halbe_stunde": false
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "13514110301896704",
-                    "bitmask_binary": "000000110000000000110000001100000000000000000000000000000000"
+                    "bitmask": "13510798882111488",
+                    "bitmask_binary": "000000110000000000000000000000000000000000000000000000000000"
                 },
                 {
                     "name": "ÖKO1s",
@@ -5382,16 +5276,11 @@
                             "tag": 3,
                             "beginn": "18:45",
                             "ist_halbe_stunde": false
-                        },
-                        {
-                            "tag": 1,
-                            "beginn": "17:10",
-                            "ist_halbe_stunde": false
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "211106233319424",
-                    "bitmask_binary": "000000000000110000000000000000000000000011000000000000000000"
+                    "bitmask": "786432",
+                    "bitmask_binary": "000000000000000000000000000000000000000011000000000000000000"
                 }
             ],
             "2": [
@@ -5399,21 +5288,11 @@
                     "name": "ÖKO2d",
                     "fach_lang": "Ökonomie",
                     "stufe": 2,
-                    "lehrer": "LEPL",
+                    "lehrer": "SCHL",
                     "klassen": [
                         "7D"
                     ],
                     "schedule": [
-                        {
-                            "tag": 0,
-                            "beginn": "17:55",
-                            "ist_halbe_stunde": false
-                        },
-                        {
-                            "tag": 0,
-                            "beginn": "18:45",
-                            "ist_halbe_stunde": false
-                        },
                         {
                             "tag": 1,
                             "beginn": "17:55",
@@ -5426,23 +5305,18 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "270281948339896320",
-                    "bitmask_binary": "001111000000001111000000000000000000000000000000000000000000"
+                    "bitmask": "65970697666560",
+                    "bitmask_binary": "000000000000001111000000000000000000000000000000000000000000"
                 },
                 {
                     "name": "ÖKO2e",
                     "fach_lang": "Ökonomie",
                     "stufe": 2,
-                    "lehrer": "FOIS",
+                    "lehrer": "NEUG",
                     "klassen": [
                         "7E"
                     ],
                     "schedule": [
-                        {
-                            "tag": 0,
-                            "beginn": "19:30",
-                            "ist_halbe_stunde": false
-                        },
                         {
                             "tag": 1,
                             "beginn": "19:30",
@@ -5455,23 +5329,18 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "13514110301896704",
-                    "bitmask_binary": "000000110000000000110000001100000000000000000000000000000000"
+                    "bitmask": "3311419785216",
+                    "bitmask_binary": "000000000000000000110000001100000000000000000000000000000000"
                 },
                 {
                     "name": "ÖKO2s",
                     "fach_lang": "Ökonomie",
                     "stufe": 2,
-                    "lehrer": "LEPL",
+                    "lehrer": "NEUG",
                     "klassen": [
                         "7S"
                     ],
                     "schedule": [
-                        {
-                            "tag": 3,
-                            "beginn": "18:45",
-                            "ist_halbe_stunde": false
-                        },
                         {
                             "tag": 1,
                             "beginn": "17:10",
@@ -5479,8 +5348,8 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "211106233319424",
-                    "bitmask_binary": "000000000000110000000000000000000000000011000000000000000000"
+                    "bitmask": "211106232532992",
+                    "bitmask_binary": "000000000000110000000000000000000000000000000000000000000000"
                 }
             ],
             "3": [
@@ -5555,6 +5424,80 @@
         }
     },
     "Nicht-Pflichtfach": {
+        "Deutsch als Zweitsprache": [
+            {
+                "name": "DAZ1d",
+                "fach_lang": "Deutsch als Zweitsprache",
+                "stufe": 0,
+                "lehrer": "KOGM",
+                "klassen": [
+                    "1D"
+                ],
+                "schedule": [
+                    {
+                        "tag": 1,
+                        "beginn": "17:55",
+                        "ist_halbe_stunde": false
+                    },
+                    {
+                        "tag": 4,
+                        "beginn": "17:55",
+                        "ist_halbe_stunde": false
+                    }
+                ],
+                "pflicht": "nein",
+                "bitmask": "52776558134016",
+                "bitmask_binary": "000000000000001100000000000000000000000000000000001100000000"
+            },
+            {
+                "name": "DAZ1e",
+                "fach_lang": "Deutsch als Zweitsprache",
+                "stufe": 0,
+                "lehrer": "BENE",
+                "klassen": [
+                    "1D"
+                ],
+                "schedule": [
+                    {
+                        "tag": 2,
+                        "beginn": "17:10",
+                        "ist_halbe_stunde": false
+                    },
+                    {
+                        "tag": 3,
+                        "beginn": "17:10",
+                        "ist_halbe_stunde": false
+                    }
+                ],
+                "pflicht": "nein",
+                "bitmask": "51552190464",
+                "bitmask_binary": "000000000000000000000000110000000000110000000000000000000000"
+            },
+            {
+                "name": "DAZ2a",
+                "fach_lang": "Deutsch als Zweitsprache",
+                "stufe": 0,
+                "lehrer": "KOGM",
+                "klassen": [
+                    "H_SS"
+                ],
+                "schedule": [
+                    {
+                        "tag": 1,
+                        "beginn": "17:10",
+                        "ist_halbe_stunde": false
+                    },
+                    {
+                        "tag": 4,
+                        "beginn": "17:10",
+                        "ist_halbe_stunde": false
+                    }
+                ],
+                "pflicht": "nein",
+                "bitmask": "211106232536064",
+                "bitmask_binary": "000000000000110000000000000000000000000000000000110000000000"
+            }
+        ],
         "Persönlichkeitsbildung und Lerntechnik": [
             {
                 "name": "PBLT1d",

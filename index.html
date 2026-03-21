@@ -10,10 +10,16 @@
     <div class="app-container">
         <aside class="sidebar">
             <div class="sidebar-header">
-                <h2>Fächerwahl</h2>
-                <div style="display: flex; gap: 8px;">
-                    <button class="btn-pdf" onclick="exportPDF()">PDF</button>
-                    <button class="btn-reset" onclick="resetSchedule()">Reset</button>
+                <div class="sidebar-header-top">
+                    <h2 style="margin: 0;">Fächerwahl</h2>
+                    <div style="display: flex; gap: 8px;">
+                        <button class="btn-pdf" onclick="exportPDF()">PDF</button>
+                        <button class="btn-reset" onclick="resetSchedule()">Reset</button>
+                    </div>
+                </div>
+                <div class="sidebar-header-bottom">
+                    <input type="checkbox" id="allow-overlap-chk" onchange="toggleAllowOverlap()">
+                    <label for="allow-overlap-chk" style="font-size: 0.9rem; cursor: pointer; user-select: none;">Überschneidung zulassen</label>
                 </div>
             </div>
             <div id="accordion-container">
@@ -49,10 +55,9 @@
                     <div class="grid-cell header">Mi</div>
                     <div class="grid-cell header">Do</div>
                     <div class="grid-cell header">Fr</div>
-                    </div>
+                </div>
             </div>
 
-            <!-- NEU: Container für die Liste im PDF -->
             <div id="pdf-module-list">
                 <h3>Gewählte Module</h3>
                 <ul id="print-modules"></ul>
