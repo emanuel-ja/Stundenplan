@@ -7,9 +7,6 @@
                     "fach_lang": "Biologie und Umweltbildung",
                     "stufe": 1,
                     "lehrer": "FILN",
-                    "klassen": [
-                        "3D"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -33,17 +30,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "16492674662400",
-                    "bitmask_binary": "000000000000000011110000000000000000000000111100000000000000"
+                    "bitmask": "16492674662400"
                 },
                 {
                     "name": "BIOUB1s",
                     "fach_lang": "Biologie und Umweltbildung",
                     "stufe": 1,
                     "lehrer": "FOIS",
-                    "klassen": [
-                        "3S"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -57,8 +50,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "16492674416640",
-                    "bitmask_binary": "000000000000000011110000000000000000000000000000000000000000"
+                    "bitmask": "16492674416640"
                 }
             ],
             "2": [
@@ -67,9 +59,6 @@
                     "fach_lang": "Biologie und Umweltbildung",
                     "stufe": 2,
                     "lehrer": "FOIS",
-                    "klassen": [
-                        "4A"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -93,17 +82,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "270217008434380800",
-                    "bitmask_binary": "001111000000000000001111000000000000000000000000000000000000"
+                    "bitmask": "270217008434380800"
                 },
                 {
                     "name": "BIOUB2b",
                     "fach_lang": "Biologie und Umweltbildung",
                     "stufe": 2,
                     "lehrer": "LEPL",
-                    "klassen": [
-                        "4B"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -127,17 +112,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "808452336",
-                    "bitmask_binary": "000000000000000000000000000000110000001100000000000011110000"
+                    "bitmask": "808452336"
                 },
                 {
                     "name": "BIOUB2k",
                     "fach_lang": "Biologie und Umweltbildung",
                     "stufe": 2,
                     "lehrer": "FOIS",
-                    "klassen": [
-                        "5K"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -156,17 +137,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "4274901208793088",
-                    "bitmask_binary": "000000001111001100000000000000000000000000000000000000000000"
+                    "bitmask": "4274901208793088"
                 },
                 {
                     "name": "BIOUB2p",
                     "fach_lang": "Biologie und Umweltbildung",
                     "stufe": 2,
                     "lehrer": "LEPL",
-                    "klassen": [
-                        "4P"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -180,8 +157,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "844424980463616",
-                    "bitmask_binary": "000000000011000000000000000000000011000000000000000000000000"
+                    "bitmask": "844424980463616"
                 }
             ]
         },
@@ -192,9 +168,6 @@
                     "fach_lang": "Chemie",
                     "stufe": 1,
                     "lehrer": "PREK",
-                    "klassen": [
-                        "4A"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -213,17 +186,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "61488",
-                    "bitmask_binary": "000000000000000000000000000000000000000000001111000000110000"
+                    "bitmask": "61488"
                 },
                 {
                     "name": "CH1b",
                     "fach_lang": "Chemie",
                     "stufe": 1,
                     "lehrer": "PREK",
-                    "klassen": [
-                        "4B"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -242,17 +211,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "910395627798528",
-                    "bitmask_binary": "000000000011001111000000000000000000000000000000000000000000"
+                    "bitmask": "910395627798528"
                 },
                 {
                     "name": "CH1k",
                     "fach_lang": "Chemie",
                     "stufe": 1,
                     "lehrer": "PREK",
-                    "klassen": [
-                        "5K"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -276,8 +241,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "54043195532378304",
-                    "bitmask_binary": "000011000000000000000000000000000000001111000000000011000000"
+                    "bitmask": "54043195532378304"
                 }
             ],
             "2": [
@@ -286,9 +250,6 @@
                     "fach_lang": "Chemie",
                     "stufe": 2,
                     "lehrer": "PREK",
-                    "klassen": [
-                        "5D"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -307,17 +268,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "16888498602639372",
-                    "bitmask_binary": "000000111100000000000000000000000000000000000000000000001100"
+                    "bitmask": "16888498602639372"
                 },
                 {
                     "name": "CH2k",
                     "fach_lang": "Chemie",
                     "stufe": 2,
                     "lehrer": "PREK",
-                    "klassen": [
-                        "5K"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -341,8 +298,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "54043195532378304",
-                    "bitmask_binary": "000011000000000000000000000000000000001111000000000011000000"
+                    "bitmask": "54043195532378304"
                 }
             ]
         },
@@ -353,9 +309,6 @@
                     "fach_lang": "Deutsch",
                     "stufe": 1,
                     "lehrer": "STAI",
-                    "klassen": [
-                        "1D"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -379,17 +332,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "3377699723673840",
-                    "bitmask_binary": "000000001100000000000000000000000000001100000000000011110000"
+                    "bitmask": "3377699723673840"
                 },
                 {
                     "name": "D1e",
                     "fach_lang": "Deutsch",
                     "stufe": 1,
                     "lehrer": "FUCB",
-                    "klassen": [
-                        "1E"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -413,17 +362,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "16492876529664",
-                    "bitmask_binary": "000000000000000011110000000000001100000011000000000000000000"
+                    "bitmask": "16492876529664"
                 },
                 {
                     "name": "D1s",
                     "fach_lang": "Deutsch",
                     "stufe": 1,
                     "lehrer": "LENK",
-                    "klassen": [
-                        "1S"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -437,8 +382,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "65970697666560",
-                    "bitmask_binary": "000000000000001111000000000000000000000000000000000000000000"
+                    "bitmask": "65970697666560"
                 }
             ],
             "2": [
@@ -447,9 +391,6 @@
                     "fach_lang": "Deutsch",
                     "stufe": 2,
                     "lehrer": "STAI",
-                    "klassen": [
-                        "2A"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -468,17 +409,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "54043195528507392",
-                    "bitmask_binary": "000011000000000000000000000000000000000000001111000000000000"
+                    "bitmask": "54043195528507392"
                 },
                 {
                     "name": "D2b",
                     "fach_lang": "Deutsch",
                     "stufe": 2,
                     "lehrer": "WILE",
-                    "klassen": [
-                        "2B"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -497,17 +434,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "3221225487",
-                    "bitmask_binary": "000000000000000000000000000011000000000000000000000000001111"
+                    "bitmask": "3221225487"
                 },
                 {
                     "name": "D2m",
                     "fach_lang": "Deutsch",
                     "stufe": 2,
                     "lehrer": "LENK",
-                    "klassen": [
-                        "H_1M"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -531,17 +464,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "939524992",
-                    "bitmask_binary": "000000000000000000000000000000111000000000000000001110000000"
+                    "bitmask": "939524992"
                 },
                 {
                     "name": "D2p",
                     "fach_lang": "Deutsch",
                     "stufe": 2,
                     "lehrer": "MODK",
-                    "klassen": [
-                        "2P"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -555,8 +484,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "939524096",
-                    "bitmask_binary": "000000000000000000000000000000111000000000000000000000000000"
+                    "bitmask": "939524096"
                 }
             ],
             "3": [
@@ -565,9 +493,6 @@
                     "fach_lang": "Deutsch",
                     "stufe": 3,
                     "lehrer": "WILE",
-                    "klassen": [
-                        "3D"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -586,17 +511,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "67553994410558208",
-                    "bitmask_binary": "000011110000000000000000000000000000000000000000001100000000"
+                    "bitmask": "67553994410558208"
                 },
                 {
                     "name": "D3m",
                     "fach_lang": "Deutsch",
                     "stufe": 3,
                     "lehrer": "LENK",
-                    "klassen": [
-                        "H_1M"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -620,17 +541,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "939524992",
-                    "bitmask_binary": "000000000000000000000000000000111000000000000000001110000000"
+                    "bitmask": "939524992"
                 },
                 {
                     "name": "D3s",
                     "fach_lang": "Deutsch",
                     "stufe": 3,
                     "lehrer": "PRIG",
-                    "klassen": [
-                        "3S"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -644,8 +561,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "123145302310912",
-                    "bitmask_binary": "000000000000011100000000000000000000000000000000000000000000"
+                    "bitmask": "123145302310912"
                 }
             ],
             "4": [
@@ -654,9 +570,6 @@
                     "fach_lang": "Deutsch",
                     "stufe": 4,
                     "lehrer": "STAI",
-                    "klassen": [
-                        "4A"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -675,17 +588,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "3222208512",
-                    "bitmask_binary": "000000000000000000000000000011000000000011110000000000000000"
+                    "bitmask": "3222208512"
                 },
                 {
                     "name": "D4b",
                     "fach_lang": "Deutsch",
                     "stufe": 4,
                     "lehrer": "MODK",
-                    "klassen": [
-                        "4B"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -704,17 +613,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "3221286912",
-                    "bitmask_binary": "000000000000000000000000000011000000000000001111000000000000"
+                    "bitmask": "3221286912"
                 },
                 {
                     "name": "D4p",
                     "fach_lang": "Deutsch",
                     "stufe": 4,
                     "lehrer": "FUCB",
-                    "klassen": [
-                        "4P"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -728,8 +633,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "3758096384",
-                    "bitmask_binary": "000000000000000000000000000011100000000000000000000000000000"
+                    "bitmask": "3758096384"
                 }
             ],
             "5": [
@@ -738,9 +642,6 @@
                     "fach_lang": "Deutsch",
                     "stufe": 5,
                     "lehrer": "WILE",
-                    "klassen": [
-                        "5D"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -764,17 +665,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "844425181790256",
-                    "bitmask_binary": "000000000011000000000000000000001111000000000000000000110000"
+                    "bitmask": "844425181790256"
                 },
                 {
                     "name": "D5s",
                     "fach_lang": "Deutsch",
                     "stufe": 5,
                     "lehrer": "LADA",
-                    "klassen": [
-                        "5S"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -788,8 +685,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "983040",
-                    "bitmask_binary": "000000000000000000000000000000000000000011110000000000000000"
+                    "bitmask": "983040"
                 }
             ],
             "6": [
@@ -798,9 +694,6 @@
                     "fach_lang": "Deutsch",
                     "stufe": 6,
                     "lehrer": "HUBB",
-                    "klassen": [
-                        "6A"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -819,17 +712,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "4027318272",
-                    "bitmask_binary": "000000000000000000000000000011110000000011000000000000000000"
+                    "bitmask": "4027318272"
                 },
                 {
                     "name": "D6b",
                     "fach_lang": "Deutsch",
                     "stufe": 6,
                     "lehrer": "LENK",
-                    "klassen": [
-                        "6B"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -848,17 +737,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "3298534883388",
-                    "bitmask_binary": "000000000000000000110000000000000000000000000000000000111100"
+                    "bitmask": "3298534883388"
                 },
                 {
                     "name": "D6m",
                     "fach_lang": "Deutsch",
                     "stufe": 6,
                     "lehrer": "NEUB",
-                    "klassen": [
-                        "H_3M"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -882,17 +767,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "4026531952",
-                    "bitmask_binary": "000000000000000000000000000011110000000000000000000001110000"
+                    "bitmask": "4026531952"
                 },
                 {
                     "name": "D6p",
                     "fach_lang": "Deutsch",
                     "stufe": 6,
                     "lehrer": "LENK",
-                    "klassen": [
-                        "6P"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -906,8 +787,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "15032385536",
-                    "bitmask_binary": "000000000000000000000000001110000000000000000000000000000000"
+                    "bitmask": "15032385536"
                 }
             ],
             "7": [
@@ -916,9 +796,6 @@
                     "fach_lang": "Deutsch",
                     "stufe": 7,
                     "lehrer": "BENE",
-                    "klassen": [
-                        "7D"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -942,17 +819,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "3377700525895680",
-                    "bitmask_binary": "000000001100000000000000000000110000000000001111000000000000"
+                    "bitmask": "3377700525895680"
                 },
                 {
                     "name": "D7e",
                     "fach_lang": "Deutsch",
                     "stufe": 7,
                     "lehrer": "HUBB",
-                    "klassen": [
-                        "7E"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -976,17 +849,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "1031043809280",
-                    "bitmask_binary": "000000000000000000001111000000001111000000000000000000000000"
+                    "bitmask": "1031043809280"
                 },
                 {
                     "name": "D7m",
                     "fach_lang": "Deutsch",
                     "stufe": 7,
                     "lehrer": "NEUB",
-                    "klassen": [
-                        "H_3M"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -1010,17 +879,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "4026531952",
-                    "bitmask_binary": "000000000000000000000000000011110000000000000000000001110000"
+                    "bitmask": "4026531952"
                 },
                 {
                     "name": "D7s",
                     "fach_lang": "Deutsch",
                     "stufe": 7,
                     "lehrer": "HUBB",
-                    "klassen": [
-                        "7S"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -1034,8 +899,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "65970697666560",
-                    "bitmask_binary": "000000000000001111000000000000000000000000000000000000000000"
+                    "bitmask": "65970697666560"
                 }
             ],
             "8": [
@@ -1044,9 +908,6 @@
                     "fach_lang": "Deutsch",
                     "stufe": 8,
                     "lehrer": "MODK",
-                    "klassen": [
-                        "8A"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -1070,17 +931,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "270215977695707136",
-                    "bitmask_binary": "001111000000000000000000000000000011001100000000000000000000"
+                    "bitmask": "270215977695707136"
                 },
                 {
                     "name": "D8b",
                     "fach_lang": "Deutsch",
                     "stufe": 8,
                     "lehrer": "HUBB",
-                    "klassen": [
-                        "8B"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -1104,17 +961,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "61680",
-                    "bitmask_binary": "000000000000000000000000000000000000000000001111000011110000"
+                    "bitmask": "61680"
                 },
                 {
                     "name": "D8p",
                     "fach_lang": "Deutsch",
                     "stufe": 8,
                     "lehrer": "BENE",
-                    "klassen": [
-                        "8P"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -1128,8 +981,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "251658240",
-                    "bitmask_binary": "000000000000000000000000000000001111000000000000000000000000"
+                    "bitmask": "251658240"
                 }
             ]
         },
@@ -1140,9 +992,6 @@
                     "fach_lang": "Englisch",
                     "stufe": 1,
                     "lehrer": "PRIG",
-                    "klassen": [
-                        "1D"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -1161,17 +1010,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "4126389829632",
-                    "bitmask_binary": "000000000000000000111100000011000000000000000000000000000000"
+                    "bitmask": "4126389829632"
                 },
                 {
                     "name": "E1e",
                     "fach_lang": "Englisch",
                     "stufe": 1,
-                    "lehrer": "KOCD",
-                    "klassen": [
-                        "1E"
-                    ],
+                    "lehrer": "PIRS",
                     "schedule": [
                         {
                             "tag": 0,
@@ -1190,17 +1035,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "4222124650659888",
-                    "bitmask_binary": "000000001111000000000000000000000000000000000000000000110000"
+                    "bitmask": "4222124650659888"
                 },
                 {
                     "name": "E1s",
                     "fach_lang": "Englisch",
                     "stufe": 1,
                     "lehrer": "VERA",
-                    "klassen": [
-                        "1S"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -1214,8 +1055,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "3848290697216",
-                    "bitmask_binary": "000000000000000000111000000000000000000000000000000000000000"
+                    "bitmask": "3848290697216"
                 }
             ],
             "2": [
@@ -1224,9 +1064,6 @@
                     "fach_lang": "Englisch",
                     "stufe": 2,
                     "lehrer": "WEIM",
-                    "klassen": [
-                        "2A"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -1245,17 +1082,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "13198166065152",
-                    "bitmask_binary": "000000000000000011000000000011110000000000000000000000000000"
+                    "bitmask": "13198166065152"
                 },
                 {
                     "name": "E2b",
                     "fach_lang": "Englisch",
                     "stufe": 2,
                     "lehrer": "PRIG",
-                    "klassen": [
-                        "2B"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -1274,17 +1107,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "13194139594752",
-                    "bitmask_binary": "000000000000000011000000000000000000000000001111000000000000"
+                    "bitmask": "13194139594752"
                 },
                 {
                     "name": "E2m",
                     "fach_lang": "Englisch",
                     "stufe": 2,
                     "lehrer": "VERA",
-                    "klassen": [
-                        "H_1M"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -1308,17 +1137,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "117440624",
-                    "bitmask_binary": "000000000000000000000000000000000111000000000000000001110000"
+                    "bitmask": "117440624"
                 },
                 {
                     "name": "E2p",
                     "fach_lang": "Englisch",
                     "stufe": 2,
                     "lehrer": "WEIM",
-                    "klassen": [
-                        "2P"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -1332,8 +1157,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "117440512",
-                    "bitmask_binary": "000000000000000000000000000000000111000000000000000000000000"
+                    "bitmask": "117440512"
                 }
             ],
             "3": [
@@ -1342,9 +1166,6 @@
                     "fach_lang": "Englisch",
                     "stufe": 3,
                     "lehrer": "KERS",
-                    "klassen": [
-                        "3D"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -1363,17 +1184,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "12528",
-                    "bitmask_binary": "000000000000000000000000000000000000000000000011000011110000"
+                    "bitmask": "12528"
                 },
                 {
                     "name": "E3m",
                     "fach_lang": "Englisch",
                     "stufe": 3,
                     "lehrer": "VERA",
-                    "klassen": [
-                        "H_1M"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -1397,17 +1214,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "117440624",
-                    "bitmask_binary": "000000000000000000000000000000000111000000000000000001110000"
+                    "bitmask": "117440624"
                 },
                 {
                     "name": "E3s",
                     "fach_lang": "Englisch",
                     "stufe": 3,
                     "lehrer": "DEGM",
-                    "klassen": [
-                        "3S"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -1421,8 +1234,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "229376",
-                    "bitmask_binary": "000000000000000000000000000000000000000000111000000000000000"
+                    "bitmask": "229376"
                 }
             ],
             "4": [
@@ -1431,9 +1243,6 @@
                     "fach_lang": "Englisch",
                     "stufe": 4,
                     "lehrer": "PIRS",
-                    "klassen": [
-                        "4A"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -1452,17 +1261,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "50332608",
-                    "bitmask_binary": "000000000000000000000000000000000011000000000000001111000000"
+                    "bitmask": "50332608"
                 },
                 {
                     "name": "E4b",
                     "fach_lang": "Englisch",
                     "stufe": 4,
                     "lehrer": "WEIM",
-                    "klassen": [
-                        "4B"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -1481,17 +1286,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "4136053506048",
-                    "bitmask_binary": "000000000000000000111100001100000000000000000000000000000000"
+                    "bitmask": "4136053506048"
                 },
                 {
                     "name": "E4p",
                     "fach_lang": "Englisch",
                     "stufe": 4,
                     "lehrer": "PIRS",
-                    "klassen": [
-                        "4P"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -1505,8 +1306,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "469762048",
-                    "bitmask_binary": "000000000000000000000000000000011100000000000000000000000000"
+                    "bitmask": "469762048"
                 }
             ],
             "5": [
@@ -1515,9 +1315,6 @@
                     "fach_lang": "Englisch",
                     "stufe": 5,
                     "lehrer": "PISG",
-                    "klassen": [
-                        "5D"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -1541,17 +1338,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "16492674417600",
-                    "bitmask_binary": "000000000000000011110000000000000000000000000000001111000000"
+                    "bitmask": "16492674417600"
                 },
                 {
                     "name": "E5s",
                     "fach_lang": "Englisch",
                     "stufe": 5,
                     "lehrer": "PREK",
-                    "klassen": [
-                        "5S"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -1565,8 +1358,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "1030792151040",
-                    "bitmask_binary": "000000000000000000001111000000000000000000000000000000000000"
+                    "bitmask": "1030792151040"
                 }
             ],
             "6": [
@@ -1575,9 +1367,6 @@
                     "fach_lang": "Englisch",
                     "stufe": 6,
                     "lehrer": "FILN",
-                    "klassen": [
-                        "6A"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -1601,17 +1390,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "251658480",
-                    "bitmask_binary": "000000000000000000000000000000001111000000000000000011110000"
+                    "bitmask": "251658480"
                 },
                 {
                     "name": "E6b",
                     "fach_lang": "Englisch",
                     "stufe": 6,
                     "lehrer": "PRIG",
-                    "klassen": [
-                        "6B"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -1635,17 +1420,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "13510799134556160",
-                    "bitmask_binary": "000000110000000000000000000000001111000011000000000000000000"
+                    "bitmask": "13510799134556160"
                 },
                 {
                     "name": "E6m",
                     "fach_lang": "Englisch",
                     "stufe": 6,
                     "lehrer": "FILN",
-                    "klassen": [
-                        "H_3M"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -1669,17 +1450,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "30064771087",
-                    "bitmask_binary": "000000000000000000000000011100000000000000000000000000001111"
+                    "bitmask": "30064771087"
                 },
                 {
                     "name": "E6p",
                     "fach_lang": "Englisch",
                     "stufe": 6,
                     "lehrer": "PRIG",
-                    "klassen": [
-                        "6P"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -1693,8 +1470,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "4222124650659840",
-                    "bitmask_binary": "000000001111000000000000000000000000000000000000000000000000"
+                    "bitmask": "4222124650659840"
                 }
             ],
             "7": [
@@ -1703,9 +1479,6 @@
                     "fach_lang": "Englisch",
                     "stufe": 7,
                     "lehrer": "VERA",
-                    "klassen": [
-                        "7D"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -1724,17 +1497,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "13510814988238848",
-                    "bitmask_binary": "000000110000000000000000001111000000000000000000000000000000"
+                    "bitmask": "13510814988238848"
                 },
                 {
                     "name": "E7e",
                     "fach_lang": "Englisch",
                     "stufe": 7,
                     "lehrer": "KERS",
-                    "klassen": [
-                        "7E"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -1753,17 +1522,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "3145743",
-                    "bitmask_binary": "000000000000000000000000000000000000001100000000000000001111"
+                    "bitmask": "3145743"
                 },
                 {
                     "name": "E7m",
                     "fach_lang": "Englisch",
                     "stufe": 7,
                     "lehrer": "FILN",
-                    "klassen": [
-                        "H_3M"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -1787,17 +1552,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "30064771087",
-                    "bitmask_binary": "000000000000000000000000011100000000000000000000000000001111"
+                    "bitmask": "30064771087"
                 },
                 {
                     "name": "E7s",
                     "fach_lang": "Englisch",
                     "stufe": 7,
                     "lehrer": "KERS",
-                    "klassen": [
-                        "7S"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -1811,8 +1572,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "229376",
-                    "bitmask_binary": "000000000000000000000000000000000000000000111000000000000000"
+                    "bitmask": "229376"
                 }
             ],
             "8": [
@@ -1821,9 +1581,6 @@
                     "fach_lang": "Englisch",
                     "stufe": 8,
                     "lehrer": "FILN",
-                    "klassen": [
-                        "8A"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -1847,17 +1604,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "1034818682880",
-                    "bitmask_binary": "000000000000000000001111000011110000000000000000000000000000"
+                    "bitmask": "1034818682880"
                 },
                 {
                     "name": "E8b",
                     "fach_lang": "Englisch",
                     "stufe": 8,
                     "lehrer": "PISG",
-                    "klassen": [
-                        "8B"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -1881,17 +1634,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "1030792151055",
-                    "bitmask_binary": "000000000000000000001111000000000000000000000000000000001111"
+                    "bitmask": "1030792151055"
                 },
                 {
                     "name": "E8p",
                     "fach_lang": "Englisch",
                     "stufe": 8,
                     "lehrer": "DEGM",
-                    "klassen": [
-                        "8P"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -1905,8 +1654,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "270215977642229760",
-                    "bitmask_binary": "001111000000000000000000000000000000000000000000000000000000"
+                    "bitmask": "270215977642229760"
                 }
             ]
         },
@@ -1917,11 +1665,6 @@
                     "fach_lang": "Ethik",
                     "stufe": 1,
                     "lehrer": "MODK",
-                    "klassen": [
-                        "1D",
-                        "1E",
-                        "1S"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -1930,8 +1673,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "196608",
-                    "bitmask_binary": "000000000000000000000000000000000000000000110000000000000000"
+                    "bitmask": "196608"
                 }
             ],
             "2": [
@@ -1940,10 +1682,6 @@
                     "fach_lang": "Ethik",
                     "stufe": 2,
                     "lehrer": "MODK",
-                    "klassen": [
-                        "3D",
-                        "3S"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -1952,8 +1690,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "786432",
-                    "bitmask_binary": "000000000000000000000000000000000000000011000000000000000000"
+                    "bitmask": "786432"
                 }
             ],
             "3": [
@@ -1962,11 +1699,6 @@
                     "fach_lang": "Ethik",
                     "stufe": 3,
                     "lehrer": "MODK",
-                    "klassen": [
-                        "6A",
-                        "6B",
-                        "6P"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -1975,8 +1707,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "51539607552",
-                    "bitmask_binary": "000000000000000000000000110000000000000000000000000000000000"
+                    "bitmask": "51539607552"
                 }
             ],
             "4": [
@@ -1985,11 +1716,6 @@
                     "fach_lang": "Ethik",
                     "stufe": 4,
                     "lehrer": "MODK",
-                    "klassen": [
-                        "8A",
-                        "8B",
-                        "8P"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -1998,8 +1724,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "12884901888",
-                    "bitmask_binary": "000000000000000000000000001100000000000000000000000000000000"
+                    "bitmask": "12884901888"
                 }
             ]
         },
@@ -2010,10 +1735,6 @@
                     "fach_lang": "Französisch",
                     "stufe": 1,
                     "lehrer": "NEUB",
-                    "klassen": [
-                        "2A",
-                        "2B"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -2037,17 +1758,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "844425181790976",
-                    "bitmask_binary": "000000000011000000000000000000001111000000000000001100000000"
+                    "bitmask": "844425181790976"
                 },
                 {
                     "name": "F1p",
                     "fach_lang": "Französisch",
                     "stufe": 1,
                     "lehrer": "LADA",
-                    "klassen": [
-                        "2P"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -2061,8 +1778,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "67553994410557440",
-                    "bitmask_binary": "000011110000000000000000000000000000000000000000000000000000"
+                    "bitmask": "67553994410557440"
                 }
             ],
             "2": [
@@ -2071,9 +1787,6 @@
                     "fach_lang": "Französisch",
                     "stufe": 2,
                     "lehrer": "LADA",
-                    "klassen": [
-                        "3D"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -2097,17 +1810,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "1886388224",
-                    "bitmask_binary": "000000000000000000000000000001110000011100000000000000000000"
+                    "bitmask": "1886388224"
                 },
                 {
                     "name": "F2s",
                     "fach_lang": "Französisch",
                     "stufe": 2,
                     "lehrer": "KOGM",
-                    "klassen": [
-                        "3S"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -2121,8 +1830,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "7340032",
-                    "bitmask_binary": "000000000000000000000000000000000000011100000000000000000000"
+                    "bitmask": "7340032"
                 }
             ],
             "3": [
@@ -2131,10 +1839,6 @@
                     "fach_lang": "Französisch",
                     "stufe": 3,
                     "lehrer": "NEUB",
-                    "klassen": [
-                        "4A",
-                        "4B"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -2158,17 +1862,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "7881299347898382",
-                    "bitmask_binary": "000000011100000000000000000000000000000000000000000000001110"
+                    "bitmask": "7881299347898382"
                 },
                 {
                     "name": "F3p",
                     "fach_lang": "Französisch",
                     "stufe": 3,
                     "lehrer": "NEUB",
-                    "klassen": [
-                        "4P"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -2182,8 +1882,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "7881299347898368",
-                    "bitmask_binary": "000000011100000000000000000000000000000000000000000000000000"
+                    "bitmask": "7881299347898368"
                 }
             ],
             "4": [
@@ -2192,10 +1891,6 @@
                     "fach_lang": "Französisch",
                     "stufe": 4,
                     "lehrer": "LADA",
-                    "klassen": [
-                        "5D",
-                        "5K"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -2219,17 +1914,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "1030792212480",
-                    "bitmask_binary": "000000000000000000001111000000000000000000001111000000000000"
+                    "bitmask": "1030792212480"
                 },
                 {
                     "name": "F4s",
                     "fach_lang": "Französisch",
                     "stufe": 4,
                     "lehrer": "LADA",
-                    "klassen": [
-                        "5S"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -2243,8 +1934,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "61440",
-                    "bitmask_binary": "000000000000000000000000000000000000000000001111000000000000"
+                    "bitmask": "61440"
                 }
             ],
             "5": [
@@ -2253,10 +1943,6 @@
                     "fach_lang": "Französisch",
                     "stufe": 5,
                     "lehrer": "BENE",
-                    "klassen": [
-                        "6A",
-                        "6B"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -2280,17 +1966,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "270215990527328256",
-                    "bitmask_binary": "001111000000000000000000001100000000000000110000000000000000"
+                    "bitmask": "270215990527328256"
                 },
                 {
                     "name": "F5p",
                     "fach_lang": "Französisch",
                     "stufe": 5,
                     "lehrer": "BENE",
-                    "klassen": [
-                        "6P"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -2304,8 +1986,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "270215977642229760",
-                    "bitmask_binary": "001111000000000000000000000000000000000000000000000000000000"
+                    "bitmask": "270215977642229760"
                 }
             ]
         },
@@ -2316,9 +1997,6 @@
                     "fach_lang": "Geographie und wirtschaftliche Bildung",
                     "stufe": 1,
                     "lehrer": "SCHL",
-                    "klassen": [
-                        "1D"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -2342,17 +2020,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "844425182576640",
-                    "bitmask_binary": "000000000011000000000000000000001111000011000000000000000000"
+                    "bitmask": "844425182576640"
                 },
                 {
                     "name": "GWB1e",
                     "fach_lang": "Geographie und wirtschaftliche Bildung",
                     "stufe": 1,
                     "lehrer": "NEUG",
-                    "klassen": [
-                        "1E"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -2376,17 +2050,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "1034818682880",
-                    "bitmask_binary": "000000000000000000001111000011110000000000000000000000000000"
+                    "bitmask": "1034818682880"
                 },
                 {
                     "name": "GWB1s",
                     "fach_lang": "Geographie und wirtschaftliche Bildung",
                     "stufe": 1,
                     "lehrer": "VERA",
-                    "klassen": [
-                        "1S"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -2400,8 +2070,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "61440",
-                    "bitmask_binary": "000000000000000000000000000000000000000000001111000000000000"
+                    "bitmask": "61440"
                 }
             ],
             "2": [
@@ -2410,9 +2079,6 @@
                     "fach_lang": "Geographie und wirtschaftliche Bildung",
                     "stufe": 2,
                     "lehrer": "VERA",
-                    "klassen": [
-                        "2A"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -2436,17 +2102,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "983055",
-                    "bitmask_binary": "000000000000000000000000000000000000000011110000000000001111"
+                    "bitmask": "983055"
                 },
                 {
                     "name": "GWB2b",
                     "fach_lang": "Geographie und wirtschaftliche Bildung",
                     "stufe": 2,
                     "lehrer": "SCHL",
-                    "klassen": [
-                        "2B"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -2470,17 +2132,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "3378730512875520",
-                    "bitmask_binary": "000000001100000000001111000000000000000000110000000000000000"
+                    "bitmask": "3378730512875520"
                 },
                 {
                     "name": "GWB2k",
                     "fach_lang": "Geographie und wirtschaftliche Bildung",
                     "stufe": 2,
                     "lehrer": "LEPL",
-                    "klassen": [
-                        "5K"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -2499,17 +2157,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "13510798882111503",
-                    "bitmask_binary": "000000110000000000000000000000000000000000000000000000001111"
+                    "bitmask": "13510798882111503"
                 },
                 {
                     "name": "GWB2p",
                     "fach_lang": "Geographie und wirtschaftliche Bildung",
                     "stufe": 2,
                     "lehrer": "LEPL",
-                    "klassen": [
-                        "2P"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -2523,8 +2177,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "16106127360",
-                    "bitmask_binary": "000000000000000000000000001111000000000000000000000000000000"
+                    "bitmask": "16106127360"
                 }
             ]
         },
@@ -2535,9 +2188,6 @@
                     "fach_lang": "Geschichte und Politische Bildung",
                     "stufe": 1,
                     "lehrer": "KOGM",
-                    "klassen": [
-                        "1D"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -2551,17 +2201,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "61440",
-                    "bitmask_binary": "000000000000000000000000000000000000000000001111000000000000"
+                    "bitmask": "61440"
                 },
                 {
                     "name": "GPB1e",
                     "fach_lang": "Geschichte und Politische Bildung",
                     "stufe": 1,
                     "lehrer": "SCHH",
-                    "klassen": [
-                        "1E"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -2575,17 +2221,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "54095972086579200",
-                    "bitmask_binary": "000011000000001100000000000000000000000000000000000000000000"
+                    "bitmask": "54095972086579200"
                 },
                 {
                     "name": "GPB1s",
                     "fach_lang": "Geschichte und Politische Bildung",
                     "stufe": 1,
                     "lehrer": "SCHH",
-                    "klassen": [
-                        "1S"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -2594,8 +2236,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "786432",
-                    "bitmask_binary": "000000000000000000000000000000000000000011000000000000000000"
+                    "bitmask": "786432"
                 }
             ],
             "2": [
@@ -2604,9 +2245,6 @@
                     "fach_lang": "Geschichte und Politische Bildung",
                     "stufe": 2,
                     "lehrer": "SCHH",
-                    "klassen": [
-                        "2A"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -2630,17 +2268,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "16889529394790400",
-                    "bitmask_binary": "000000111100000000001111000000000000000000000000000000000000"
+                    "bitmask": "16889529394790400"
                 },
                 {
                     "name": "GPB2b",
                     "fach_lang": "Geschichte und Politische Bildung",
                     "stufe": 2,
                     "lehrer": "KOGM",
-                    "klassen": [
-                        "2B"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -2664,17 +2298,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "3298535670000",
-                    "bitmask_binary": "000000000000000000110000000000000000000011000000000011110000"
+                    "bitmask": "3298535670000"
                 },
                 {
                     "name": "GPB2k",
                     "fach_lang": "Geschichte und Politische Bildung",
                     "stufe": 2,
                     "lehrer": "SCHH",
-                    "klassen": [
-                        "5K"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -2698,17 +2328,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "13195146362880",
-                    "bitmask_binary": "000000000000000011000000000000111100000000110000000000000000"
+                    "bitmask": "13195146362880"
                 },
                 {
                     "name": "GPB2p",
                     "fach_lang": "Geschichte und Politische Bildung",
                     "stufe": 2,
                     "lehrer": "KOGM",
-                    "klassen": [
-                        "2P"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -2722,8 +2348,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "4222124650659840",
-                    "bitmask_binary": "000000001111000000000000000000000000000000000000000000000000"
+                    "bitmask": "4222124650659840"
                 }
             ],
             "3": [
@@ -2732,9 +2357,6 @@
                     "fach_lang": "Geschichte und Politische Bildung",
                     "stufe": 3,
                     "lehrer": "HUBB",
-                    "klassen": [
-                        "3D"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -2753,17 +2375,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "12884901903",
-                    "bitmask_binary": "000000000000000000000000001100000000000000000000000000001111"
+                    "bitmask": "12884901903"
                 },
                 {
                     "name": "GPB3k",
                     "fach_lang": "Geschichte und Politische Bildung",
                     "stufe": 3,
                     "lehrer": "SCHH",
-                    "klassen": [
-                        "5K"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -2787,17 +2405,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "13195146362880",
-                    "bitmask_binary": "000000000000000011000000000000111100000000110000000000000000"
+                    "bitmask": "13195146362880"
                 },
                 {
                     "name": "GPB3s",
                     "fach_lang": "Geschichte und Politische Bildung",
                     "stufe": 3,
                     "lehrer": "SCHL",
-                    "klassen": [
-                        "3S"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -2811,8 +2425,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "28672",
-                    "bitmask_binary": "000000000000000000000000000000000000000000000111000000000000"
+                    "bitmask": "28672"
                 }
             ]
         },
@@ -2823,9 +2436,6 @@
                     "fach_lang": "Informatik",
                     "stufe": 1,
                     "lehrer": "JARE",
-                    "klassen": [
-                        "1D"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -2839,17 +2449,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "67553994410557440",
-                    "bitmask_binary": "000011110000000000000000000000000000000000000000000000000000"
+                    "bitmask": "67553994410557440"
                 },
                 {
                     "name": "INF1e",
                     "fach_lang": "Informatik",
                     "stufe": 1,
                     "lehrer": "WALP",
-                    "klassen": [
-                        "1E"
-                    ],
                     "schedule": [
                         {
                             "tag": 4,
@@ -2863,17 +2469,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "15",
-                    "bitmask_binary": "000000000000000000000000000000000000000000000000000000001111"
+                    "bitmask": "15"
                 },
                 {
                     "name": "INF1s",
                     "fach_lang": "Informatik",
                     "stufe": 1,
                     "lehrer": "JARE",
-                    "klassen": [
-                        "1S"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -2882,8 +2484,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "3145728",
-                    "bitmask_binary": "000000000000000000000000000000000000001100000000000000000000"
+                    "bitmask": "3145728"
                 }
             ],
             "2": [
@@ -2892,9 +2493,6 @@
                     "fach_lang": "Informatik",
                     "stufe": 2,
                     "lehrer": "WALP",
-                    "klassen": [
-                        "7D"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -2913,17 +2511,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "3298534883568",
-                    "bitmask_binary": "000000000000000000110000000000000000000000000000000011110000"
+                    "bitmask": "3298534883568"
                 },
                 {
                     "name": "INF2e",
                     "fach_lang": "Informatik",
                     "stufe": 2,
                     "lehrer": "WALP",
-                    "klassen": [
-                        "7E"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -2942,17 +2536,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "13194139594752",
-                    "bitmask_binary": "000000000000000011000000000000000000000000001111000000000000"
+                    "bitmask": "13194139594752"
                 },
                 {
                     "name": "INF2s",
                     "fach_lang": "Informatik",
                     "stufe": 2,
                     "lehrer": "WALP",
-                    "klassen": [
-                        "7S"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -2966,8 +2556,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "481036337152",
-                    "bitmask_binary": "000000000000000000000111000000000000000000000000000000000000"
+                    "bitmask": "481036337152"
                 }
             ],
             "3": [
@@ -2976,9 +2565,6 @@
                     "fach_lang": "Informatik",
                     "stufe": 3,
                     "lehrer": "WALP",
-                    "klassen": [
-                        "8A"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -2997,17 +2583,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "13510798883094528",
-                    "bitmask_binary": "000000110000000000000000000000000000000011110000000000000000"
+                    "bitmask": "13510798883094528"
                 },
                 {
                     "name": "INF3b",
                     "fach_lang": "Informatik",
                     "stufe": 3,
                     "lehrer": "WALP",
-                    "klassen": [
-                        "8B"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -3026,17 +2608,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "4222124653805568",
-                    "bitmask_binary": "000000001111000000000000000000000000001100000000000000000000"
+                    "bitmask": "4222124653805568"
                 },
                 {
                     "name": "INF3p",
                     "fach_lang": "Informatik",
                     "stufe": 3,
                     "lehrer": "JARE",
-                    "klassen": [
-                        "8P"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -3050,8 +2628,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "1970324836974592",
-                    "bitmask_binary": "000000000111000000000000000000000000000000000000000000000000"
+                    "bitmask": "1970324836974592"
                 }
             ]
         },
@@ -3062,10 +2639,6 @@
                     "fach_lang": "Italienisch",
                     "stufe": 4,
                     "lehrer": "FUCB",
-                    "klassen": [
-                        "5D",
-                        "5K"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -3089,8 +2662,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "1030792212480",
-                    "bitmask_binary": "000000000000000000001111000000000000000000001111000000000000"
+                    "bitmask": "1030792212480"
                 }
             ],
             "5": [
@@ -3099,10 +2671,6 @@
                     "fach_lang": "Italienisch",
                     "stufe": 5,
                     "lehrer": "FUCB",
-                    "klassen": [
-                        "6A",
-                        "6B"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -3126,8 +2694,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "270215990527328256",
-                    "bitmask_binary": "001111000000000000000000001100000000000000110000000000000000"
+                    "bitmask": "270215990527328256"
                 }
             ]
         },
@@ -3138,10 +2705,6 @@
                     "fach_lang": "Kunst und Gestaltung",
                     "stufe": 1,
                     "lehrer": "PUEL",
-                    "klassen": [
-                        "7D",
-                        "7E"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -3155,17 +2718,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "983040",
-                    "bitmask_binary": "000000000000000000000000000000000000000011110000000000000000"
+                    "bitmask": "983040"
                 },
                 {
                     "name": "KUNSTG1s",
                     "fach_lang": "Kunst und Gestaltung",
                     "stufe": 1,
                     "lehrer": "PUEL",
-                    "klassen": [
-                        "7S"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -3174,8 +2733,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "3145728",
-                    "bitmask_binary": "000000000000000000000000000000000000001100000000000000000000"
+                    "bitmask": "3145728"
                 }
             ]
         },
@@ -3186,10 +2744,6 @@
                     "fach_lang": "Latein",
                     "stufe": 1,
                     "lehrer": "HOFC",
-                    "klassen": [
-                        "2A",
-                        "2B"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -3213,17 +2767,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "844425181790976",
-                    "bitmask_binary": "000000000011000000000000000000001111000000000000001100000000"
+                    "bitmask": "844425181790976"
                 },
                 {
                     "name": "L1p",
                     "fach_lang": "Latein",
                     "stufe": 1,
                     "lehrer": "SCLI",
-                    "klassen": [
-                        "2P"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -3237,8 +2787,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "67553994410557440",
-                    "bitmask_binary": "000011110000000000000000000000000000000000000000000000000000"
+                    "bitmask": "67553994410557440"
                 }
             ],
             "2": [
@@ -3247,9 +2796,6 @@
                     "fach_lang": "Latein",
                     "stufe": 2,
                     "lehrer": "HOFC",
-                    "klassen": [
-                        "3D"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -3273,17 +2819,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "1886388224",
-                    "bitmask_binary": "000000000000000000000000000001110000011100000000000000000000"
+                    "bitmask": "1886388224"
                 },
                 {
                     "name": "L2s",
                     "fach_lang": "Latein",
                     "stufe": 2,
                     "lehrer": "HOFC",
-                    "klassen": [
-                        "3S"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -3297,8 +2839,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "7340032",
-                    "bitmask_binary": "000000000000000000000000000000000000011100000000000000000000"
+                    "bitmask": "7340032"
                 }
             ],
             "3": [
@@ -3307,10 +2848,6 @@
                     "fach_lang": "Latein",
                     "stufe": 3,
                     "lehrer": "HOFC",
-                    "klassen": [
-                        "4A",
-                        "4B"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -3334,17 +2871,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "7881299347898382",
-                    "bitmask_binary": "000000011100000000000000000000000000000000000000000000001110"
+                    "bitmask": "7881299347898382"
                 },
                 {
                     "name": "L3p",
                     "fach_lang": "Latein",
                     "stufe": 3,
                     "lehrer": "HOFC",
-                    "klassen": [
-                        "4P"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -3358,8 +2891,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "7881299347898368",
-                    "bitmask_binary": "000000011100000000000000000000000000000000000000000000000000"
+                    "bitmask": "7881299347898368"
                 }
             ],
             "4": [
@@ -3368,10 +2900,6 @@
                     "fach_lang": "Latein",
                     "stufe": 4,
                     "lehrer": "BIBI",
-                    "klassen": [
-                        "5D",
-                        "5K"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -3395,17 +2923,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "1030792212480",
-                    "bitmask_binary": "000000000000000000001111000000000000000000001111000000000000"
+                    "bitmask": "1030792212480"
                 },
                 {
                     "name": "L4s",
                     "fach_lang": "Latein",
                     "stufe": 4,
                     "lehrer": "BIBI",
-                    "klassen": [
-                        "5S"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -3419,8 +2943,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "61440",
-                    "bitmask_binary": "000000000000000000000000000000000000000000001111000000000000"
+                    "bitmask": "61440"
                 }
             ],
             "5": [
@@ -3429,10 +2952,6 @@
                     "fach_lang": "Latein",
                     "stufe": 5,
                     "lehrer": "HOFC",
-                    "klassen": [
-                        "6A",
-                        "6B"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -3456,17 +2975,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "270215990527328256",
-                    "bitmask_binary": "001111000000000000000000001100000000000000110000000000000000"
+                    "bitmask": "270215990527328256"
                 },
                 {
                     "name": "L5p",
                     "fach_lang": "Latein",
                     "stufe": 5,
                     "lehrer": "HOFC",
-                    "klassen": [
-                        "6P"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -3480,8 +2995,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "270215977642229760",
-                    "bitmask_binary": "001111000000000000000000000000000000000000000000000000000000"
+                    "bitmask": "270215977642229760"
                 }
             ]
         },
@@ -3492,9 +3006,6 @@
                     "fach_lang": "Lernen, Präsentieren, Kommunizieren",
                     "stufe": 1,
                     "lehrer": "PERK",
-                    "klassen": [
-                        "1D"
-                    ],
                     "schedule": [
                         {
                             "tag": 4,
@@ -3503,17 +3014,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "12",
-                    "bitmask_binary": "000000000000000000000000000000000000000000000000000000001100"
+                    "bitmask": "12"
                 },
                 {
                     "name": "LPK1e",
                     "fach_lang": "Lernen, Präsentieren, Kommunizieren",
                     "stufe": 1,
                     "lehrer": "PERK",
-                    "klassen": [
-                        "1E"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -3522,17 +3029,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "13510798882111488",
-                    "bitmask_binary": "000000110000000000000000000000000000000000000000000000000000"
+                    "bitmask": "13510798882111488"
                 },
                 {
                     "name": "LPK1k",
                     "fach_lang": "Lernen, Präsentieren, Kommunizieren",
                     "stufe": 1,
                     "lehrer": "STAI",
-                    "klassen": [
-                        "5K"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -3541,17 +3044,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "216172782113783808",
-                    "bitmask_binary": "001100000000000000000000000000000000000000000000000000000000"
+                    "bitmask": "216172782113783808"
                 },
                 {
                     "name": "LPK1s",
                     "fach_lang": "Lernen, Präsentieren, Kommunizieren",
                     "stufe": 1,
                     "lehrer": "LENK",
-                    "klassen": [
-                        "1S"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -3560,8 +3059,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "211106232532992",
-                    "bitmask_binary": "000000000000110000000000000000000000000000000000000000000000"
+                    "bitmask": "211106232532992"
                 }
             ]
         },
@@ -3572,9 +3070,6 @@
                     "fach_lang": "Mathematik",
                     "stufe": 1,
                     "lehrer": "ZANG",
-                    "klassen": [
-                        "1D"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -3593,17 +3088,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "216185989138219008",
-                    "bitmask_binary": "001100000000000011000000001100000000000000000000000000000000"
+                    "bitmask": "216185989138219008"
                 },
                 {
                     "name": "M1e",
                     "fach_lang": "Mathematik",
                     "stufe": 1,
                     "lehrer": "HAUT",
-                    "klassen": [
-                        "1E"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -3622,17 +3113,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "216172782116978688",
-                    "bitmask_binary": "001100000000000000000000000000000000001100001100000000000000"
+                    "bitmask": "216172782116978688"
                 },
                 {
                     "name": "M1s",
                     "fach_lang": "Mathematik",
                     "stufe": 1,
                     "lehrer": "SCHW",
-                    "klassen": [
-                        "1S"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -3646,8 +3133,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "481036337152",
-                    "bitmask_binary": "000000000000000000000111000000000000000000000000000000000000"
+                    "bitmask": "481036337152"
                 }
             ],
             "2": [
@@ -3656,9 +3142,6 @@
                     "fach_lang": "Mathematik",
                     "stufe": 2,
                     "lehrer": "SCHW",
-                    "klassen": [
-                        "2A"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -3677,17 +3160,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "3298534883568",
-                    "bitmask_binary": "000000000000000000110000000000000000000000000000000011110000"
+                    "bitmask": "3298534883568"
                 },
                 {
                     "name": "M2b",
                     "fach_lang": "Mathematik",
                     "stufe": 2,
                     "lehrer": "ZANG",
-                    "klassen": [
-                        "2B"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -3706,17 +3185,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "67553995215863808",
-                    "bitmask_binary": "000011110000000000000000000000110000000000000000000000000000"
+                    "bitmask": "67553995215863808"
                 },
                 {
                     "name": "M2m",
                     "fach_lang": "Mathematik",
                     "stufe": 2,
                     "lehrer": "SCHW",
-                    "klassen": [
-                        "H_1M"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -3740,17 +3215,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "16106127374",
-                    "bitmask_binary": "000000000000000000000000001111000000000000000000000000001110"
+                    "bitmask": "16106127374"
                 },
                 {
                     "name": "M2p",
                     "fach_lang": "Mathematik",
                     "stufe": 2,
                     "lehrer": "JARE",
-                    "klassen": [
-                        "2P"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -3764,8 +3235,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "504403158265495552",
-                    "bitmask_binary": "011100000000000000000000000000000000000000000000000000000000"
+                    "bitmask": "504403158265495552"
                 }
             ],
             "3": [
@@ -3774,9 +3244,6 @@
                     "fach_lang": "Mathematik",
                     "stufe": 3,
                     "lehrer": "WALM",
-                    "klassen": [
-                        "3D"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -3800,17 +3267,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "4222124902318080",
-                    "bitmask_binary": "000000001111000000000000000000001111000000000000000000000000"
+                    "bitmask": "4222124902318080"
                 },
                 {
                     "name": "M3m",
                     "fach_lang": "Mathematik",
                     "stufe": 3,
                     "lehrer": "SCHW",
-                    "klassen": [
-                        "H_1M"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -3834,17 +3297,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "16106127374",
-                    "bitmask_binary": "000000000000000000000000001111000000000000000000000000001110"
+                    "bitmask": "16106127374"
                 },
                 {
                     "name": "M3s",
                     "fach_lang": "Mathematik",
                     "stufe": 3,
                     "lehrer": "JARE",
-                    "klassen": [
-                        "3S"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -3858,8 +3317,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "1030792151040",
-                    "bitmask_binary": "000000000000000000001111000000000000000000000000000000000000"
+                    "bitmask": "1030792151040"
                 }
             ],
             "4": [
@@ -3868,9 +3326,6 @@
                     "fach_lang": "Mathematik",
                     "stufe": 4,
                     "lehrer": "SCHW",
-                    "klassen": [
-                        "4A"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -3889,17 +3344,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "52777564766208",
-                    "bitmask_binary": "000000000000001100000000000000111100000000000000000000000000"
+                    "bitmask": "52777564766208"
                 },
                 {
                     "name": "M4b",
                     "fach_lang": "Mathematik",
                     "stufe": 4,
                     "lehrer": "PRAC",
-                    "klassen": [
-                        "4B"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -3918,17 +3369,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "54043195529428992",
-                    "bitmask_binary": "000011000000000000000000000000000000000011110000000000000000"
+                    "bitmask": "54043195529428992"
                 },
                 {
                     "name": "M4p",
                     "fach_lang": "Mathematik",
                     "stufe": 4,
                     "lehrer": "HAUT",
-                    "klassen": [
-                        "4P"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -3942,8 +3389,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "30064771072",
-                    "bitmask_binary": "000000000000000000000000011100000000000000000000000000000000"
+                    "bitmask": "30064771072"
                 }
             ],
             "5": [
@@ -3952,9 +3398,6 @@
                     "fach_lang": "Mathematik",
                     "stufe": 5,
                     "lehrer": "WALM",
-                    "klassen": [
-                        "5D"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -3973,17 +3416,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "270215977642426368",
-                    "bitmask_binary": "001111000000000000000000000000000000000000110000000000000000"
+                    "bitmask": "270215977642426368"
                 },
                 {
                     "name": "M5k",
                     "fach_lang": "Mathematik",
                     "stufe": 5,
                     "lehrer": "ZANG",
-                    "klassen": [
-                        "5K"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -3997,17 +3436,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "3221226240",
-                    "bitmask_binary": "000000000000000000000000000011000000000000000000001100000000"
+                    "bitmask": "3221226240"
                 },
                 {
                     "name": "M5s",
                     "fach_lang": "Mathematik",
                     "stufe": 5,
                     "lehrer": "SCLI",
-                    "klassen": [
-                        "5S"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -4021,8 +3456,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "30786325577728",
-                    "bitmask_binary": "000000000000000111000000000000000000000000000000000000000000"
+                    "bitmask": "30786325577728"
                 }
             ],
             "6": [
@@ -4031,9 +3465,6 @@
                     "fach_lang": "Mathematik",
                     "stufe": 6,
                     "lehrer": "WALM",
-                    "klassen": [
-                        "6A"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -4057,17 +3488,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "13527291556577280",
-                    "bitmask_binary": "000000110000000011110000000000000000000000001100000000000000"
+                    "bitmask": "13527291556577280"
                 },
                 {
                     "name": "M6b",
                     "fach_lang": "Mathematik",
                     "stufe": 6,
                     "lehrer": "WALM",
-                    "klassen": [
-                        "6B"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -4091,17 +3518,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "1034818682880",
-                    "bitmask_binary": "000000000000000000001111000011110000000000000000000000000000"
+                    "bitmask": "1034818682880"
                 },
                 {
                     "name": "M6m",
                     "fach_lang": "Mathematik",
                     "stufe": 6,
                     "lehrer": "GSCD",
-                    "klassen": [
-                        "H_3M"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -4125,17 +3548,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "251659136",
-                    "bitmask_binary": "000000000000000000000000000000001111000000000000001110000000"
+                    "bitmask": "251659136"
                 },
                 {
                     "name": "M6p",
                     "fach_lang": "Mathematik",
                     "stufe": 6,
                     "lehrer": "PRAC",
-                    "klassen": [
-                        "6P"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -4149,8 +3568,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "251658240",
-                    "bitmask_binary": "000000000000000000000000000000001111000000000000000000000000"
+                    "bitmask": "251658240"
                 }
             ],
             "7": [
@@ -4159,9 +3577,6 @@
                     "fach_lang": "Mathematik",
                     "stufe": 7,
                     "lehrer": "ZANG",
-                    "klassen": [
-                        "7D"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -4180,17 +3595,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "824633720847",
-                    "bitmask_binary": "000000000000000000001100000000000000000000000000000000001111"
+                    "bitmask": "824633720847"
                 },
                 {
                     "name": "M7e",
                     "fach_lang": "Mathematik",
                     "stufe": 7,
                     "lehrer": "SCLI",
-                    "klassen": [
-                        "7E"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -4209,17 +3620,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "216172786140315648",
-                    "bitmask_binary": "001100000000000000000000000011110000000000000000000000000000"
+                    "bitmask": "216172786140315648"
                 },
                 {
                     "name": "M7m",
                     "fach_lang": "Mathematik",
                     "stufe": 7,
                     "lehrer": "GSCD",
-                    "klassen": [
-                        "H_3M"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -4243,17 +3650,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "251659136",
-                    "bitmask_binary": "000000000000000000000000000000001111000000000000001110000000"
+                    "bitmask": "251659136"
                 },
                 {
                     "name": "M7s",
                     "fach_lang": "Mathematik",
                     "stufe": 7,
                     "lehrer": "HAUT",
-                    "klassen": [
-                        "7S"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -4267,8 +3670,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "3848290697216",
-                    "bitmask_binary": "000000000000000000111000000000000000000000000000000000000000"
+                    "bitmask": "3848290697216"
                 }
             ],
             "8": [
@@ -4277,9 +3679,6 @@
                     "fach_lang": "Mathematik",
                     "stufe": 8,
                     "lehrer": "ZANG",
-                    "klassen": [
-                        "8A"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -4308,17 +3707,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "4225423185543408",
-                    "bitmask_binary": "000000001111000000110000000000000000000000000000000011110000"
+                    "bitmask": "4225423185543408"
                 },
                 {
                     "name": "M8b",
                     "fach_lang": "Mathematik",
                     "stufe": 8,
                     "lehrer": "JARE",
-                    "klassen": [
-                        "8B"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -4347,17 +3742,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "3302562398208",
-                    "bitmask_binary": "000000000000000000110000000011110000000011110000000000000000"
+                    "bitmask": "3302562398208"
                 },
                 {
                     "name": "M8p",
                     "fach_lang": "Mathematik",
                     "stufe": 8,
                     "lehrer": "PRAC",
-                    "klassen": [
-                        "8P"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -4376,8 +3767,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "15762601917022208",
-                    "bitmask_binary": "000000111000000000000000000011000000000000000000000000000000"
+                    "bitmask": "15762601917022208"
                 }
             ]
         },
@@ -4388,10 +3778,6 @@
                     "fach_lang": "Musik",
                     "stufe": 1,
                     "lehrer": "HOED",
-                    "klassen": [
-                        "7D",
-                        "7E"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -4405,17 +3791,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "983040",
-                    "bitmask_binary": "000000000000000000000000000000000000000011110000000000000000"
+                    "bitmask": "983040"
                 },
                 {
                     "name": "MU1s",
                     "fach_lang": "Musik",
                     "stufe": 1,
                     "lehrer": "HOED",
-                    "klassen": [
-                        "7S"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -4424,8 +3806,175 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "3145728",
-                    "bitmask_binary": "000000000000000000000000000000000000001100000000000000000000"
+                    "bitmask": "3145728"
+                }
+            ]
+        },
+        "Ökonomie": {
+            "1": [
+                {
+                    "name": "ÖKO1d",
+                    "fach_lang": "Ökonomie",
+                    "stufe": 1,
+                    "lehrer": "LEPL",
+                    "schedule": [
+                        {
+                            "tag": 0,
+                            "beginn": "17:55",
+                            "ist_halbe_stunde": false
+                        },
+                        {
+                            "tag": 0,
+                            "beginn": "18:45",
+                            "ist_halbe_stunde": false
+                        }
+                    ],
+                    "pflicht": "ja",
+                    "bitmask": "270215977642229760"
+                },
+                {
+                    "name": "ÖKO1e",
+                    "fach_lang": "Ökonomie",
+                    "stufe": 1,
+                    "lehrer": "FOIS",
+                    "schedule": [
+                        {
+                            "tag": 0,
+                            "beginn": "19:30",
+                            "ist_halbe_stunde": false
+                        }
+                    ],
+                    "pflicht": "ja",
+                    "bitmask": "13510798882111488"
+                },
+                {
+                    "name": "ÖKO1s",
+                    "fach_lang": "Ökonomie",
+                    "stufe": 1,
+                    "lehrer": "LEPL",
+                    "schedule": [
+                        {
+                            "tag": 3,
+                            "beginn": "18:45",
+                            "ist_halbe_stunde": false
+                        }
+                    ],
+                    "pflicht": "ja",
+                    "bitmask": "786432"
+                }
+            ],
+            "2": [
+                {
+                    "name": "ÖKO2d",
+                    "fach_lang": "Ökonomie",
+                    "stufe": 2,
+                    "lehrer": "SCHL",
+                    "schedule": [
+                        {
+                            "tag": 1,
+                            "beginn": "17:55",
+                            "ist_halbe_stunde": false
+                        },
+                        {
+                            "tag": 1,
+                            "beginn": "18:45",
+                            "ist_halbe_stunde": false
+                        }
+                    ],
+                    "pflicht": "ja",
+                    "bitmask": "65970697666560"
+                },
+                {
+                    "name": "ÖKO2e",
+                    "fach_lang": "Ökonomie",
+                    "stufe": 2,
+                    "lehrer": "NEUG",
+                    "schedule": [
+                        {
+                            "tag": 1,
+                            "beginn": "19:30",
+                            "ist_halbe_stunde": false
+                        },
+                        {
+                            "tag": 2,
+                            "beginn": "17:55",
+                            "ist_halbe_stunde": false
+                        }
+                    ],
+                    "pflicht": "ja",
+                    "bitmask": "3311419785216"
+                },
+                {
+                    "name": "ÖKO2s",
+                    "fach_lang": "Ökonomie",
+                    "stufe": 2,
+                    "lehrer": "NEUG",
+                    "schedule": [
+                        {
+                            "tag": 1,
+                            "beginn": "17:10",
+                            "ist_halbe_stunde": false
+                        }
+                    ],
+                    "pflicht": "ja",
+                    "bitmask": "211106232532992"
+                }
+            ],
+            "3": [
+                {
+                    "name": "ÖKO3a",
+                    "fach_lang": "Ökonomie",
+                    "stufe": 3,
+                    "lehrer": "NEUG",
+                    "schedule": [
+                        {
+                            "tag": 1,
+                            "beginn": "18:45",
+                            "ist_halbe_stunde": false
+                        },
+                        {
+                            "tag": 2,
+                            "beginn": "20:25",
+                            "ist_halbe_stunde": false
+                        }
+                    ],
+                    "pflicht": "ja",
+                    "bitmask": "13194340859904"
+                },
+                {
+                    "name": "ÖKO3b",
+                    "fach_lang": "Ökonomie",
+                    "stufe": 3,
+                    "lehrer": "SCHL",
+                    "schedule": [
+                        {
+                            "tag": 0,
+                            "beginn": "18:45",
+                            "ist_halbe_stunde": false
+                        },
+                        {
+                            "tag": 0,
+                            "beginn": "19:30",
+                            "ist_halbe_stunde": false
+                        }
+                    ],
+                    "pflicht": "ja",
+                    "bitmask": "67553994410557440"
+                },
+                {
+                    "name": "ÖKO3p",
+                    "fach_lang": "Ökonomie",
+                    "stufe": 3,
+                    "lehrer": "SCHL",
+                    "schedule": [
+                        {
+                            "tag": 2,
+                            "beginn": "19:30",
+                            "ist_halbe_stunde": false
+                        }
+                    ],
+                    "pflicht": "ja",
+                    "bitmask": "805306368"
                 }
             ]
         },
@@ -4436,9 +3985,6 @@
                     "fach_lang": "Physik",
                     "stufe": 1,
                     "lehrer": "PRAC",
-                    "klassen": [
-                        "4A"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -4457,17 +4003,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "16492677562368",
-                    "bitmask_binary": "000000000000000011110000000000000000001100000000000000000000"
+                    "bitmask": "16492677562368"
                 },
                 {
                     "name": "PH1b",
                     "fach_lang": "Physik",
                     "stufe": 1,
                     "lehrer": "HAUT",
-                    "klassen": [
-                        "4B"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -4486,17 +4028,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "206410088448",
-                    "bitmask_binary": "000000000000000000000011000000001111000000000000000000000000"
+                    "bitmask": "206410088448"
                 },
                 {
                     "name": "PH1p",
                     "fach_lang": "Physik",
                     "stufe": 1,
                     "lehrer": "HAUT",
-                    "klassen": [
-                        "4P"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -4510,8 +4048,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "63050394783186944",
-                    "bitmask_binary": "000011100000000000000000000000000000000000000000000000000000"
+                    "bitmask": "63050394783186944"
                 }
             ],
             "2": [
@@ -4520,9 +4057,6 @@
                     "fach_lang": "Physik",
                     "stufe": 2,
                     "lehrer": "HAUT",
-                    "klassen": [
-                        "5D"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -4541,17 +4075,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "52777364226048",
-                    "bitmask_binary": "000000000000001100000000000000110000000011000000000000000000"
+                    "bitmask": "52777364226048"
                 },
                 {
                     "name": "PH2k",
                     "fach_lang": "Physik",
                     "stufe": 2,
                     "lehrer": "GSCD",
-                    "klassen": [
-                        "5K"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -4565,17 +4095,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "12884901936",
-                    "bitmask_binary": "000000000000000000000000001100000000000000000000000000110000"
+                    "bitmask": "12884901936"
                 },
                 {
                     "name": "PH2s",
                     "fach_lang": "Physik",
                     "stufe": 2,
                     "lehrer": "GSCD",
-                    "klassen": [
-                        "5S"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -4589,8 +4115,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "7340032",
-                    "bitmask_binary": "000000000000000000000000000000000000011100000000000000000000"
+                    "bitmask": "7340032"
                 }
             ],
             "3": [
@@ -4599,9 +4124,6 @@
                     "fach_lang": "Physik",
                     "stufe": 3,
                     "lehrer": "PRAC",
-                    "klassen": [
-                        "6A"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -4620,17 +4142,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "1030792163328",
-                    "bitmask_binary": "000000000000000000001111000000000000000000000011000000000000"
+                    "bitmask": "1030792163328"
                 },
                 {
                     "name": "PH3b",
                     "fach_lang": "Physik",
                     "stufe": 3,
                     "lehrer": "GSCD",
-                    "klassen": [
-                        "6B"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -4649,17 +4167,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "61443",
-                    "bitmask_binary": "000000000000000000000000000000000000000000001111000000000011"
+                    "bitmask": "61443"
                 },
                 {
                     "name": "PH3p",
                     "fach_lang": "Physik",
                     "stufe": 3,
                     "lehrer": "GSCD",
-                    "klassen": [
-                        "6P"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -4673,8 +4187,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "1879048192",
-                    "bitmask_binary": "000000000000000000000000000001110000000000000000000000000000"
+                    "bitmask": "1879048192"
                 }
             ]
         },
@@ -4685,9 +4198,6 @@
                     "fach_lang": "Psychologie und Philosophie",
                     "stufe": 1,
                     "lehrer": "STAI",
-                    "klassen": [
-                        "6A"
-                    ],
                     "schedule": [
                         {
                             "tag": 4,
@@ -4701,17 +4211,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "15",
-                    "bitmask_binary": "000000000000000000000000000000000000000000000000000000001111"
+                    "bitmask": "15"
                 },
                 {
                     "name": "PP1b",
                     "fach_lang": "Psychologie und Philosophie",
                     "stufe": 1,
                     "lehrer": "PERK",
-                    "klassen": [
-                        "6B"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -4725,17 +4231,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "4222124650659840",
-                    "bitmask_binary": "000000001111000000000000000000000000000000000000000000000000"
+                    "bitmask": "4222124650659840"
                 },
                 {
                     "name": "PP1p",
                     "fach_lang": "Psychologie und Philosophie",
                     "stufe": 1,
                     "lehrer": "STAI",
-                    "klassen": [
-                        "6P"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -4744,8 +4246,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "13510798882111488",
-                    "bitmask_binary": "000000110000000000000000000000000000000000000000000000000000"
+                    "bitmask": "13510798882111488"
                 }
             ],
             "2": [
@@ -4754,9 +4255,6 @@
                     "fach_lang": "Psychologie und Philosophie",
                     "stufe": 2,
                     "lehrer": "STAI",
-                    "klassen": [
-                        "7D"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -4775,17 +4273,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "844425181790208",
-                    "bitmask_binary": "000000000011000000000000000000001111000000000000000000000000"
+                    "bitmask": "844425181790208"
                 },
                 {
                     "name": "PP2e",
                     "fach_lang": "Psychologie und Philosophie",
                     "stufe": 2,
                     "lehrer": "PERK",
-                    "klassen": [
-                        "7E"
-                    ],
                     "schedule": [
                         {
                             "tag": 0,
@@ -4804,17 +4298,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "54043195528446192",
-                    "bitmask_binary": "000011000000000000000000000000000000000000000000000011110000"
+                    "bitmask": "54043195528446192"
                 },
                 {
                     "name": "PP2s",
                     "fach_lang": "Psychologie und Philosophie",
                     "stufe": 2,
                     "lehrer": "PERK",
-                    "klassen": [
-                        "7S"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -4828,8 +4318,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "28672",
-                    "bitmask_binary": "000000000000000000000000000000000000000000000111000000000000"
+                    "bitmask": "28672"
                 }
             ]
         },
@@ -4840,11 +4329,6 @@
                     "fach_lang": "Religion",
                     "stufe": 1,
                     "lehrer": "REDS",
-                    "klassen": [
-                        "1D",
-                        "1E",
-                        "1S"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -4853,19 +4337,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "196608",
-                    "bitmask_binary": "000000000000000000000000000000000000000000110000000000000000"
+                    "bitmask": "196608"
                 },
                 {
                     "name": "RuE1tF",
                     "fach_lang": "Religion",
                     "stufe": 1,
                     "lehrer": "REDS",
-                    "klassen": [
-                        "1D",
-                        "1E",
-                        "1S"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -4874,19 +4352,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "196608",
-                    "bitmask_binary": "000000000000000000000000000000000000000000110000000000000000"
+                    "bitmask": "196608"
                 },
                 {
                     "name": "RuE1u",
                     "fach_lang": "Religion",
                     "stufe": 1,
                     "lehrer": "PERK",
-                    "klassen": [
-                        "1D",
-                        "1E",
-                        "1S"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -4895,19 +4367,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "196608",
-                    "bitmask_binary": "000000000000000000000000000000000000000000110000000000000000"
+                    "bitmask": "196608"
                 },
                 {
                     "name": "RuE1uF",
                     "fach_lang": "Religion",
                     "stufe": 1,
                     "lehrer": "PERK",
-                    "klassen": [
-                        "1D",
-                        "1E",
-                        "1S"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -4916,8 +4382,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "196608",
-                    "bitmask_binary": "000000000000000000000000000000000000000000110000000000000000"
+                    "bitmask": "196608"
                 }
             ],
             "2": [
@@ -4926,10 +4391,6 @@
                     "fach_lang": "Religion",
                     "stufe": 2,
                     "lehrer": "REDS",
-                    "klassen": [
-                        "3D",
-                        "3S"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -4938,18 +4399,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "786432",
-                    "bitmask_binary": "000000000000000000000000000000000000000011000000000000000000"
+                    "bitmask": "786432"
                 },
                 {
                     "name": "RuE2tF",
                     "fach_lang": "Religion",
                     "stufe": 2,
                     "lehrer": "REDS",
-                    "klassen": [
-                        "3D",
-                        "3S"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -4958,18 +4414,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "786432",
-                    "bitmask_binary": "000000000000000000000000000000000000000011000000000000000000"
+                    "bitmask": "786432"
                 },
                 {
                     "name": "RuE2u",
                     "fach_lang": "Religion",
                     "stufe": 2,
                     "lehrer": "PERK",
-                    "klassen": [
-                        "3D",
-                        "3S"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -4978,18 +4429,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "786432",
-                    "bitmask_binary": "000000000000000000000000000000000000000011000000000000000000"
+                    "bitmask": "786432"
                 },
                 {
                     "name": "RuE2uF",
                     "fach_lang": "Religion",
                     "stufe": 2,
                     "lehrer": "PERK",
-                    "klassen": [
-                        "3D",
-                        "3S"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -4998,8 +4444,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "786432",
-                    "bitmask_binary": "000000000000000000000000000000000000000011000000000000000000"
+                    "bitmask": "786432"
                 }
             ],
             "3": [
@@ -5008,11 +4453,6 @@
                     "fach_lang": "Religion",
                     "stufe": 3,
                     "lehrer": "REDS",
-                    "klassen": [
-                        "6A",
-                        "6B",
-                        "6P"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -5021,19 +4461,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "51539607552",
-                    "bitmask_binary": "000000000000000000000000110000000000000000000000000000000000"
+                    "bitmask": "51539607552"
                 },
                 {
                     "name": "RuE3qF",
                     "fach_lang": "Religion",
                     "stufe": 3,
                     "lehrer": "REDS",
-                    "klassen": [
-                        "6A",
-                        "6B",
-                        "6P"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -5042,19 +4476,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "51539607552",
-                    "bitmask_binary": "000000000000000000000000110000000000000000000000000000000000"
+                    "bitmask": "51539607552"
                 },
                 {
                     "name": "RuE3r",
                     "fach_lang": "Religion",
                     "stufe": 3,
                     "lehrer": "PERK",
-                    "klassen": [
-                        "6A",
-                        "6B",
-                        "6P"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -5063,19 +4491,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "51539607552",
-                    "bitmask_binary": "000000000000000000000000110000000000000000000000000000000000"
+                    "bitmask": "51539607552"
                 },
                 {
                     "name": "RuE3rF",
                     "fach_lang": "Religion",
                     "stufe": 3,
                     "lehrer": "PERK",
-                    "klassen": [
-                        "6A",
-                        "6B",
-                        "6P"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -5084,8 +4506,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "51539607552",
-                    "bitmask_binary": "000000000000000000000000110000000000000000000000000000000000"
+                    "bitmask": "51539607552"
                 }
             ],
             "4": [
@@ -5094,11 +4515,6 @@
                     "fach_lang": "Religion",
                     "stufe": 4,
                     "lehrer": "REDS",
-                    "klassen": [
-                        "8A",
-                        "8B",
-                        "8P"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -5107,19 +4523,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "12884901888",
-                    "bitmask_binary": "000000000000000000000000001100000000000000000000000000000000"
+                    "bitmask": "12884901888"
                 },
                 {
                     "name": "RuE4qF",
                     "fach_lang": "Religion",
                     "stufe": 4,
                     "lehrer": "REDS",
-                    "klassen": [
-                        "8A",
-                        "8B",
-                        "8P"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -5128,19 +4538,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "12884901888",
-                    "bitmask_binary": "000000000000000000000000001100000000000000000000000000000000"
+                    "bitmask": "12884901888"
                 },
                 {
                     "name": "RuE4r",
                     "fach_lang": "Religion",
                     "stufe": 4,
                     "lehrer": "PERK",
-                    "klassen": [
-                        "8A",
-                        "8B",
-                        "8P"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -5149,19 +4553,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "12884901888",
-                    "bitmask_binary": "000000000000000000000000001100000000000000000000000000000000"
+                    "bitmask": "12884901888"
                 },
                 {
                     "name": "RuE4rF",
                     "fach_lang": "Religion",
                     "stufe": 4,
                     "lehrer": "PERK",
-                    "klassen": [
-                        "8A",
-                        "8B",
-                        "8P"
-                    ],
                     "schedule": [
                         {
                             "tag": 2,
@@ -5170,8 +4568,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "12884901888",
-                    "bitmask_binary": "000000000000000000000000001100000000000000000000000000000000"
+                    "bitmask": "12884901888"
                 }
             ]
         },
@@ -5182,9 +4579,6 @@
                     "fach_lang": "Wissenschaftliches Arbeiten",
                     "stufe": 1,
                     "lehrer": "SCHL",
-                    "klassen": [
-                        "5D"
-                    ],
                     "schedule": [
                         {
                             "tag": 3,
@@ -5193,18 +4587,13 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "3145728",
-                    "bitmask_binary": "000000000000000000000000000000000000001100000000000000000000"
+                    "bitmask": "3145728"
                 },
                 {
                     "name": "WA1s",
                     "fach_lang": "Wissenschaftliches Arbeiten",
                     "stufe": 1,
                     "lehrer": "SCHL",
-                    "klassen": [
-                        "5K",
-                        "5S"
-                    ],
                     "schedule": [
                         {
                             "tag": 1,
@@ -5213,212 +4602,7 @@
                         }
                     ],
                     "pflicht": "ja",
-                    "bitmask": "3298534883328",
-                    "bitmask_binary": "000000000000000000110000000000000000000000000000000000000000"
-                }
-            ]
-        },
-        "Ökonomie": {
-            "1": [
-                {
-                    "name": "ÖKO1d",
-                    "fach_lang": "Ökonomie",
-                    "stufe": 1,
-                    "lehrer": "LEPL",
-                    "klassen": [
-                        "7D"
-                    ],
-                    "schedule": [
-                        {
-                            "tag": 0,
-                            "beginn": "17:55",
-                            "ist_halbe_stunde": false
-                        },
-                        {
-                            "tag": 0,
-                            "beginn": "18:45",
-                            "ist_halbe_stunde": false
-                        }
-                    ],
-                    "pflicht": "ja",
-                    "bitmask": "270215977642229760",
-                    "bitmask_binary": "001111000000000000000000000000000000000000000000000000000000"
-                },
-                {
-                    "name": "ÖKO1e",
-                    "fach_lang": "Ökonomie",
-                    "stufe": 1,
-                    "lehrer": "FOIS",
-                    "klassen": [
-                        "7E"
-                    ],
-                    "schedule": [
-                        {
-                            "tag": 0,
-                            "beginn": "19:30",
-                            "ist_halbe_stunde": false
-                        }
-                    ],
-                    "pflicht": "ja",
-                    "bitmask": "13510798882111488",
-                    "bitmask_binary": "000000110000000000000000000000000000000000000000000000000000"
-                },
-                {
-                    "name": "ÖKO1s",
-                    "fach_lang": "Ökonomie",
-                    "stufe": 1,
-                    "lehrer": "LEPL",
-                    "klassen": [
-                        "7S"
-                    ],
-                    "schedule": [
-                        {
-                            "tag": 3,
-                            "beginn": "18:45",
-                            "ist_halbe_stunde": false
-                        }
-                    ],
-                    "pflicht": "ja",
-                    "bitmask": "786432",
-                    "bitmask_binary": "000000000000000000000000000000000000000011000000000000000000"
-                }
-            ],
-            "2": [
-                {
-                    "name": "ÖKO2d",
-                    "fach_lang": "Ökonomie",
-                    "stufe": 2,
-                    "lehrer": "SCHL",
-                    "klassen": [
-                        "7D"
-                    ],
-                    "schedule": [
-                        {
-                            "tag": 1,
-                            "beginn": "17:55",
-                            "ist_halbe_stunde": false
-                        },
-                        {
-                            "tag": 1,
-                            "beginn": "18:45",
-                            "ist_halbe_stunde": false
-                        }
-                    ],
-                    "pflicht": "ja",
-                    "bitmask": "65970697666560",
-                    "bitmask_binary": "000000000000001111000000000000000000000000000000000000000000"
-                },
-                {
-                    "name": "ÖKO2e",
-                    "fach_lang": "Ökonomie",
-                    "stufe": 2,
-                    "lehrer": "NEUG",
-                    "klassen": [
-                        "7E"
-                    ],
-                    "schedule": [
-                        {
-                            "tag": 1,
-                            "beginn": "19:30",
-                            "ist_halbe_stunde": false
-                        },
-                        {
-                            "tag": 2,
-                            "beginn": "17:55",
-                            "ist_halbe_stunde": false
-                        }
-                    ],
-                    "pflicht": "ja",
-                    "bitmask": "3311419785216",
-                    "bitmask_binary": "000000000000000000110000001100000000000000000000000000000000"
-                },
-                {
-                    "name": "ÖKO2s",
-                    "fach_lang": "Ökonomie",
-                    "stufe": 2,
-                    "lehrer": "NEUG",
-                    "klassen": [
-                        "7S"
-                    ],
-                    "schedule": [
-                        {
-                            "tag": 1,
-                            "beginn": "17:10",
-                            "ist_halbe_stunde": false
-                        }
-                    ],
-                    "pflicht": "ja",
-                    "bitmask": "211106232532992",
-                    "bitmask_binary": "000000000000110000000000000000000000000000000000000000000000"
-                }
-            ],
-            "3": [
-                {
-                    "name": "ÖKO3a",
-                    "fach_lang": "Ökonomie",
-                    "stufe": 3,
-                    "lehrer": "NEUG",
-                    "klassen": [
-                        "8A"
-                    ],
-                    "schedule": [
-                        {
-                            "tag": 1,
-                            "beginn": "18:45",
-                            "ist_halbe_stunde": false
-                        },
-                        {
-                            "tag": 2,
-                            "beginn": "20:25",
-                            "ist_halbe_stunde": false
-                        }
-                    ],
-                    "pflicht": "ja",
-                    "bitmask": "13194340859904",
-                    "bitmask_binary": "000000000000000011000000000000001100000000000000000000000000"
-                },
-                {
-                    "name": "ÖKO3b",
-                    "fach_lang": "Ökonomie",
-                    "stufe": 3,
-                    "lehrer": "SCHL",
-                    "klassen": [
-                        "8B"
-                    ],
-                    "schedule": [
-                        {
-                            "tag": 0,
-                            "beginn": "18:45",
-                            "ist_halbe_stunde": false
-                        },
-                        {
-                            "tag": 0,
-                            "beginn": "19:30",
-                            "ist_halbe_stunde": false
-                        }
-                    ],
-                    "pflicht": "ja",
-                    "bitmask": "67553994410557440",
-                    "bitmask_binary": "000011110000000000000000000000000000000000000000000000000000"
-                },
-                {
-                    "name": "ÖKO3p",
-                    "fach_lang": "Ökonomie",
-                    "stufe": 3,
-                    "lehrer": "SCHL",
-                    "klassen": [
-                        "8P"
-                    ],
-                    "schedule": [
-                        {
-                            "tag": 2,
-                            "beginn": "19:30",
-                            "ist_halbe_stunde": false
-                        }
-                    ],
-                    "pflicht": "ja",
-                    "bitmask": "805306368",
-                    "bitmask_binary": "000000000000000000000000000000110000000000000000000000000000"
+                    "bitmask": "3298534883328"
                 }
             ]
         }
@@ -5430,9 +4614,6 @@
                 "fach_lang": "Deutsch als Zweitsprache",
                 "stufe": 0,
                 "lehrer": "KOGM",
-                "klassen": [
-                    "1D"
-                ],
                 "schedule": [
                     {
                         "tag": 1,
@@ -5446,17 +4627,13 @@
                     }
                 ],
                 "pflicht": "nein",
-                "bitmask": "52776558134016",
-                "bitmask_binary": "000000000000001100000000000000000000000000000000001100000000"
+                "bitmask": "52776558134016"
             },
             {
                 "name": "DAZ1e",
                 "fach_lang": "Deutsch als Zweitsprache",
                 "stufe": 0,
                 "lehrer": "BENE",
-                "klassen": [
-                    "1D"
-                ],
                 "schedule": [
                     {
                         "tag": 2,
@@ -5470,17 +4647,13 @@
                     }
                 ],
                 "pflicht": "nein",
-                "bitmask": "51552190464",
-                "bitmask_binary": "000000000000000000000000110000000000110000000000000000000000"
+                "bitmask": "51552190464"
             },
             {
                 "name": "DAZ2a",
                 "fach_lang": "Deutsch als Zweitsprache",
                 "stufe": 0,
                 "lehrer": "KOGM",
-                "klassen": [
-                    "H_SS"
-                ],
                 "schedule": [
                     {
                         "tag": 1,
@@ -5494,76 +4667,7 @@
                     }
                 ],
                 "pflicht": "nein",
-                "bitmask": "211106232536064",
-                "bitmask_binary": "000000000000110000000000000000000000000000000000110000000000"
-            }
-        ],
-        "Persönlichkeitsbildung und Lerntechnik": [
-            {
-                "name": "PBLT1d",
-                "fach_lang": "Persönlichkeitsbildung und Lerntechnik",
-                "stufe": 0,
-                "lehrer": "PERK",
-                "klassen": [
-                    "1D"
-                ],
-                "schedule": [
-                    {
-                        "tag": 2,
-                        "beginn": "19:30",
-                        "ist_halbe_stunde": false
-                    }
-                ],
-                "pflicht": "nein",
-                "bitmask": "805306368",
-                "bitmask_binary": "000000000000000000000000000000110000000000000000000000000000"
-            }
-        ],
-        "Schreibwerkstatt": [
-            {
-                "name": "SWd",
-                "fach_lang": "Schreibwerkstatt",
-                "stufe": 0,
-                "lehrer": "BENE",
-                "klassen": [
-                    "H_SS"
-                ],
-                "schedule": [
-                    {
-                        "tag": 0,
-                        "beginn": "17:10",
-                        "ist_halbe_stunde": false
-                    }
-                ],
-                "pflicht": "nein",
-                "bitmask": "864691128455135232",
-                "bitmask_binary": "110000000000000000000000000000000000000000000000000000000000"
-            }
-        ],
-        "Unternehmensführerschein": [
-            {
-                "name": "UFSS",
-                "fach_lang": "Unternehmensführerschein",
-                "stufe": 0,
-                "lehrer": "VERA",
-                "klassen": [
-                    "H_SS"
-                ],
-                "schedule": [
-                    {
-                        "tag": 3,
-                        "beginn": "17:10",
-                        "ist_halbe_stunde": false
-                    },
-                    {
-                        "tag": 3,
-                        "beginn": "17:55",
-                        "ist_halbe_stunde": false
-                    }
-                ],
-                "pflicht": "nein",
-                "bitmask": "15728640",
-                "bitmask_binary": "000000000000000000000000000000000000111100000000000000000000"
+                "bitmask": "211106232536064"
             }
         ],
         "freies Philosophieren": [
@@ -5572,9 +4676,6 @@
                 "fach_lang": "freies Philosophieren",
                 "stufe": 0,
                 "lehrer": "BAUF",
-                "klassen": [
-                    "H_SS"
-                ],
                 "schedule": [
                     {
                         "tag": 3,
@@ -5583,8 +4684,63 @@
                     }
                 ],
                 "pflicht": "nein",
-                "bitmask": "12582912",
-                "bitmask_binary": "000000000000000000000000000000000000110000000000000000000000"
+                "bitmask": "12582912"
+            }
+        ],
+        "Persönlichkeitsbildung und Lerntechnik": [
+            {
+                "name": "PBLT1d",
+                "fach_lang": "Persönlichkeitsbildung und Lerntechnik",
+                "stufe": 0,
+                "lehrer": "PERK",
+                "schedule": [
+                    {
+                        "tag": 2,
+                        "beginn": "19:30",
+                        "ist_halbe_stunde": false
+                    }
+                ],
+                "pflicht": "nein",
+                "bitmask": "805306368"
+            }
+        ],
+        "Schreibwerkstatt": [
+            {
+                "name": "SWd",
+                "fach_lang": "Schreibwerkstatt",
+                "stufe": 0,
+                "lehrer": "BENE",
+                "schedule": [
+                    {
+                        "tag": 0,
+                        "beginn": "17:10",
+                        "ist_halbe_stunde": false
+                    }
+                ],
+                "pflicht": "nein",
+                "bitmask": "864691128455135232"
+            }
+        ],
+        "Unternehmensführerschein": [
+            {
+                "name": "UFSS",
+                "fach_lang": "Unternehmensführerschein",
+                "stufe": 0,
+                "lehrer": "VERA",
+                "schedule": [
+                    {
+                        "tag": 3,
+                        "beginn": "17:10",
+                        "ist_halbe_stunde": false
+                    },
+                    {
+                        "tag": 3,
+                        "beginn": "17:55",
+                        "ist_halbe_stunde": false
+                    }
+                ],
+                "pflicht": "nein",
+                "bitmask": "15728640"
             }
         ]
     }
