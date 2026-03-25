@@ -25,13 +25,14 @@ body { font-family: sans-serif; margin: 0; background: #f1f5f9; height: 100dvh; 
     border-radius: 4px; 
     margin-top: 5px; 
     font-weight: bold; 
-    transition: background 0.2s;
+    /*transition: background 0.2s;*/
 }
 
 /* Ebene 1: Hauptkategorien (Pflichtfächer / Freigegenstände) */
 .main-cat { 
+       font-size: 0.9rem;
     background: #e2e8f0; 
-    border-bottom: 2px solid var(--primary);
+    border-bottom: 4px solid var(--primary);
 }
 
 /* Ebene 2: Fächer (z.B. Mathematik) */
@@ -40,6 +41,12 @@ body { font-family: sans-serif; margin: 0; background: #f1f5f9; height: 100dvh; 
     font-size: 0.9rem;
     margin-left: 5px;
     width: calc(100% - 5px);
+}
+
+/* NEU: Geänderte Hintergrundfarbe, wenn Ebene 2 geöffnet ist */
+.accordion-content .accordion-header.active {
+    background: #cee3fa;  /* Helles Blau, passend zum Rest deines Themes */
+    border-left: 3px solid var(--primary);
 }
 
 /* Ebene 3: Stufen (z.B. Stufe 1) */
@@ -52,15 +59,23 @@ body { font-family: sans-serif; margin: 0; background: #f1f5f9; height: 100dvh; 
     border-left: 3px solid var(--accent);
 }
 
+/* NEU: Falls Ebene 3 geöffnet ist, bekommt sie ein eigenes leichtes Grau/Blau */
+/*
+.accordion-content .accordion-content .accordion-header.active {
+    background: #f1f5f9;
+}
+*/
+
 .accordion-content { display: none; padding-left: 5px; }
 .accordion-content.active { display: block; }
 
-.item-list { list-style: none; padding: 0; margin-left: 18px; border-left: 2px dashed var(--border); padding-left: 10px; margin-top: 5px; }
+/* Ebene 4: Die Module */
+.item-list { list-style: none; padding: 0; margin-left: 18px; border-left: 2px solid var(--border); padding-left: 10px; margin-top: 5px; }
 .item-list li { padding: 8px; margin: 2px 0; cursor: pointer; border-radius: 4px; font-size: 0.85rem; border: 1px solid transparent; position: relative; }
 .item-list li::before { content: ''; position: absolute; left: -12px; top: 16px; width: 10px; height: 2px; background: var(--border); }
 .item-list li:hover { background: #eff6ff; }
 .item-list li.selected { background: #dcfce7; border-color: var(--accent); font-weight: bold; }
-.item-list li.wildcard-active { background: #dbeafe; border-color: var(--primary); }
+.item-list li.wildcard-active { background: #dcfce7; border-color: var(--accent); }
 
 .item-list li.conflict { 
     opacity: 0.4; 

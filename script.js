@@ -321,7 +321,7 @@ function calculateCombinations() {
                 currentModules.push(m);
                 solve(depth + 1, currentModules, usedOverlaps + check.newOvl);
                 currentModules.pop();
-                if (results.length >= 1000) break; 
+                if (results.length >= 5000) break; 
             }
         }
     }
@@ -534,6 +534,7 @@ function createAccordion(title, contentCb) {
     btn.onclick = () => {
         if (!content.hasChildNodes()) content.appendChild(contentCb());
         content.classList.toggle('active');
+        btn.classList.toggle('active'); // <-- NEU: Diese Zeile fügt die Klasse zum Button hinzu
         updateSidebarUI();
     };
     wrap.appendChild(btn); wrap.appendChild(content);
@@ -605,6 +606,7 @@ function resetSchedule(skipConfirm = false) {
     fixedSelection = []; 
     wildcardRequests = []; 
     document.querySelectorAll('.accordion-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.accordion-header').forEach(el => el.classList.remove('active'));
     updateSystem(); 
 }
 
