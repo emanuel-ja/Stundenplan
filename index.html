@@ -18,9 +18,15 @@
                     </div>
                 </div>
                 <div class="sidebar-header-bottom">
-                    <input type="checkbox" id="allow-overlap-chk" onchange="toggleAllowOverlap()">
-                    <label for="allow-overlap-chk" style="font-size: 0.9rem; cursor: pointer; user-select: none;">Überschneidung zulassen</label>
-                </div>
+    <div style="display: flex; align-items: center; gap: 8px;">
+        <input type="checkbox" id="allow-overlap-chk" onchange="toggleAllowOverlap()">
+        <label for="allow-overlap-chk" style="font-size: 0.9rem; cursor: pointer; user-select: none;">Überschneidung zulassen</label>
+    </div>
+    <div style="display: flex; align-items: center; gap: 8px; margin-top: 4px;">
+        <input type="checkbox" id="only-presence-chk" onchange="toggleOnlyPresence()">
+        <label for="only-presence-chk" style="font-size: 0.9rem; cursor: pointer; user-select: none;">ohne Fernstudium</label>
+    </div>
+</div>
             </div>
             <div id="accordion-container">
                 <div class="category">

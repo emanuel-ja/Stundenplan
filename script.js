@@ -4,6 +4,7 @@ let wildcardRequests = [];
 let combinations = [];
 let comboIdx = 0;
 let allowOverlap = false;
+let onlyPresence = false;
 
 const TIMES = ["17:10", "17:55", "18:45", "19:30", "20:25", "21:10"];
 const COLLISION_EXCEPTIONS = [
@@ -30,6 +31,7 @@ function isFernstudienmodul(name) {
 }
 
 function countInitialOverlaps(modules) {
+    if (onlyPresence && modules.some(m => isFernstudienmodul(m.name))) return -1;
     let count = 0;
     for (let i = 0; i < modules.length; i++) {
         for (let j = i + 1; j < modules.length; j++) {
@@ -50,6 +52,7 @@ function countInitialOverlaps(modules) {
 }
 
 function canAddModule(m, currentModules, currentUsedOverlaps) {
+    if (onlyPresence && isFernstudienmodul(m.name)) return { valid: false };
     let newOvl = 0;
     const mBits = BigInt(m.bitmask);
     
@@ -588,6 +591,65 @@ function checkSystemValidWithoutOverlaps() {
     }
     quickSolve(0, [...baseSelection]);
     return possible;
+}
+
+// --- NEUE FUNKTIONEN FÜR "KEIN FERNSTUDIUM" ---
+
+function checkSystemValidWithCurrentSettings() {
+    const baseSelection = fixedSelection.filter(fs => 
+        !wildcardRequests.some(w => w.fach === fs.fach_lang && w.stufe == fs.stufe)
+    );
+    
+    const initialOvl = countInitialOverlaps(baseSelection);
+    if (initialOvl === -1) return false;
+    if (wildcardRequests.length === 0) return true;
+    
+    let possible = false;
+    function quickSolve(depth, currentModules, usedOvl) {
+        if (possible) return;
+        if (depth === wildcardRequests.length) { possible = true; return; }
+        for (const m of wildcardRequests[depth].modules) {
+            const check = canAddModule(m, currentModules, usedOvl);
+            if (check.valid) {
+                currentModules.push(m);
+                quickSolve(depth + 1, currentModules, usedOvl + check.newOvl);
+                currentModules.pop();
+            }
+        }
+    }
+    quickSolve(0, [...baseSelection], initialOvl);
+    return possible;
+}
+
+function toggleOnlyPresence() {
+    // Wichtig: Stelle sicher, dass deine Checkbox im HTML diese ID hat!
+    const chk = document.getElementById('only-presence-chk'); 
+    
+    if (chk.checked) {
+        onlyPresence = true;
+        const tempValid = checkSystemValidWithCurrentSettings();
+        
+        if (tempValid) {
+            // Es gibt gültige Varianten -> System aktualisiert sich (filtert Fernstudien raus)
+            updateSystem(); 
+        } else {
+            // Es gibt keine Variante -> Dialog anzeigen
+            if (confirm("Für die gegebene Modulwahl existiert keine Variante ohne Fernstudium. Soll der Stundenplan komplett zurückgesetzt werden?")) {
+                resetSchedule(true);
+                // Wichtig: Nach dem Reset soll der Haken aktiv bleiben
+                chk.checked = true;
+                onlyPresence = true;
+            } else {
+                // Abbrechen -> Haken wieder rausnehmen
+                chk.checked = false;
+                onlyPresence = false;
+            }
+        }
+    } else {
+        // Deaktiviert -> System normal berechnen
+        onlyPresence = false; 
+        updateSystem();
+    }
 }
 
 function showCombo(idx) {
