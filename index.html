@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stundenplan-Planer</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="app-container">
         <aside class="sidebar">
@@ -18,23 +20,44 @@
                     </div>
                 </div>
                 <div class="sidebar-header-bottom">
-    <div style="display: flex; align-items: center; gap: 8px;">
-        <input type="checkbox" id="allow-overlap-chk" onchange="toggleAllowOverlap()">
-        <label for="allow-overlap-chk" style="font-size: 0.9rem; cursor: pointer; user-select: none;">Überschneidung zulassen</label>
-    </div>
-    <div style="display: flex; align-items: center; gap: 8px; margin-top: 4px;">
-        <input type="checkbox" id="only-presence-chk" onchange="toggleOnlyPresence()">
-        <label for="only-presence-chk" style="font-size: 0.9rem; cursor: pointer; user-select: none;">ohne Fernstudium</label>
-    </div>
-</div>
+                    <div style="display: flex; align-items: center; gap: 8px;">
+                        <label class="switch">
+                            <input type="checkbox" id="allow-overlap-chk" onchange="toggleAllowOverlap()" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <label for="allow-overlap-chk"
+                            style="font-size: 0.9rem; cursor: pointer; user-select: none;">Überschneidung
+                            zulassen</label>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; margin-top: 4px;">
+                        <label class="switch">
+                            <input type="checkbox" id="only-presence-chk" onchange="toggleOnlyPresence()" checked>
+                            <span class="slider"></span>
+                        </label>
+                        <label for="only-presence-chk" style="font-size: 0.9rem; cursor: pointer; user-select: none;">
+                            Fernstudien-Module</label>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 8px; margin-top: 4px;">
+                        <label class="switch">
+                            <input type="checkbox" id="no-quereinsteiger-chk" onchange="toggleNoQuereinsteiger()"
+                                checked>
+                            <span class="slider"></span>
+                        </label>
+                        <label for="no-quereinsteiger-chk"
+                            style="font-size: 0.9rem; cursor: pointer; user-select: none;">
+                            Quereinsteiger-Module</label>
+                    </div>
+                </div>
             </div>
             <div id="accordion-container">
                 <div class="category">
-                    <button class="accordion-header main-cat" onclick="toggleAccordion('pflicht-content')">Pflichtfächer</button>
+                    <button class="accordion-header main-cat"
+                        onclick="toggleAccordion('pflicht-content')">Pflichtfächer</button>
                     <div id="pflicht-content" class="accordion-content"></div>
                 </div>
                 <div class="category">
-                    <button class="accordion-header main-cat" onclick="toggleAccordion('frei-content')">Freigegenstände</button>
+                    <button class="accordion-header main-cat"
+                        onclick="toggleAccordion('frei-content')">Freigegenstände</button>
                     <div id="frei-content" class="accordion-content"></div>
                 </div>
             </div>
@@ -72,4 +95,5 @@
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -4,40 +4,95 @@
     --border: #e2e8f0;
 }
 
-body { font-family: sans-serif; margin: 0; background: #f1f5f9; height: 100dvh; overflow: hidden; }
-.app-container { display: flex; height: 100dvh; }
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background: #f1f5f9;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+.app-container {
+    display: flex;
+    height: 100dvh;
+}
 
 /* Sidebar */
-.sidebar { width: 300px; background: white; border-right: 1px solid var(--border); display: flex; flex-direction: column; }
-.sidebar-header { padding: 15px; border-bottom: 1px solid var(--border); display: flex; flex-direction: column; gap: 12px; }
-.sidebar-header-top { display: flex; justify-content: space-between; align-items: center; }
-.sidebar-header-bottom { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+.sidebar {
+    width: 300px;
+    background: white;
+    border-right: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+}
 
-#accordion-container { flex: 1; overflow-y: auto; padding: 10px; }
+.sidebar-header {
+    padding: 15px;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.sidebar-header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Zieht das Div über das Padding des Eltern-Elements hinaus an den Rand */
+    margin-left: -15px;
+    margin-right: -15px;
+    /* Drückt den Inhalt wieder an die richtige Stelle */
+    padding-left: 15px;
+    padding-right: 15px;
+    /* Schafft den größeren Abstand nach unten und zieht die Trennlinie */
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border);
+}
+
+.sidebar-header-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+#accordion-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
 
 /* Basis-Styling für alle Header */
-.accordion-header { 
-    width: 100%; 
-    text-align: left; 
-    padding: 10px; 
-    border: none; 
-    cursor: pointer; 
-    border-radius: 4px; 
-    margin-top: 5px; 
-    font-weight: bold; 
+.accordion-header {
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 5px;
+    font-weight: bold;
     /*transition: background 0.2s;*/
+    /* Verhindere das Markieren von Text im Akkordeon */
+    user-select: none;
+    -webkit-user-select: none;
+    /* Für Safari */
+    -moz-user-select: none;
+    /* Für Firefox */
+    -ms-user-select: none;
+    /* Für alte Internet Explorer */
 }
 
 /* Ebene 1: Hauptkategorien (Pflichtfächer / Freigegenstände) */
-.main-cat { 
-       font-size: 0.9rem;
-    background: #e2e8f0; 
+.main-cat {
+    font-size: 0.9rem;
+    background: #e2e8f0;
     border-bottom: 4px solid var(--primary);
 }
 
 /* Ebene 2: Fächer (z.B. Mathematik) */
-.accordion-content .accordion-header { 
-    background: #f1f5f9; 
+.accordion-content .accordion-header {
+    background: #f1f5f9;
     font-size: 0.9rem;
     margin-left: 5px;
     width: calc(100% - 5px);
@@ -45,13 +100,14 @@ body { font-family: sans-serif; margin: 0; background: #f1f5f9; height: 100dvh; 
 
 /* NEU: Geänderte Hintergrundfarbe, wenn Ebene 2 geöffnet ist */
 .accordion-content .accordion-header.active {
-    background: #cee3fa;  /* Helles Blau, passend zum Rest deines Themes */
+    background: #cee3fa;
+    /* Helles Blau, passend zum Rest deines Themes */
     border-left: 3px solid var(--primary);
 }
 
 /* Ebene 3: Stufen (z.B. Stufe 1) */
-.accordion-content .accordion-content .accordion-header { 
-    background: #f8fafc; 
+.accordion-content .accordion-content .accordion-header {
+    background: #f8fafc;
     font-size: 0.85rem;
     font-weight: normal;
     margin-left: 10px;
@@ -66,127 +122,477 @@ body { font-family: sans-serif; margin: 0; background: #f1f5f9; height: 100dvh; 
 }
 */
 
-.accordion-content { display: none; padding-left: 5px; }
-.accordion-content.active { display: block; }
+.accordion-content {
+    display: none;
+    padding-left: 5px;
+}
+
+.accordion-content.active {
+    display: block;
+}
 
 /* Ebene 4: Die Module */
-.item-list { list-style: none; padding: 0; margin-left: 18px; border-left: 2px solid var(--border); padding-left: 10px; margin-top: 5px; }
-.item-list li { padding: 8px; margin: 2px 0; cursor: pointer; border-radius: 4px; font-size: 0.85rem; border: 1px solid transparent; position: relative; }
-.item-list li::before { content: ''; position: absolute; left: -12px; top: 16px; width: 10px; height: 2px; background: var(--border); }
-.item-list li:hover { background: #eff6ff; }
-.item-list li.selected { background: #dcfce7; border-color: var(--accent); font-weight: bold; }
-.item-list li.wildcard-active { background: #dcfce7; border-color: var(--accent); }
+.item-list {
+    list-style: none;
+    padding: 0;
+    margin-left: 18px;
+    border-left: 2px solid var(--border);
+    padding-left: 10px;
+    margin-top: 5px;
+}
 
-.item-list li.conflict { 
-    opacity: 0.4; 
-    cursor: pointer; 
-    text-decoration: line-through; 
+.item-list li {
+    padding: 8px;
+    margin: 2px 0;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    border: 1px solid transparent;
+    position: relative;
+    /* Verhindere das Markieren von Text im Akkordeon*/
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.item-list li::before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 16px;
+    width: 10px;
+    height: 2px;
+    background: var(--border);
+}
+
+.item-list li:hover {
+    background: #eff6ff;
+}
+
+.item-list li.selected {
+    background: #dcfce7;
+    border-color: var(--accent);
+    font-weight: bold;
+}
+
+.item-list li.wildcard-active {
+    background: #dcfce7;
+    border-color: var(--accent);
+}
+
+.item-list li.conflict {
+    opacity: 0.4;
+    cursor: pointer;
+    text-decoration: line-through;
 }
 
 /* Grid & Rest */
-.main-content { flex: 1; padding: 20px; display: flex; flex-direction: column; gap: 15px;}
-.schedule-container { flex: 1; background: white; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); overflow: hidden; }
+.main-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.schedule-container {
+    flex: 1;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
 
 .schedule-grid {
     display: grid;
     grid-template-columns: 80px repeat(5, 1fr);
-    grid-template-rows: 40px repeat(6, 1fr); 
-    height: 100%; gap: 1px; background: #cbd5e1;
+    grid-template-rows: 40px repeat(6, 1fr);
+    height: 100%;
+    gap: 1px;
+    background: #cbd5e1;
 }
 
-.grid-cell { background: white; position: relative; padding: 5px; }
-.grid-cell.header { background: #f8fafc; font-weight: bold; display: flex; align-items: center; justify-content: center; }
-.time-label { display: flex; align-items: center; justify-content: center; text-align: center; font-size: 0.8rem; background: #f8fafc; font-weight: bold; }
+.grid-cell {
+    background: white;
+    position: relative;
+    padding: 5px;
+}
+
+.grid-cell.header {
+    background: #f8fafc;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.time-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.8rem;
+    background: #f8fafc;
+    font-weight: bold;
+}
 
 .module-block {
-    position: absolute; left: 4px; right: 4px; top: 4px;
-    background: var(--primary); color: white; border-radius: 4px;
-    padding: 6px; font-size: 0.75rem; line-height: 1.2;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    top: 4px;
+    background: var(--primary);
+    color: white;
+    border-radius: 4px;
+    padding: 6px;
+    font-size: 0.75rem;
+    line-height: 1.2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 10;
     overflow: hidden;
 }
 
 /* Vorschau-Schraffur für Konflikt-Module */
 .module-preview-frame {
-    position: absolute; left: 4px; right: 4px; top: 4px; /* Geändert: Abstände wieder auf 4px */
+    position: absolute;
+    left: 4px;
+    right: 4px;
+    top: 4px;
+    /* Geändert: Abstände wieder auf 4px */
     /* Diagonales Streifenmuster (Schraffur) in Rot */
-    background: repeating-linear-gradient(
-        45deg,
-        rgba(215, 215, 215, 0.5),
-        rgba(215, 215, 215, 0.5) 8px,
-        rgba(104, 104, 104, 0.5) 8px,
-        rgba(104, 104, 104, 0.5) 16px
-    );
+    background: repeating-linear-gradient(45deg,
+            rgba(215, 215, 215, 0.5),
+            rgba(215, 215, 215, 0.5) 8px,
+            rgba(104, 104, 104, 0.5) 8px,
+            rgba(104, 104, 104, 0.5) 16px);
     border: 1px solid rgba(104, 104, 104, 0.8);
     box-sizing: border-box;
     border-radius: 4px;
-    z-index: 20; /* Liegt über den normalen Blöcken */
+    z-index: 20;
+    /* Liegt über den normalen Blöcken */
     pointer-events: none;
     transition: opacity 0.4s ease;
     opacity: 1;
 }
+
 .module-preview-frame.fade-out {
     opacity: 0;
 }
 
 /* Dynamische Höhenberechnung für Desktop */
-.full-unit { bottom: 4px; }
-.half-unit { bottom: 51%; height: auto; } 
-.half-unit-bottom { top: 51% !important; bottom: 4px; height: auto; }
+.full-unit {
+    bottom: 4px;
+}
 
-.combo-ui { background: #1e293b; color: white; padding: 10px; border-radius: 8px; display: flex; align-items: center; gap: 15px; }
+.half-unit {
+    bottom: 51%;
+    height: auto;
+}
+
+.half-unit-bottom {
+    top: 51% !important;
+    bottom: 4px;
+    height: auto;
+}
+
+.combo-ui {
+    background: #ffffff;
+    color: #334155;
+    padding: 10px 16px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border);
+    margin-bottom: 5px;
+    animation: slideInCombo 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
 
 /* Buttons der Kombinationen optisch ansprechend machen */
-.combo-nav button { background: var(--accent); color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
-.combo-nav button:hover { background: #196e68;; }
-.btn-apply { background: var(--accent); color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: background 0.2s; }
-.btn-apply:hover { background: #196e68; }
+@keyframes slideInCombo {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
 
-.hidden { display: none !important; }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-#current-status { margin-top: 10px; }
+.combo-nav {
+    display: flex;
+    align-items: center;
+    background: #f1f5f9;
+    padding: 4px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    gap: 4px;
+    /* Erlaubt dem Container, bei Platzmangel zu schrumpfen */
+    min-width: 0;
+    flex-shrink: 1;
+}
+
+#combo-info {
+    font-size: 0.85rem;
+    font-weight: 600;
+    /* min-width entfernt, damit das Element mitschrumpfen kann */
+    text-align: center;
+    color: var(--primary);
+    padding: 0 5px;
+    /* Sorgt für sauberen Umbruch und kompakte Zeilen */
+    white-space: normal;
+    line-height: 1.1;
+    word-break: break-word;
+    user-select: none;
+    -webkit-user-select: none;
+    /* Für Safari */
+    -moz-user-select: none;
+    /* Für Firefox */
+    -ms-user-select: none;
+    /* Für alte Internet Explorer */
+}
+
+.combo-nav button {
+    background: white;
+    color: var(--primary);
+    border: 1px solid var(--border);
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.combo-nav button:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+    transform: translateY(-1px);
+}
+
+.btn-apply {
+    background: var(--accent);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 167, 158, 0.2);
+    /* Änderungen für Mehrzeiligkeit: */
+    white-space: normal;
+    /* Erlaubt den automatischen Zeilenumbruch */
+    line-height: 1.2;
+    /* Sorgt für einen sauberen Zeilenabstand */
+    text-align: center;
+    /* Zentriert den Text, falls er umbricht */
+}
+
+.btn-apply:hover {
+    background: #008f88;
+    box-shadow: 0 4px 12px rgba(0, 167, 158, 0.3);
+}
+
+.hidden {
+    display: none !important;
+}
+
+#current-status {
+    margin-top: 10px;
+}
 
 /* Button Styling */
-.btn-pdf { 
-    background: var(--primary); 
-    color: white; 
-    border: none; 
-    padding: 4px 10px; /* Leicht reduziertes Padding für die Kompaktheit */
-    border-radius: 4px; 
-    cursor: pointer; 
-    font-weight: bold; 
-    font-size: 0.75rem; /* Etwas kleinere Schrift */
-    line-height: 1.1;   /* Engerer Zeilenabstand für die zwei Zeilen */
-    transition: background 0.2s; 
+.btn-pdf {
+    background: var(--primary);
+    color: white;
+    border: none;
+    padding: 4px 10px;
+    /* Leicht reduziertes Padding für die Kompaktheit */
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.75rem;
+    /* Etwas kleinere Schrift */
+    line-height: 1.1;
+    /* Engerer Zeilenabstand für die zwei Zeilen */
+    transition: background 0.2s;
 }
-.btn-pdf:hover { background: #283b70; }
-.btn-reset { background: transparent; color: #ef4444; border: 1px solid #ef4444; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: all 0.2s; }
-.btn-reset:hover { background: #ef4444; color: white; }
+
+.btn-pdf:hover {
+    background: #283b70;
+}
+
+.btn-reset {
+    background: transparent;
+    color: #ef4444;
+    border: 1px solid #ef4444;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.2s;
+}
+
+.btn-reset:hover {
+    background: #ef4444;
+    color: white;
+}
 
 /* Versteckter Bereich für die Modulliste im PDF */
-#pdf-module-list { display: none; }
+#pdf-module-list {
+    display: none;
+}
 
 /* Print/PDF Styles */
 @media print {
-    body { overflow: visible !important; height: auto !important; background: white !important; }
-    .app-container { display: block !important; height: auto !important; }
-    .sidebar, header { display: none !important; }
-    .main-content { padding: 0 !important; display: block !important; height: auto !important; }
-    .schedule-container { box-shadow: none !important; height: auto !important; overflow: visible !important; border: 1px solid #cbd5e1; }
-    .schedule-grid { height: 600px !important; }
-    .module-block { box-shadow: inset 0 0 0 1px rgba(0,0,0,0.2) !important; }
-    #pdf-module-list { display: block !important; margin-top: 30px; font-family: sans-serif; }
-    #pdf-module-list ul { margin-left: 20px; line-height: 1.6; }
-    * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; color-adjust: exact !important; }
+    body {
+        overflow: visible !important;
+        height: auto !important;
+        background: white !important;
+    }
+
+    .app-container {
+        display: block !important;
+        height: auto !important;
+    }
+
+    .sidebar,
+    header {
+        display: none !important;
+    }
+
+    .main-content {
+        padding: 0 !important;
+        display: block !important;
+        height: auto !important;
+    }
+
+    .schedule-container {
+        box-shadow: none !important;
+        height: auto !important;
+        overflow: visible !important;
+        border: 1px solid #cbd5e1;
+    }
+
+    .schedule-grid {
+        height: 600px !important;
+    }
+
+    .module-block {
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    #pdf-module-list {
+        display: block !important;
+        margin-top: 30px;
+        font-family: sans-serif;
+    }
+
+    #pdf-module-list ul {
+        margin-left: 20px;
+        line-height: 1.6;
+    }
+
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
 }
 
 /* Mobile Optimierung */
 @media (max-width: 768px) {
-    body { overflow-y: auto; }
-    .app-container { flex-direction: column-reverse; height: auto; }
-    .sidebar { width: 100%; border-right: none; border-top: 1px solid var(--border); height: auto; }
-    .main-content { padding: 10px; height: 550px; flex: none; }
-    .schedule-grid { font-size: 0.8rem; grid-template-columns: 45px repeat(5, 1fr); }
-    .module-block { padding: 2px; font-size: 0.65rem; left: 2px; right: 2px; }
+    body {
+        overflow-y: auto;
+    }
+
+    .app-container {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-top: 1px solid var(--border);
+        height: auto;
+    }
+
+    .main-content {
+        padding: 10px;
+        height: 550px;
+        flex: none;
+    }
+
+    .schedule-grid {
+        font-size: 0.8rem;
+        grid-template-columns: 45px repeat(5, 1fr);
+    }
+
+    .module-block {
+        padding: 2px;
+        font-size: 0.65rem;
+        left: 2px;
+        right: 2px;
+    }
+}
+
+/* --- Toggle Switch Styles --- */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cbd5e1;
+    transition: .4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: var(--accent);
+}
+
+input:checked+.slider:before {
+    transform: translateX(16px);
 }

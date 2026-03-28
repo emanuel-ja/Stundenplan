@@ -1,10 +1,11 @@
 let data = null;
-let fixedSelection = []; 
-let wildcardRequests = []; 
+let fixedSelection = [];
+let wildcardRequests = [];
 let combinations = [];
 let comboIdx = 0;
-let allowOverlap = false;
+let allowOverlap = true;
 let onlyPresence = false;
+let noQuereinsteiger = false;
 
 const TIMES = ["17:10", "17:55", "18:45", "19:30", "20:25", "21:10"];
 const COLLISION_EXCEPTIONS = [
@@ -30,8 +31,13 @@ function isFernstudienmodul(name) {
     return /\d[stuqprm]/.test(name);
 }
 
+function isQuereinsteigermodul(name) {
+    return /\d[ghjk]/.test(name);
+}
+
 function countInitialOverlaps(modules) {
     if (onlyPresence && modules.some(m => isFernstudienmodul(m.name))) return -1;
+    if (noQuereinsteiger && modules.some(m => isQuereinsteigermodul(m.name))) return -1;
     let count = 0;
     for (let i = 0; i < modules.length; i++) {
         for (let j = i + 1; j < modules.length; j++) {
@@ -53,9 +59,10 @@ function countInitialOverlaps(modules) {
 
 function canAddModule(m, currentModules, currentUsedOverlaps) {
     if (onlyPresence && isFernstudienmodul(m.name)) return { valid: false };
+    if (noQuereinsteiger && isQuereinsteigermodul(m.name)) return { valid: false };
     let newOvl = 0;
     const mBits = BigInt(m.bitmask);
-    
+
     for (const other of currentModules) {
         const overlapBits = mBits & BigInt(other.bitmask);
         if (overlapBits !== 0n) {
@@ -69,7 +76,7 @@ function canAddModule(m, currentModules, currentUsedOverlaps) {
             }
         }
     }
-    
+
     if (currentUsedOverlaps + newOvl > 1) return { valid: false };
     return { valid: true, newOvl: newOvl };
 }
@@ -91,7 +98,7 @@ async function init() {
 function renderSidebar() {
     const pflichtDiv = document.getElementById('pflicht-content');
     const freiDiv = document.getElementById('frei-content');
-    
+
     for (const [fach, stufen] of Object.entries(data.Pflichtfach)) {
         pflichtDiv.appendChild(createAccordion(fach, () => {
             const wrap = document.createElement('div');
@@ -105,17 +112,17 @@ function renderSidebar() {
     const freieListe = [];
     Object.values(data.Pflichtfach).forEach(subject => {
         Object.values(subject).forEach(levelModules => {
-            levelModules.forEach(m => { if(m.pflicht === "nein") freieListe.push(m); });
+            levelModules.forEach(m => { if (m.pflicht === "nein") freieListe.push(m); });
         });
     });
 
-    if(data["Nicht-Pflichtfach"]) {
+    if (data["Nicht-Pflichtfach"]) {
         Object.values(data["Nicht-Pflichtfach"]).forEach(modulesArray => {
             freieListe.push(...modulesArray);
         });
     }
-    
-    if(freieListe.length > 0) {
+
+    if (freieListe.length > 0) {
         freiDiv.appendChild(renderModuleList(freieListe));
     }
 }
@@ -140,7 +147,7 @@ function renderModuleList(modules, fach = null, stufe = null) {
         li.id = `li-${m.name}`;
         li.dataset.bitmask = m.bitmask;
         li.innerText = `${m.name} (${m.lehrer})`;
-        
+
         // Regulärer Klick (Modul hinzufügen/entfernen)
         li.onclick = () => {
             if (li.classList.contains('conflict')) return; // Verhindert Auswahl bei Konflikt
@@ -171,18 +178,18 @@ function renderModuleList(modules, fach = null, stufe = null) {
 function showPreview(m) {
     // Alte Vorschauen sofort entfernen, falls man sehr schnell klickt
     document.querySelectorAll('.module-preview-frame').forEach(f => f.remove());
-    
+
     m.schedule.forEach(entry => {
         const timeIdx = getTimeIndex(entry.beginn);
         if (timeIdx === -1) return;
-        
+
         let position = 'full';
         if (entry.ist_halbe_stunde) {
             const slotStart = TIMES[timeIdx];
             const diff = timeToMinutes(entry.beginn) - timeToMinutes(slotStart);
             position = diff > 15 ? 'bottom' : 'top';
         }
-        
+
         const cell = document.getElementById(`cell-${entry.tag}-${timeIdx}`);
         if (cell) {
             const frame = document.createElement('div');
@@ -190,7 +197,7 @@ function showPreview(m) {
             if (position === 'top') frame.classList.add('half-unit');
             else if (position === 'bottom') frame.classList.add('half-unit-bottom');
             else frame.classList.add('full-unit');
-            
+
             cell.appendChild(frame);
         }
     });
@@ -200,7 +207,7 @@ function hidePreview() {
     document.querySelectorAll('.module-preview-frame:not(.fade-out)').forEach(frame => {
         frame.classList.add('fade-out');
         // Nach der CSS-Transition (400ms) aus dem DOM entfernen
-        setTimeout(() => frame.remove(), 400); 
+        setTimeout(() => frame.remove(), 400);
     });
 }
 
@@ -220,24 +227,24 @@ function timeToMinutes(timeStr) {
 
 function renderSchedule(modules) {
     document.querySelectorAll('.module-block').forEach(b => b.remove());
-    
-    const cellMap = {}; 
-    
+
+    const cellMap = {};
+
     modules.forEach(m => {
         m.schedule.forEach(entry => {
             const timeIdx = getTimeIndex(entry.beginn);
             if (timeIdx === -1) return;
-            
+
             let position = 'full';
             if (entry.ist_halbe_stunde) {
                 const slotStart = TIMES[timeIdx];
                 const diff = timeToMinutes(entry.beginn) - timeToMinutes(slotStart);
                 position = diff > 15 ? 'bottom' : 'top';
             }
-            
+
             const cellKey = `${entry.tag}-${timeIdx}`;
             if (!cellMap[cellKey]) cellMap[cellKey] = [];
-            
+
             if (!cellMap[cellKey].some(x => x.name === m.name && x.pos === position)) {
                 cellMap[cellKey].push({ name: m.name, lehrer: m.lehrer, pos: position, day: entry.tag, tIdx: timeIdx });
             }
@@ -245,19 +252,19 @@ function renderSchedule(modules) {
     });
 
     const cellGroups = {};
-    
+
     for (const [cellKey, entries] of Object.entries(cellMap)) {
         const hasHalf = entries.some(e => e.pos === 'top' || e.pos === 'bottom');
-        
+
         entries.forEach(e => {
             if (e.pos === 'full' && hasHalf) {
                 const topKey = `${cellKey}-top`;
                 const bottomKey = `${cellKey}-bottom`;
-                
+
                 if (!cellGroups[topKey]) cellGroups[topKey] = { names: [], teachers: [], pos: 'top', day: e.day, tIdx: e.tIdx };
                 cellGroups[topKey].names.push(e.name);
                 cellGroups[topKey].teachers.push(e.lehrer);
-                
+
                 if (!cellGroups[bottomKey]) cellGroups[bottomKey] = { names: [], teachers: [], pos: 'bottom', day: e.day, tIdx: e.tIdx };
                 cellGroups[bottomKey].names.push(e.name);
                 cellGroups[bottomKey].teachers.push(e.lehrer);
@@ -269,7 +276,7 @@ function renderSchedule(modules) {
             }
         });
     }
-    
+
     for (const [key, cellData] of Object.entries(cellGroups)) {
         const cell = document.getElementById(`cell-${cellData.day}-${cellData.tIdx}`);
         if (cell) {
@@ -278,19 +285,19 @@ function renderSchedule(modules) {
             if (cellData.pos === 'top') block.classList.add('half-unit');
             else if (cellData.pos === 'bottom') block.classList.add('half-unit-bottom');
             else block.classList.add('full-unit');
-            
+
             const uniqueNames = [...new Set(cellData.names)];
             const uniqueTeachers = [...new Set(cellData.teachers)];
-            
+
             block.innerHTML = `<strong>${uniqueNames.join(' / ')}</strong><br>${uniqueTeachers.join(' / ')}`;
-            
+
             if (uniqueNames.length > 1) {
                 const isEx = COLLISION_EXCEPTIONS.some(p => p.includes(uniqueNames[0]) && p.includes(uniqueNames[1]));
                 if (!isEx) {
-                    block.style.backgroundColor = '#ef4444'; 
+                    block.style.backgroundColor = '#ef4444';
                 }
             }
-            
+
             cell.appendChild(block);
         }
     }
@@ -298,11 +305,11 @@ function renderSchedule(modules) {
 
 function calculateCombinations() {
     const results = [];
-    
-    const baseSelection = fixedSelection.filter(fs => 
+
+    const baseSelection = fixedSelection.filter(fs =>
         !wildcardRequests.some(w => w.fach === fs.fach_lang && w.stufe == fs.stufe)
     );
-    
+
     const initialOvl = countInitialOverlaps(baseSelection);
     if (initialOvl === -1) {
         combinations = [];
@@ -324,7 +331,7 @@ function calculateCombinations() {
                 currentModules.push(m);
                 solve(depth + 1, currentModules, usedOverlaps + check.newOvl);
                 currentModules.pop();
-                if (results.length >= 5000) break; 
+                if (results.length >= 5000) break;
             }
         }
     }
@@ -355,11 +362,11 @@ function toggleFixedModule(m, fach, stufe) {
             if (wIdx > -1) wildcardRequests.splice(wIdx, 1);
             fixedSelection = fixedSelection.filter(fs => !(fs.fach_lang === m.fach_lang && fs.stufe == m.stufe));
         }
-        
+
         const currentOvl = countInitialOverlaps(fixedSelection);
         if (currentOvl === -1) return;
         if (!canAddModule(m, fixedSelection, currentOvl).valid) return;
-        
+
         fixedSelection.push(m);
     }
     updateSystem();
@@ -416,14 +423,14 @@ function findModuleByName(name) {
 function isWildcardViable(fach, stufe, modules) {
     const currentWildcards = wildcardRequests.filter(w => !(w.fach === fach && w.stufe === stufe));
     const tempWildcards = [...currentWildcards, { fach, stufe, modules }];
-    
-    const baseSelection = fixedSelection.filter(fs => 
+
+    const baseSelection = fixedSelection.filter(fs =>
         !tempWildcards.some(w => w.fach === fs.fach_lang && w.stufe == fs.stufe)
     );
-    
+
     const initialOvl = countInitialOverlaps(baseSelection);
     if (initialOvl === -1) return false;
-    
+
     let possible = false;
     function quickCheck(depth, currentModules, usedOvl) {
         if (possible) return;
@@ -444,7 +451,7 @@ function isWildcardViable(fach, stufe, modules) {
 function updateSidebarUI() {
     document.querySelectorAll('.item-list li').forEach(li => {
         li.classList.remove('selected', 'wildcard-active', 'conflict');
-        
+
         if (li.id.startsWith('wildcard-')) {
             const [_, f, s] = li.id.split('-');
             const isActive = wildcardRequests.some(w => w.fach === f && w.stufe === s);
@@ -459,7 +466,7 @@ function updateSidebarUI() {
 
         const mName = li.id.replace('li-', '');
         const mObj = findModuleByName(mName);
-        
+
         if (fixedSelection.some(s => s.name === mName)) {
             li.classList.add('selected');
         } else if (mObj) {
@@ -476,7 +483,7 @@ function updateSidebarUI() {
             if (initialOvl === -1 || !canAddModule(mObj, testSelection, initialOvl).valid) {
                 li.classList.add('conflict');
             } else if (wildcardRequests.length > 0) {
-                const activeWildcards = wildcardRequests.filter(w => 
+                const activeWildcards = wildcardRequests.filter(w =>
                     !(mObj.fach_lang && mObj.stufe && w.fach === mObj.fach_lang && w.stufe == mObj.stufe)
                 );
 
@@ -484,7 +491,7 @@ function updateSidebarUI() {
                 const checkFirst = canAddModule(mObj, testSelection, initialOvl);
                 const startSelection = [...testSelection, mObj];
                 const startOvl = initialOvl + checkFirst.newOvl;
-                
+
                 const quickCheck = (depth, currentModules, usedOvl) => {
                     if (possible) return;
                     if (depth === activeWildcards.length) { possible = true; return; }
@@ -509,13 +516,13 @@ function generateGrid() {
     TIMES.forEach((time, i) => {
         const tLabel = document.createElement('div');
         tLabel.className = 'grid-cell time-label';
-        
+
         let [h, m] = time.split(':').map(Number);
         m += 45;
         h += Math.floor(m / 60);
         m = m % 60;
         const endTime = `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`;
-        
+
         tLabel.innerHTML = `${time}<br>-<br>${endTime}`;
         grid.appendChild(tLabel);
         for (let d = 0; d < 5; d++) {
@@ -537,7 +544,7 @@ function createAccordion(title, contentCb) {
     btn.onclick = () => {
         if (!content.hasChildNodes()) content.appendChild(contentCb());
         content.classList.toggle('active');
-        btn.classList.toggle('active'); // <-- NEU: Diese Zeile fügt die Klasse zum Button hinzu
+        btn.classList.toggle('active');
         updateSidebarUI();
     };
     wrap.appendChild(btn); wrap.appendChild(content);
@@ -546,17 +553,17 @@ function createAccordion(title, contentCb) {
 
 function toggleAllowOverlap() {
     const chk = document.getElementById('allow-overlap-chk');
-    
+
     if (chk.checked) {
         allowOverlap = true;
         updateSystem();
     } else {
-        allowOverlap = false; 
-        
+        allowOverlap = false;
+
         const tempValid = checkSystemValidWithoutOverlaps();
-        
+
         if (tempValid) {
-            updateSystem(); 
+            updateSystem();
         } else {
             if (confirm("Für die gegebene Modulwahl existiert keine Variante ohne Überschneidung. Soll der Stundenplan komplett zurückgesetzt werden?")) {
                 resetSchedule(true);
@@ -570,10 +577,10 @@ function toggleAllowOverlap() {
 
 function checkSystemValidWithoutOverlaps() {
     if (countInitialOverlaps(fixedSelection) === -1) return false;
-    
+
     if (wildcardRequests.length === 0) return true;
-    
-    const baseSelection = fixedSelection.filter(fs => 
+
+    const baseSelection = fixedSelection.filter(fs =>
         !wildcardRequests.some(w => w.fach === fs.fach_lang && w.stufe == fs.stufe)
     );
     let possible = false;
@@ -581,7 +588,7 @@ function checkSystemValidWithoutOverlaps() {
         if (possible) return;
         if (depth === wildcardRequests.length) { possible = true; return; }
         for (const m of wildcardRequests[depth].modules) {
-            const check = canAddModule(m, currentModules, 0); 
+            const check = canAddModule(m, currentModules, 0);
             if (check.valid) {
                 currentModules.push(m);
                 quickSolve(depth + 1, currentModules);
@@ -593,17 +600,15 @@ function checkSystemValidWithoutOverlaps() {
     return possible;
 }
 
-// --- NEUE FUNKTIONEN FÜR "KEIN FERNSTUDIUM" ---
-
 function checkSystemValidWithCurrentSettings() {
-    const baseSelection = fixedSelection.filter(fs => 
+    const baseSelection = fixedSelection.filter(fs =>
         !wildcardRequests.some(w => w.fach === fs.fach_lang && w.stufe == fs.stufe)
     );
-    
+
     const initialOvl = countInitialOverlaps(baseSelection);
     if (initialOvl === -1) return false;
     if (wildcardRequests.length === 0) return true;
-    
+
     let possible = false;
     function quickSolve(depth, currentModules, usedOvl) {
         if (possible) return;
@@ -622,32 +627,52 @@ function checkSystemValidWithCurrentSettings() {
 }
 
 function toggleOnlyPresence() {
-    // Wichtig: Stelle sicher, dass deine Checkbox im HTML diese ID hat!
-    const chk = document.getElementById('only-presence-chk'); 
-    
-    if (chk.checked) {
+    const chk = document.getElementById('only-presence-chk');
+
+    if (!chk.checked) { // Toggle wird AUSgeschaltet -> Fernstudium verbieten
         onlyPresence = true;
         const tempValid = checkSystemValidWithCurrentSettings();
-        
+
         if (tempValid) {
-            // Es gibt gültige Varianten -> System aktualisiert sich (filtert Fernstudien raus)
-            updateSystem(); 
+            updateSystem();
         } else {
-            // Es gibt keine Variante -> Dialog anzeigen
             if (confirm("Für die gegebene Modulwahl existiert keine Variante ohne Fernstudium. Soll der Stundenplan komplett zurückgesetzt werden?")) {
                 resetSchedule(true);
-                // Wichtig: Nach dem Reset soll der Haken aktiv bleiben
-                chk.checked = true;
+                chk.checked = false; // Bleibt aus
                 onlyPresence = true;
             } else {
-                // Abbrechen -> Haken wieder rausnehmen
-                chk.checked = false;
+                chk.checked = true; // Wird wieder an gemacht
                 onlyPresence = false;
             }
         }
-    } else {
-        // Deaktiviert -> System normal berechnen
-        onlyPresence = false; 
+    } else { // Toggle wird EINgeschaltet -> Fernstudium erlauben
+        onlyPresence = false;
+        updateSystem();
+    }
+}
+
+// --- NEUE FUNKTION FÜR QUEREINSTEIGER-MODULE ---
+function toggleNoQuereinsteiger() {
+    const chk = document.getElementById('no-quereinsteiger-chk');
+
+    if (!chk.checked) { // Toggle wird AUSgeschaltet -> Quereinsteiger verbieten
+        noQuereinsteiger = true;
+        const tempValid = checkSystemValidWithCurrentSettings();
+
+        if (tempValid) {
+            updateSystem();
+        } else {
+            if (confirm("Für die gegebene Modulwahl existiert keine Variante ohne Quereinsteiger-Modul. Soll der Stundenplan komplett zurückgesetzt werden?")) {
+                resetSchedule(true);
+                chk.checked = false; // Bleibt aus
+                noQuereinsteiger = true;
+            } else {
+                chk.checked = true; // Wird wieder an gemacht
+                noQuereinsteiger = false;
+            }
+        }
+    } else { // Toggle wird EINgeschaltet -> Quereinsteiger erlauben
+        noQuereinsteiger = false;
         updateSystem();
     }
 }
@@ -662,14 +687,14 @@ function nextCombo() { comboIdx = (comboIdx + 1) % combinations.length; showComb
 function prevCombo() { comboIdx = (comboIdx - 1 + combinations.length) % combinations.length; showCombo(comboIdx); }
 function applyCurrentCombo() { fixedSelection = [...combinations[comboIdx]]; wildcardRequests = []; updateSystem(); }
 
-function resetSchedule(skipConfirm = false) { 
+function resetSchedule(skipConfirm = false) {
     if (!skipConfirm && !confirm("Möchtest du den Stundenplan wirklich komplett zurücksetzen?")) return;
-    
-    fixedSelection = []; 
-    wildcardRequests = []; 
+
+    fixedSelection = [];
+    wildcardRequests = [];
     document.querySelectorAll('.accordion-content').forEach(el => el.classList.remove('active'));
     document.querySelectorAll('.accordion-header').forEach(el => el.classList.remove('active'));
-    updateSystem(); 
+    updateSystem();
 }
 
 function toggleAccordion(id) { document.getElementById(id).classList.toggle('active'); }
@@ -677,7 +702,7 @@ function toggleAccordion(id) { document.getElementById(id).classList.toggle('act
 function exportPDF() {
     const list = document.getElementById('print-modules');
     list.innerHTML = '';
-    
+
     let modulesToPrint = combinations.length > 0 ? combinations[comboIdx] : fixedSelection;
 
     if (modulesToPrint.length === 0) {
@@ -693,7 +718,7 @@ function exportPDF() {
         list.appendChild(li);
     });
 
-    setTimeout(() => window.print(), 100); 
+    setTimeout(() => window.print(), 100);
 }
 
 init();
