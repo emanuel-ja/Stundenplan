@@ -561,7 +561,7 @@ function toggleAllowOverlap() {
         if (tempValid) {
             updateSystem();
         } else {
-            if (confirm("Für die gegebene Modulwahl existiert keine Variante ohne Überschneidung. Soll der Stundenplan komplett zurückgesetzt werden?")) {
+            if (confirm("Für die gegebene Modulwahl ist keine Variante ohne Überschneidung verfügbar. Soll der Stundenplan komplett zurückgesetzt werden?")) {
                 resetSchedule(true);
             } else {
                 chk.checked = true;
@@ -632,7 +632,7 @@ function toggleOnlyPresence() {
         if (tempValid) {
             updateSystem();
         } else {
-            if (confirm("Für die gegebene Modulwahl existiert keine Variante ohne Fernstudien-Modul. Soll der Stundenplan komplett zurückgesetzt werden?")) {
+            if (confirm("Für die gegebene Modulwahl ist keine Variante ohne Fernstudien-Modul verfügbar. Soll der Stundenplan komplett zurückgesetzt werden?")) {
                 resetSchedule(true);
                 chk.checked = false; // Bleibt aus
                 onlyPresence = true;
@@ -658,7 +658,7 @@ function toggleNoQuereinsteiger() {
         if (tempValid) {
             updateSystem();
         } else {
-            if (confirm("Für die gegebene Modulwahl existiert keine Variante ohne Quereinsteiger-Modul. Soll der Stundenplan komplett zurückgesetzt werden?")) {
+            if (confirm("Für die gegebene Modulwahl ist keine Variante ohne Quereinsteiger-Modul verfügbar. Soll der Stundenplan komplett zurückgesetzt werden?")) {
                 resetSchedule(true);
                 chk.checked = false; // Bleibt aus
                 noQuereinsteiger = true;
