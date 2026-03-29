@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stundenplan-Planer</title>
+    <title>Stundenplan</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -13,7 +13,7 @@
         <aside class="sidebar">
             <div class="sidebar-header">
                 <div class="sidebar-header-top">
-                    <h2 style="margin: 0;">Fächerwahl</h2>
+                    <h2 style="margin: 0;">Modulwahl</h2>
                     <div style="display: flex; gap: 8px;">
                         <button class="btn-pdf" onclick="exportPDF()">Druck<br>PDF</button>
                         <button class="btn-reset" onclick="resetSchedule()">Reset</button>
@@ -73,7 +73,7 @@
                     </div>
                     <button class="btn-apply" onclick="applyCurrentCombo()">Diese Auswahl übernehmen</button>
                 </div>
-                <div id="current-status">Wähle Module oder "Beliebiges..."</div>
+                <div id="current-status"><strong>Gewählte Module:</strong></div>
             </header>
 
             <div class="schedule-container">

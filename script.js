@@ -385,12 +385,8 @@ function toggleWildcard(fach, stufe, modules) {
 
 function updateStatusText(modules) {
     const statusDiv = document.getElementById('current-status');
-    if (!modules || modules.length === 0) {
-        statusDiv.innerText = 'Wähle Module oder "Beliebiges..."';
-    } else {
-        const names = modules.map(m => m.name).sort().join(', ');
-        statusDiv.innerHTML = `<strong>Gewählte Module:</strong> ${names}`;
-    }
+    const names = modules.map(m => m.name).sort().join(', ');
+    statusDiv.innerHTML = `<strong>Gewählte Module:</strong> ${names}`;
 }
 
 function updateSystem() {
@@ -636,7 +632,7 @@ function toggleOnlyPresence() {
         if (tempValid) {
             updateSystem();
         } else {
-            if (confirm("Für die gegebene Modulwahl existiert keine Variante ohne Fernstudium. Soll der Stundenplan komplett zurückgesetzt werden?")) {
+            if (confirm("Für die gegebene Modulwahl existiert keine Variante ohne Fernstudien-Modul. Soll der Stundenplan komplett zurückgesetzt werden?")) {
                 resetSchedule(true);
                 chk.checked = false; // Bleibt aus
                 onlyPresence = true;
@@ -688,7 +684,7 @@ function prevCombo() { comboIdx = (comboIdx - 1 + combinations.length) % combina
 function applyCurrentCombo() { fixedSelection = [...combinations[comboIdx]]; wildcardRequests = []; updateSystem(); }
 
 function resetSchedule(skipConfirm = false) {
-    if (!skipConfirm && !confirm("Möchtest du den Stundenplan wirklich komplett zurücksetzen?")) return;
+    if (!skipConfirm && !confirm("Soll der Stundenplan komplett zurückgesetzt werden?")) return;
 
     fixedSelection = [];
     wildcardRequests = [];
@@ -704,12 +700,12 @@ function exportPDF() {
     list.innerHTML = '';
 
     let modulesToPrint = combinations.length > 0 ? combinations[comboIdx] : fixedSelection;
-
+/*
     if (modulesToPrint.length === 0) {
         alert("Bitte wähle zuerst Module aus.");
         return;
     }
-
+*/
     const sortedModules = [...modulesToPrint].sort((a, b) => a.name.localeCompare(b.name));
 
     sortedModules.forEach(m => {
