@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self';
+connect-src 'self'; manifest-src 'self'; font-src 'none'; frame-src 'none'; object-src 'none'">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover, interactive-widget=resizes-content">
+    <title>Stundenplan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link rel="shortcut icon" href="favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Stundenplan" />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+</head>
+
+<body>
+
+    <div id="password-gate" class="password-gate flex items-center justify-center">
+        <form id="password-gate-form" class="password-gate-box flex flex-col gap-md" autocomplete="off">
+            <h2>Stundenplan geschützt</h2>
+            <p class="text-muted">Bitte Passwort eingeben, um die Module zu sehen.</p>
+            <input type="password" id="password-gate-input" class="password-gate-input" name="password"
+                placeholder="Passwort" autocomplete="current-password" required autofocus>
+            <p id="password-gate-error" class="password-gate-error hidden" role="alert"></p>
+            <button type="submit" id="password-gate-submit" class="btn btn-primary btn-lg w-full">Bestätigen</button>
+        </form>
+    </div>
+
+    <div class="app-container flex">
+
+        <div id="app-modal" class="modal-overlay flex items-center justify-center hidden">
+            <div id="app-modal-content" class="modal-content text-center"></div>
+        </div>
+
+        <aside class="sidebar flex flex-col mobile-hidden">
+            <div class="sidebar-inner flex flex-col flex-1">
+
+                <div class="sidebar-header flex flex-col gap-md">
+                    <div class="sidebar-header-top flex justify-between items-center">
+                        <h2 class="sidebar-title">Modulwahl</h2>
+                        <div class="sidebar-header-actions flex gap-sm">
+                            <button id="btn-export-pdf" class="btn btn-primary btn-sm">Druck<br>PDF</button>
+                            <button id="btn-reset-schedule" class="btn btn-danger  btn-sm">Reset</button>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-impressum-link flex items-center justify-end">
+                        <button type="button" id="btn-impressum" class="impressum-link">Impressum</button>
+                    </div>
+
+                    <div class="sidebar-header-bottom flex flex-col items-start gap-sm">
+                        <div class="toggle-group flex items-center gap-sm">
+                            <label class="switch">
+                                <input type="checkbox" id="allow-overlap-chk" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <label for="allow-overlap-chk" class="toggle-label">Überschneidung zulassen</label>
+                            <button class="info-btn" type="button" aria-label="Information zu Überschneidung zulassen"
+                                data-info-key="overlap">i</button>
+                        </div>
+
+                        <div class="toggle-group flex items-center gap-sm">
+                            <label class="switch">
+                                <input type="checkbox" id="allow-quer-chk" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <label for="allow-quer-chk" class="toggle-label">Quereinsteigermodule wählbar</label>
+                            <button class="info-btn" type="button" aria-label="Information zu Quereinsteiger-Modulen"
+                                data-info-key="quer">i</button>
+                        </div>
+                        <div class="toggle-group flex items-center gap-sm">
+                            <label class="switch">
+                                <input type="checkbox" id="allow-fern-chk" checked>
+                                <span class="slider"></span>
+                            </label>
+                            <label for="allow-fern-chk" class="toggle-label">Fernstudienmodule wählbar</label>
+                            <button class="info-btn" type="button" aria-label="Information zu Fernstudien-Modulen"
+                                data-info-key="fern">i</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="accordion-container">
+                    <div class="category">
+                        <button class="accordion-header main-cat">Pflichtgegenstände</button>
+                        <div id="pflicht-content" class="accordion-content"></div>
+                    </div>
+                    <div class="category">
+                        <button class="accordion-header main-cat">Freigegenstände</button>
+                        <div id="frei-content" class="accordion-content"></div>
+                    </div>
+                    <div class="category">
+                        <button class="accordion-header main-cat">Klassenstundenpläne</button>
+                        <div id="klassen-content" class="accordion-content"></div>
+                    </div>
+                </div>
+
+            </div>
+        </aside>
+
+        <main class="main-content flex flex-col flex-1">
+            <div class="main-content-inner flex flex-col flex-1">
+
+                <div class="top-bar flex justify-between items-center">
+                    <input type="text" id="schedule-title" value="Mein Name ✎" spellcheck="false"
+                        autocomplete="off" aria-label="Titel des Stundenplans">
+                    <div class="theme-toggle-wrapper flex items-center gap-sm">
+                        <div class="history-nav flex items-center gap-xs">
+                            <button id="btn-undo" class="btn-history" aria-label="Rückgängig (Strg+Z)"
+                                disabled>↩</button>
+                            <button id="btn-redo" class="btn-history" aria-label="Wiederholen (Strg+Y)"
+                                disabled>↪</button>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="theme-toggle-chk">
+                            <span class="slider"></span>
+                        </label>
+                        <label for="theme-toggle-chk" class="theme-toggle-label">Eule</label>
+                    </div>
+                </div>
+
+                <header class="main-header">
+                    <div id="combination-controls" class="combo-ui flex items-center justify-between gap-lg hidden">
+                        <div class="combo-nav flex items-center gap-xs">
+                            <button id="btn-prev-combo" class="flex items-center justify-center">❮</button>
+                            <span id="combo-info" class="text-center">Kombinationen</span>
+                            <button id="btn-next-combo" class="flex items-center justify-center">❯</button>
+                        </div>
+                        <button id="btn-apply-combo" class="btn btn-primary btn-lg">Variante übernehmen</button>
+                    </div>
+                    <div id="current-status" class="module-status-wrapper">
+                        <span class="text-muted fw-bold">Keine Module gewählt.</span>
+                    </div>
+                </header>
+
+                <div class="schedule-container flex flex-col flex-1">
+                    <div class="schedule-grid" id="schedule-grid">
+                        <div class="grid-cell header flex items-center justify-center"></div>
+                        <div class="grid-cell header flex items-center justify-center">Mo</div>
+                        <div class="grid-cell header flex items-center justify-center">Di</div>
+                        <div class="grid-cell header flex items-center justify-center">Mi</div>
+                        <div class="grid-cell header flex items-center justify-center">Do</div>
+                        <div class="grid-cell header flex items-center justify-center">Fr</div>
+                    </div>
+                </div>
+
+                <div id="pdf-module-list">
+                    <h3>Gewählte Module:</h3>
+                    <ul id="print-modules"></ul>
+                </div>
+
+            </div>
+        </main>
+
+        <nav class="mobile-nav">
+            <button class="nav-btn" id="nav-btn-sidebar">Modulwahl</button>
+            <button class="nav-btn active" id="nav-btn-schedule">Stundenplan</button>
+        </nav>
+
+    </div>
+
+    <script type="module" src="js/main.js"></script>
+</body>
+
+</html>

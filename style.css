@@ -1,0 +1,1776 @@
+/* =========================================================
+   TABLE OF CONTENTS
+   =========================================================
+   1.  Variables & Themes
+   2.  Global Reset
+   3.  Utilities
+   4.  Layout
+   5.  Top Bar
+   6.  Sidebar
+   7.  Accordion & Tabs
+   8.  Module Lists
+   9.  Schedule Grid
+   10. Status Bar
+   11. Combo Navigation
+   12. Buttons
+   12b. History Navigation (Undo / Redo)
+   13. Toggle Switches
+   14. Info Button & Tooltip
+   15. Modals
+   16. Scrollbars
+   17. Print Styles
+   18. Responsive / Mobile
+   ========================================================= */
+
+
+/* ==========================================
+   1. VARIABLES & THEMES
+   ========================================== */
+:root {
+    --primary: #315bb4;
+    --primary-hover: #254589;
+    --primary-dark: #202e53;
+
+    --accent: #00a79e;
+    --accent-hover: #008f88;
+
+    --danger: #dd2b2b;
+    --danger-hover: #c72525;
+
+    --text-main: #334155;
+    --text-muted: #64748b;
+    --text-light: #ffffff;
+    --text-primary: var(--primary);
+    --text-on-accent: #002b28;
+
+    --bg-main: #f1f5f9;
+    --bg-surface: #ffffff;
+    --bg-header: #f8fafc;
+    --bg-grid: #d9dee4;
+    --bg-hover: #eff6ff;
+    --bg-selected: #dcfce7;
+    --overlay-bg: rgba(0, 0, 0, 0.4);
+
+    --ui-level-1: #ffffff;
+    --ui-level-2: #f1f5f9;
+    --ui-level-2-active: #cee3fa;
+
+    --border-color: #e2e8f0;
+    --border-dark: #cbd5e1;
+    --border-dark-hover: #94a3b8;
+
+    --preview-stripe-1: rgba(215, 215, 215, 0.5);
+    --preview-stripe-2: rgba(104, 104, 104, 0.5);
+    --preview-border: rgba(104, 104, 104, 0.8);
+
+    --font-family: sans-serif;
+
+    --radius-sm: 0.25rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.625rem;
+    --radius-xl: 0.75rem;
+    --radius-pill: 1.25rem;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-xl: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+    --shadow-accent: 0 2px 6px rgba(0, 167, 158, 0.2);
+    --shadow-accent-hover: 0 4px 12px rgba(0, 167, 158, 0.3);
+    --shadow-danger: 0 2px 4px rgba(239, 68, 68, 0.2);
+    --shadow-danger-hover: 0 4px 8px rgba(239, 68, 68, 0.3);
+    --shadow-primary: 0 2px 4px rgba(49, 91, 180, 0.2);
+    --shadow-primary-hover: 0 4px 8px rgba(49, 91, 180, 0.3);
+
+}
+
+[data-theme="dark"] {
+    --primary: #5f00a2;
+    --primary-hover: #6e00bc;
+    --primary-dark: #4f0087;
+
+    --accent: #03dac6;
+    --accent-hover: #43c9c4;
+
+    --danger: #e0115f;
+    --danger-hover: #c60b53;
+
+    --text-main: rgba(255, 255, 255, 0.87);
+    --text-muted: rgba(255, 255, 255, 0.60);
+    --text-light: rgba(255, 255, 255, 0.87);
+    --text-primary: #bb86fc;
+    --text-on-accent: #000000;
+
+    --bg-main: #121212;
+    --bg-surface: #1e1e1e;
+    --bg-header: #272727;
+    --bg-grid: #333333;
+    --bg-hover: rgba(255, 255, 255, 0.08);
+    --bg-selected: rgba(187, 134, 252, 0.16);
+    --overlay-bg: rgba(0, 0, 0, 0.6);
+
+    --ui-level-1: #1e1e1e;
+    --ui-level-2: #2c2c2c;
+    --ui-level-2-active: #3e2723;
+
+    --border-color: rgba(255, 255, 255, 0.12);
+    --border-dark: rgba(255, 255, 255, 0.20);
+    --border-dark-hover: rgba(255, 255, 255, 0.50);
+
+    --preview-stripe-1: rgba(255, 255, 255, 0.3);
+    --preview-stripe-2: rgba(255, 255, 255, 0.05);
+    --preview-border: rgba(255, 255, 255, 0.3);
+
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.5);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.6);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.7);
+    --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.8);
+
+    --shadow-accent: 0 2px 6px rgba(3, 218, 198, 0.1);
+    --shadow-accent-hover: 0 4px 12px rgba(3, 218, 198, 0.2);
+    --shadow-primary: 0 2px 4px rgba(187, 134, 252, 0.15);
+    --shadow-primary-hover: 0 4px 8px rgba(187, 134, 252, 0.25);
+}
+
+
+/* ==========================================
+   2. GLOBAL RESET
+   ========================================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    background: var(--bg-main);
+    color: var(--text-main);
+    width: 100%;
+    height: 100%;
+    /* Moderner, gewollter Wert ganz unten! */
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* ==========================================
+   3. UTILITIES
+   ========================================== */
+.hidden {
+    display: none !important;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.fw-bold {
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-muted {
+    color: var(--text-muted);
+}
+
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-end {
+    justify-content: flex-end;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.gap-xs {
+    gap: 0.25rem;
+}
+
+.gap-sm {
+    gap: 0.5rem;
+}
+
+.gap-md {
+    gap: 0.75rem;
+}
+
+.gap-lg {
+    gap: 1rem;
+}
+
+
+/* ==========================================
+   4. LAYOUT
+   ========================================== */
+
+.app-container {
+position: fixed;
+inset: 0;
+}
+
+.sidebar {
+    width: 22.5rem;
+    background: transparent;
+    padding: 1.25rem 0 1.25rem 1.25rem;
+}
+
+.sidebar-inner {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+
+.main-content {
+    padding: 1.25rem;
+}
+
+.main-content-inner {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+
+
+/* ==========================================
+   5. TOP BAR
+   ========================================== */
+.top-bar {
+    padding: 0.9375rem 1.25rem;
+    border-bottom: 1px solid var(--border-color);
+    flex-shrink: 0;
+}
+
+#schedule-title {
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    margin-right: 0.9375rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    font-family: inherit;
+    color: var(--text-primary);
+    background: transparent;
+    border: 1px dashed transparent;
+    border-radius: var(--radius-sm);
+    padding: 0.25rem 0.5rem;
+    outline: none;
+    cursor: text;
+    transition: all 0.2s ease;
+}
+
+#schedule-title:focus {
+    border-color: var(--accent);
+    background: var(--bg-hover);
+}
+
+.theme-toggle-wrapper {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--text-main);
+    user-select: none;
+}
+
+.theme-toggle-label {
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   6. SIDEBAR
+   ========================================== */
+.sidebar-header {
+    padding: 0.9375rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-header-top {
+    margin-left: -0.9375rem;
+    margin-right: -0.9375rem;
+    padding-left: 0.9375rem;
+    padding-right: 0.9375rem;
+    padding-bottom: 0.9375rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.sidebar-title {
+    margin: 0;
+    color: var(--text-main);
+    font-size: 1.4rem;
+}
+
+#accordion-container {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0.625rem;
+}
+
+.sidebar-impressum-link {
+    margin: -0.75rem -0.9375rem 0;
+    padding: 0.5rem 0.9375rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.impressum-link {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.impressum-link:hover {
+    color: var(--text-primary);
+    text-decoration: underline;
+}
+
+
+/* ==========================================
+   7. ACCORDION & TABS
+   ========================================== */
+.accordion-header {
+    width: 100%;
+    text-align: left;
+    padding: 0.625rem;
+    margin-top: 0.3125rem;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-weight: bold;
+    color: var(--text-main);
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.main-cat {
+    font-size: 0.9rem;
+    background: var(--ui-level-1);
+    border-bottom: 4px solid var(--primary);
+}
+
+.accordion-content {
+    display: none;
+    /*padding-left: 0.3125rem;*/
+}
+
+.accordion-content.active {
+    display: block;
+}
+
+/* Level-2 accordion (Fach inside Pflichtgegenstände) */
+.accordion-content .accordion-header {
+    background: var(--ui-level-2);
+        border-left: 3px solid var(--ui-level-2);
+    font-size: 0.9rem;
+    /*margin-left: 5px;*/
+    width: 100%;
+}
+
+.accordion-content .accordion-header.active {
+    background: var(--ui-level-2-active);
+    border-left: 3px solid var(--primary);
+}
+
+/* Level-3 accordion (Stufe inside Fach — currently unused but kept for extensibility) */
+.accordion-content .accordion-content .accordion-header {
+    background: var(--bg-header);
+    font-size: 0.85rem;
+    font-weight: normal;
+    margin-left: 10px;
+    width: calc(100% - 10px);
+    border-left: 3px solid var(--accent);
+}
+
+/* ── Tabs ── */
+.tabs-header {
+    margin-top: 0.3125rem;
+    margin-bottom: 0.625rem;
+    background: var(--bg-header);
+    border-radius: var(--radius-sm);
+    box-shadow: inset 0 0 0 1px var(--border-color);
+    overflow: hidden;
+}
+
+.tab-btn {
+    flex: 1;
+    height: 32px;
+    background: transparent;
+    border: none;
+    border-bottom: 3px solid transparent;
+    border-right: 1px solid var(--border-color);
+    font-size: 0.85rem;
+    color: var(--text-main);
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.2s ease;
+}
+
+.tab-btn:last-child {
+    border-right: none;
+}
+
+.tab-btn:hover {
+    background: var(--bg-hover);
+}
+
+.tab-btn.active {
+    background: var(--bg-surface);
+    font-weight: bold;
+    color: var(--text-primary);
+    border-bottom-color: var(--accent);
+}
+
+.tabs-content {
+    width: 100%;
+}
+
+.tab-pane {
+    display: none !important;
+}
+
+.tab-pane.active {
+    display: block !important;
+}
+
+
+/* ==========================================
+   8. MODULE LISTS
+   ========================================== */
+.item-list {
+    list-style: none;
+    margin-left: 1.125rem;
+    margin-top: 0.3125rem;
+    padding: 0 0 0 0.625rem;
+    border-left: 2px solid var(--border-color);
+}
+
+.item-list li {
+    position: relative;
+    padding: 0.5rem;
+    margin: 0.125rem 0;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    font-size: 0.85rem;
+    color: var(--text-main);
+    cursor: pointer;
+    user-select: none;
+    touch-action: pan-y;
+}
+
+/* Tree connector line */
+.item-list li::before {
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 16px;
+    width: 10px;
+    height: 2px;
+    background: var(--border-color);
+}
+
+.item-list li:hover {
+    background: var(--bg-hover);
+}
+
+.item-list li.selected,
+.item-list li.wildcard-active {
+    background: var(--bg-selected);
+    border-color: var(--accent);
+}
+
+.item-list li.conflict {
+    opacity: 0.4;
+    /*text-decoration: line-through;*/
+}
+
+/* Module type badges (Fernstudium / Quereinsteiger) */
+.module-badge {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 600;
+    line-height: 1;
+    padding: 4px 5px;
+    border-radius: 4px;
+    vertical-align: middle;
+    margin-left: 5px;
+    letter-spacing: 0.02em;
+    position: relative;
+    top: -1px;
+}
+
+.module-badge--fern {
+    background: #bff0e5;
+    color: #07353a;
+}
+
+.module-badge--quer {
+    background: #bfd7f0;
+    color: #0b3157;
+}
+
+
+/* ==========================================
+   9. SCHEDULE GRID
+   ========================================== */
+.main-header {
+    padding: 0.9375rem 1.25rem;
+    flex-shrink: 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.schedule-container {
+    overflow: hidden;
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: 80px repeat(5, 1fr);
+    grid-template-rows: 40px repeat(6, 1fr);
+    flex: 1;
+    min-height: 0;
+    gap: 0;
+}
+
+/*
+ * Inset box-shadow simulates cell borders without physical gaps,
+ * producing stable lines that never collapse at fractional pixel sizes.
+ */
+.grid-cell {
+    position: relative;
+    padding: 0;
+    background: var(--bg-surface);
+    background-clip: padding-box;
+    box-shadow: inset 0 0 0 0.5px var(--bg-grid);
+}
+
+.grid-cell.header {
+    background: var(--bg-header);
+    font-weight: bold;
+    background-clip: padding-box;
+}
+
+.time-label {
+    position: relative;
+    padding: 0;
+    box-shadow: inset 0 0 0 0.5px var(--bg-grid);
+    font-size: 0.8rem;
+    font-weight: bold;
+    background: var(--bg-header);
+    background-clip: padding-box;
+}
+
+.time-label .hour-number {
+    font-size: 1.1rem;
+    line-height: 1;
+    margin-bottom: 0.6rem;
+}
+
+.time-label .time-range {
+    line-height: 1;
+}
+
+.module-block {
+    position: absolute;
+    left: 1px;
+    right: 1px;
+    top: 1px;
+    padding: 6px;
+    background: var(--primary);
+    color: #ffffff;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    line-height: 1.2;
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    z-index: 10;
+}
+
+.module-block.is-conflict {
+    background-color: var(--danger);
+}
+
+.module-preview-frame {
+    position: absolute;
+    left: 1px;
+    right: 1px;
+    top: 1px;
+    background: repeating-linear-gradient(45deg,
+            var(--preview-stripe-1),
+            var(--preview-stripe-1) 8px,
+            var(--preview-stripe-2) 8px,
+            var(--preview-stripe-2) 16px);
+    border: 1px solid var(--preview-border);
+    border-radius: var(--radius-sm);
+    z-index: 20;
+    pointer-events: none;
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
+.module-preview-frame.fade-out {
+    opacity: 0;
+}
+
+.full-unit {
+    bottom: 1px;
+}
+
+.half-unit {
+    bottom: 51%;
+    height: auto;
+}
+
+.half-unit-bottom {
+    top: 51% !important;
+    bottom: 1px;
+    height: auto;
+}
+
+
+/* ==========================================
+   10. STATUS BAR
+   ========================================== */
+#current-status {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--text-main);
+    margin-top: 0.2rem;
+}
+
+.module-status-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 32px;
+    gap: 0.1rem;
+}
+
+.status-label {
+    font-weight: bold;
+    margin-right: 0.3rem;
+}
+
+.micro-chip {
+    display: inline-flex;
+    align-items: center;
+    background: var(--bg-header);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 0.05rem 0.15rem 0.05rem 0.3rem;
+    margin: 0.15rem 0.25rem 0.15rem 0;
+    white-space: nowrap;
+    color: var(--text-main);
+}
+
+.micro-chip-remove {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    font-weight: bold;
+    padding: 0 0.15rem;
+    margin-left: 0.1rem;
+    cursor: pointer;
+}
+
+.micro-chip-remove:hover,
+.micro-chip-remove:active {
+    color: var(--danger);
+}
+
+.micro-chip-wildcard-symbol {
+    /* Displayed inline on desktop; hidden on mobile (see @media block). */
+}
+
+.micro-chip--fern {
+
+    border-color: #b1b993;
+
+    background: #bff0e5;
+    color: #07353a;
+}
+
+.micro-chip--quer {
+    border-color: #8fa1b4;
+    background: #bfd7f0;
+    color: #0b3157;
+}
+
+
+/* ==========================================
+   11. COMBO NAVIGATION
+   ========================================== */
+.combo-ui {
+    background: var(--bg-surface);
+    color: var(--text-main);
+    padding: 0.625rem 1rem;
+    margin-bottom: 0.3125rem;
+    border: 0 solid var(--border-color);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    animation: slideInCombo 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Ensure the nav and button stretch to equal height. */
+#combination-controls.items-center {
+    align-items: stretch;
+}
+
+#combination-controls .combo-nav,
+#combination-controls #btn-apply-combo {
+    height: auto;
+}
+
+@keyframes slideInCombo {
+    from {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.combo-nav {
+    background: var(--bg-main);
+    padding: 0.25rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    min-width: 0;
+    flex-shrink: 1;
+}
+
+#combo-info {
+    padding: 0 0.3rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    white-space: normal;
+    word-break: break-word;
+    line-height: 1.1;
+    user-select: none;
+}
+
+.combo-nav button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    padding: 0;
+    background: var(--bg-surface);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-weight: bold;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.2s ease;
+}
+
+.combo-nav button:hover {
+    background: var(--primary);
+    color: var(--text-light);
+    border-color: var(--primary);
+    transform: translateY(-1px);
+}
+
+
+/* ==========================================
+   12. BUTTONS
+   ========================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-weight: bold;
+    font-family: inherit;
+    line-height: 1.2;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+    border-radius: var(--radius-sm);
+}
+
+.btn-md {
+    padding: 0.625rem 1rem;
+    font-size: 0.9rem;
+    border-radius: var(--radius-md);
+}
+
+.btn-lg {
+    padding: 0.625rem 1.25rem;
+    font-size: 0.85rem;
+    border-radius: var(--radius-lg);
+    white-space: normal;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: var(--text-light);
+    border: 1px solid var(--primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+    background: var(--primary-hover);
+    border-color: var(--primary-hover);
+    box-shadow: var(--shadow-primary-hover);
+}
+
+.btn-danger {
+    background: var(--danger);
+    color: var(--text-light);
+    border: 1px solid var(--danger);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-danger:hover {
+    background: var(--danger-hover);
+    border-color: var(--danger-hover);
+    box-shadow: var(--shadow-danger-hover);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--border-dark);
+}
+
+.btn-outline:hover {
+    background: var(--bg-hover);
+    color: var(--text-main);
+}
+
+
+/* ==========================================
+   12b. HISTORY NAVIGATION (Undo / Redo)
+   ========================================== */
+
+/**
+ * Wrapper that groups the two history buttons.
+ * Sits inside .theme-toggle-wrapper, left of the Eule toggle.
+ */
+.history-nav {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    margin-right: 1rem;
+}
+
+/**
+ * Individual undo / redo button.
+ * Styled to match the existing combo-nav buttons in shape and weight,
+ * but slightly smaller to sit comfortably in the top bar.
+ */
+.btn-history {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background: var(--bg-surface);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    font-size: 1.05rem;
+    font-family: inherit;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: var(--shadow-sm);
+    transition: background 0.2s ease, color 0.2s ease,
+        border-color 0.2s ease, transform 0.2s ease,
+        opacity 0.2s ease;
+    user-select: none;
+}
+
+.btn-history:not(:disabled):hover {
+    background: var(--primary);
+    color: var(--text-light);
+    border-color: var(--primary);
+    transform: translateY(-1px);
+}
+
+.btn-history:not(:disabled):active {
+    transform: translateY(0);
+}
+
+.btn-history:disabled {
+    opacity: 0.35;
+    cursor: default;
+    pointer-events: none;
+}
+
+
+/* ==========================================
+   13. TOGGLE SWITCHES
+   ========================================== */
+.toggle-label {
+    font-size: 0.9rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 36px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    inset: 0;
+    background-color: var(--bg-grid);
+    border-radius: var(--radius-pill);
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.slider::before {
+    content: '';
+    position: absolute;
+    left: 3px;
+    bottom: 3px;
+    width: 14px;
+    height: 14px;
+    background-color: var(--bg-surface);
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked+.slider {
+    background-color: var(--accent);
+}
+
+input:checked+.slider::before {
+    transform: translateX(16px);
+}
+
+
+/* ==========================================
+   14. INFO BUTTON & TOOLTIP
+   ========================================== */
+
+.info-btn {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    border: 1.5px solid var(--primary);
+    background: transparent;
+    color: var(--primary);
+    font-size: 0.65rem;
+    font-weight: 800;
+    font-style: italic;
+    font-family: Georgia, serif;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    line-height: 1;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+    margin-left: 2px;
+}
+
+.info-btn:hover,
+.info-btn.active {
+    background: var(--primary);
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.info-btn:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+[data-theme="dark"] .info-btn {
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .info-btn:hover,
+[data-theme="dark"] .info-btn.active {
+    background: var(--text-primary);
+    color: var(--bg-surface);
+}
+
+[data-theme="dark"] .module-badge--fern {
+    background: #01304b;
+    color: #bdddda;
+}
+
+[data-theme="dark"] .module-badge--quer {
+    background: #35233e;
+    color: #ede1f3;
+}
+
+[data-theme="dark"] .micro-chip--fern {
+
+    border-color: #03DAC6;
+    background: #01304b;
+    color: #bdddda;
+}
+
+[data-theme="dark"] .micro-chip--quer {
+    border-color: #825698;
+    background: #35233e;
+    color: #ede1f3;
+}
+
+/* Global tooltip – appended to <body>, uses fixed positioning so it
+   escapes overflow:hidden containers like .sidebar-inner */
+#info-tooltip {
+    position: fixed;
+    z-index: 9999;
+    background: var(--bg-surface);
+    color: var(--text-main);
+    padding: 0.7rem 0.95rem;
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    line-height: 1.55;
+    max-width: 300px;
+    min-width: 200px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25), 0 2px 6px rgba(0, 0, 0, 0.15);
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(4px);
+    transition: opacity 0.18s ease, transform 0.18s ease;
+    word-break: normal;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
+#info-tooltip.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: none;
+}
+
+[data-theme="dark"] #info-tooltip {
+    background: #334155;
+    color: #f1f5f9;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================
+   15. MODALS
+   ========================================== */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--overlay-bg);
+    backdrop-filter: blur(0.7px);
+    z-index: 9999;
+}
+
+.modal-content {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 400px;
+    animation: popIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal-content.modal-wide {
+    max-width: 450px;
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.modal-title {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--text-main);
+}
+
+.modal-text {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text-main);
+}
+
+.modal-body-scrollable {
+    max-height: 50vh;
+    overflow-y: auto;
+    padding-right: 5px;
+    margin-bottom: 1.25rem;
+}
+
+.btn-choice {
+    background: var(--bg-header);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    color: var(--text-main);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-choice strong {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+}
+
+.btn-choice:hover {
+    background: var(--bg-hover);
+    border-color: var(--primary);
+    box-shadow: var(--shadow-sm);
+}
+
+/* Impressum modal content — keeps its sections clearly separated and legible. */
+.legal-section {
+    margin-bottom: 1.5rem;
+}
+
+.legal-section:last-child {
+    margin-bottom: 0;
+}
+
+.legal-section h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1rem;
+    color: var(--text-main);
+}
+
+.legal-section p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: var(--text-main);
+}
+
+
+/* ==========================================
+   15b. PASSWORD GATE
+   ========================================== */
+/**
+ * Full-screen gate shown before the schedule data is decrypted.
+ * Deliberately opaque (not a translucent overlay like .modal-overlay) so
+ * nothing behind it — grid, sidebar — is visible before unlock, and it
+ * can't be dismissed by clicking outside like the regular modal can.
+ */
+.password-gate {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    background: var(--bg-main);
+    padding: 1rem;
+}
+
+.password-gate-box {
+    background: var(--bg-surface);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-xl);
+    padding: 2rem;
+    width: 90%;
+    max-width: 22rem;
+    text-align: center;
+    animation: popIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.password-gate-box h2 {
+    margin: 0;
+    font-size: 1.3rem;
+    color: var(--text-main);
+}
+
+.password-gate-input {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.625rem 0.75rem;
+    border: 1px solid var(--border-dark);
+    border-radius: var(--radius-md);
+    background: var(--bg-header);
+    color: var(--text-main);
+    outline: none;
+    text-align: center;
+    transition: border-color 0.2s ease;
+}
+
+.password-gate-input:focus {
+    border-color: var(--accent);
+}
+
+.password-gate-error {
+    margin: 0;
+    font-size: 0.85rem;
+    color: var(--danger);
+}
+
+
+/* ==========================================
+   16. SCROLLBARS
+   ========================================== */
+.modal-body-scrollable,
+#accordion-container,
+.sidebar-inner {
+    scrollbar-width: thin;
+    scrollbar-color: var(--border-dark) transparent;
+}
+
+.modal-body-scrollable::-webkit-scrollbar,
+#accordion-container::-webkit-scrollbar,
+.sidebar-inner::-webkit-scrollbar {
+    width: 8px;
+}
+
+.modal-body-scrollable::-webkit-scrollbar-track,
+#accordion-container::-webkit-scrollbar-track,
+.sidebar-inner::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: var(--radius-sm);
+}
+
+.modal-body-scrollable::-webkit-scrollbar-thumb,
+#accordion-container::-webkit-scrollbar-thumb,
+.sidebar-inner::-webkit-scrollbar-thumb {
+    background: var(--border-dark);
+    border-radius: var(--radius-sm);
+}
+
+.modal-body-scrollable::-webkit-scrollbar-thumb:hover,
+#accordion-container::-webkit-scrollbar-thumb:hover,
+.sidebar-inner::-webkit-scrollbar-thumb:hover {
+    background: var(--border-dark-hover);
+}
+
+
+/* ==========================================
+   17. PRINT STYLES
+   ========================================== */
+#pdf-module-list {
+    display: none;
+}
+
+@media print {
+    @page {
+        margin: 1.5cm;
+        size: A4 portrait;
+    }
+
+    /* Override dark-mode variables so prints are always light. */
+    [data-theme="dark"] {
+        --primary: #315bb4 !important;
+        --primary-hover: #284a93 !important;
+        --primary-dark: #283b70 !important;
+        --accent: #00a79e !important;
+        --accent-hover: #008f88 !important;
+        --danger: #ef4444 !important;
+        --danger-hover: #dc2626 !important;
+        --text-main: #334155 !important;
+        --text-muted: #64748b !important;
+        --text-light: #ffffff !important;
+        --bg-main: #f1f5f9 !important;
+        --bg-surface: #ffffff !important;
+        --bg-header: #f8fafc !important;
+        --bg-grid: #cbd5e1 !important;
+        --bg-hover: #eff6ff !important;
+        --bg-selected: #dcfce7 !important;
+        --ui-level-1: #e2e8f0 !important;
+        --ui-level-2: #f1f5f9 !important;
+        --ui-level-2-active: #cee3fa !important;
+        --border-color: #e2e8f0 !important;
+        --border-dark: #cbd5e1 !important;
+        --border-dark-hover: #94a3b8 !important;
+    }
+
+    body {
+        overflow: visible !important;
+        height: auto !important;
+        background: var(--bg-surface) !important;
+        color: var(--text-main) !important;
+    }
+
+    .app-container {
+        display: block !important;
+        height: auto !important;
+        position: relative !important; 
+        inset: auto !important;
+    }
+
+    .sidebar,
+    header,
+    .mobile-nav {
+        display: none !important;
+    }
+
+    .main-content,
+    .main-content-inner,
+    .main-content.mobile-hidden {
+        display: block !important;
+        height: auto !important;
+        padding: 0 !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        border: none !important;
+        box-shadow: none !important;
+        /* Prevent mobile slide transforms from appearing in print. */
+        transform: none !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .top-bar {
+        display: block !important;
+        padding: 0 !important;
+        margin-bottom: 1.25rem !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        text-align: center;
+    }
+
+    .theme-toggle-wrapper {
+        display: none !important;
+    }
+
+
+
+    #schedule-title {
+        border: none !important;
+        padding: 0 !important;
+        font-size: 1.5rem !important;
+        color: var(--text-main) !important;
+        display: block !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+        text-align: center !important;
+    }
+
+    .schedule-container {
+        height: 550px !important;
+        overflow: visible !important;
+        box-shadow: none !important;
+        border: 1px solid var(--border-dark);
+    }
+
+    /*.schedule-grid {
+        height: 550px !important;
+    }*/
+
+    .module-block {
+        color: #ffffff !important;
+        box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2) !important;
+    }
+
+    #pdf-module-list {
+        display: block !important;
+        margin-top: 1.875rem;
+        font-family: var(--font-family);
+        color: var(--text-main) !important;
+    }
+
+    #pdf-module-list h3 {
+        display: block !important;
+    }
+
+#pdf-module-list ul {
+        line-height: 1.4;
+        margin-left: 0;
+        padding-left: 1rem; 
+        display: flex !important;
+        flex-wrap: wrap !important;
+        flex-direction: row !important;
+    }
+
+    #pdf-module-list ul li {
+        width: 48% !important; 
+        margin-right: 2% !important;
+        box-sizing: border-box !important;
+        display: list-item !important;
+        
+        break-inside: avoid;
+        -webkit-column-break-inside: avoid;
+        padding-left: 0.25rem;
+        margin-bottom: 0.4rem;
+    }
+
+    * {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+        color-adjust: exact !important;
+    }
+}
+
+
+/* ==========================================
+   18. RESPONSIVE / MOBILE
+   ========================================== */
+.mobile-nav {
+    display: none;
+}
+
+/*@media (max-width: 1200px) and (min-width: 798px) {
+    html {
+        font-size: 85%;
+    }
+}*/
+
+@media screen and (max-width: 798px) {
+    body {
+        overflow: hidden;
+    }
+
+    .btn-lg {
+        padding: 0.2rem 0.8rem;
+        font-size: 0.82rem;
+        border-radius: var(--radius-lg);
+        white-space: normal;
+    }
+
+    .app-container {
+        position: fixed;
+        inset: 0;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: minmax(0, 1fr) 60px;
+        overflow: hidden;
+    }
+
+    /* Fallback until JS applies slide classes. */
+    .mobile-hidden {
+        display: none;
+    }
+
+    .sidebar,
+    .main-content {
+        grid-row: 1;
+        grid-column: 1;
+        width: 100%;
+        padding: 0.625rem;
+        min-height: 0;
+        min-width: 0;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        z-index: 1;
+        visibility: visible;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /*
+     * Sidebar (Modulwahl): overlay drawer that slides in from the left.
+     * Default state = hidden off-screen to the left.
+     * .slide-active = drawn over the schedule grid.
+     */
+    .sidebar {
+        z-index: 5;
+        will-change: transform;
+        transform: translateX(-100%) translateZ(0);
+        -webkit-transform: translateX(-100%) translateZ(0);
+        backface-visibility: hidden;
+        -webkit-backface-visibility: hidden;
+        contain: layout style;
+        isolation: isolate;
+        pointer-events: none;
+        transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+        -webkit-transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .sidebar.slide-active {
+        transform: translateX(0) translateZ(0);
+        -webkit-transform: translateX(0) translateZ(0);
+        pointer-events: auto;
+    }
+
+    /* ── Mobile navigation bar ── */
+    .mobile-nav {
+        grid-row: 2;
+        grid-column: 1;
+        display: flex;
+        position: relative;
+        width: 100%;
+        height: 60px;
+        flex-shrink: 0;
+        background: var(--bg-surface);
+        border-top: 1px solid var(--border-color);
+        z-index: 1000;
+        will-change: transform;
+    }
+
+    .nav-btn {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+        background: var(--bg-hover);
+        border: none;
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        font-weight: bold;
+        cursor: pointer;
+        position: relative;
+        transition: color 0.2s ease;
+    }
+
+    .nav-btn.active {
+        color: var(--text-primary);
+    }
+
+    /* Indicator oval centred between the two buttons */
+    .mobile-nav::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 46px;
+        height: 22px;
+        background: var(--bg-header);
+        border: 1px solid var(--border-color);
+        border-radius: var(--radius-pill);
+        z-index: 10;
+        pointer-events: none;
+    }
+
+    /* Indicator dots — sidebar is now the left button, schedule the right button */
+    #nav-btn-sidebar::after,
+    #nav-btn-schedule::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        border: 2px solid var(--text-muted);
+        background: transparent;
+        z-index: 11;
+        transition: all 0.3s ease;
+    }
+
+    #nav-btn-sidebar::after {
+        right: 5px;
+    }
+
+    #nav-btn-schedule::before {
+        left: 5px;
+    }
+
+    #nav-btn-sidebar.active::after,
+    #nav-btn-schedule.active::before {
+        background: var(--text-primary);
+        border-color: var(--text-primary);
+    }
+
+    /* ── Sidebar mobile ── */
+    .sidebar-inner {
+        display: block;
+        height: 100%;
+        overflow-y: auto;
+        border-radius: var(--radius-md);
+    }
+
+    #accordion-container {
+        overflow-y: visible;
+        padding-bottom: 20px;
+    }
+
+    /* ── Main content mobile ── */
+    .main-content-inner {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        min-height: 0;
+        overflow: hidden;
+        border-radius: var(--radius-md);
+    }
+
+    .top-bar {
+        padding: 0.625rem 0.9375rem;
+        flex-shrink: 0;
+    }
+
+    .main-header {
+        display: contents;
+    }
+
+    #schedule-title {
+        font-size: 1.1rem;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .sidebar-title {
+        font-size: 1.1rem;
+    }
+
+    header {
+        flex-shrink: 0;
+    }
+
+    #current-status {
+        order: 2;
+        flex-shrink: 0;
+        font-size: 0.8rem;
+        margin-top: 0;
+        padding: 0.5rem 1rem 0.75rem;
+        background: var(--bg-surface);
+        border-bottom: 1px solid var(--border-color);
+        z-index: 10;
+    }
+
+    .combo-ui {
+        padding: 0.5rem 0.625rem;
+        font-size: 0.85rem;
+    }
+
+    .schedule-container {
+        order: 3;
+        flex: 1;
+        overflow-y: auto;
+        min-height: 0;
+    }
+
+    .schedule-grid {
+        font-size: 0.8rem;
+        grid-template-columns: 45px repeat(5, 1fr);
+    }
+
+    .module-block {
+        left: 1px;
+        right: 1px;
+        padding: 2px;
+        font-size: 0.65rem;
+    }
+
+    /* ── Time labels: hide period number, center time range ── */
+    .time-label .hour-number {
+        display: none;
+    }
+
+    .time-label .time-range {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    /* ── WildCard chips: hide symbol to keep chips narrow ── */
+    .micro-chip-wildcard-symbol {
+        display: none;
+    }
+
+    /* Combo navigation moves to the bottom on mobile. */
+    #combination-controls {
+        order: 4;
+        flex-shrink: 0;
+        display: flex !important;
+        padding: 1rem;
+        padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+        background: var(--bg-surface);
+        border-top: 1px solid var(--border-color);
+        box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+        z-index: 100;
+    }
+
+    #combination-controls.hidden {
+        display: none !important;
+    }
+
+    /* Larger tap targets for thumb navigation. */
+    .combo-nav button {
+        width: 44px;
+        height: 44px;
+    }
+
+    .history-nav {
+        display: none !important;
+    }
+}
