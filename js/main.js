@@ -8,6 +8,16 @@ import { requestModuleData } from './passwordGate.js';
 // ─── Initialisation ───────────────────────────────────────────────────────────
 
 async function init() {
+    // Applied first, before the grid or the password gate are even shown —
+    // otherwise the gate would briefly render in light mode regardless of
+    // the OS/user preference, since it's on screen well before data loads.
+    const themeToggle = document.getElementById('theme-toggle-chk');
+    if (themeToggle) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        themeToggle.checked = prefersDark;
+        UI.applyTheme(prefersDark);
+    }
+
     UI.generateGrid();
 
     // Blocks here until the correct password is entered — see passwordGate.js.
@@ -25,13 +35,6 @@ async function init() {
     Logic.preprocessData();
     UI.renderInitialSidebar();
     UI.renderClassesSidebar();
-
-    const themeToggle = document.getElementById('theme-toggle-chk');
-    if (themeToggle) {
-        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        themeToggle.checked = prefersDark;
-        UI.applyTheme(prefersDark);
-    }
 
     setupEventListeners();
     UI.initInfoTooltips();
