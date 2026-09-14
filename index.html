@@ -21,12 +21,12 @@ connect-src 'self'; manifest-src 'self'; font-src 'none'; frame-src 'none'; obje
 
     <div id="password-gate" class="password-gate flex items-center justify-center">
         <form id="password-gate-form" class="password-gate-box flex flex-col gap-md" autocomplete="off">
-            <h2>Stundenplan</h2>
-            <p class="text-muted">Bitte geben Sie das Passwort ein.</p>
+            <h2>Stundenplan geschützt</h2>
+            <p class="text-muted">Bitte Passwort eingeben, um die Module zu sehen.</p>
             <input type="password" id="password-gate-input" class="password-gate-input" name="password"
                 placeholder="Passwort" autocomplete="current-password" required autofocus>
             <p id="password-gate-error" class="password-gate-error hidden" role="alert"></p>
-            <button type="submit" id="password-gate-submit" class="btn btn-primary btn-lg w-full">Bestätigen</button>
+            <button type="submit" id="password-gate-submit" class="btn btn-primary btn-md w-full">Bestätigen</button>
         </form>
     </div>
 
