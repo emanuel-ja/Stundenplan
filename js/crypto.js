@@ -1,18 +1,6 @@
 /**
  * Client-side decryption for the encrypted module-data file (unterrichte.json.enc).
- *
- * ─── WICHTIG: Sicherheits-Realitätscheck ────────────────────────────────────
- * Das hier ist eine reine Frontend-Hürde, keine echte Zugriffskontrolle.
- * Der Browser muss die Datei entschlüsseln können, um die Seite zu befüllen —
- * das heißt, der komplette Entschlüsselungsweg (dieser Code, die verschlüsselte
- * Datei, der Ablauf) liegt offen im ausgelieferten Frontend. Wer die DevTools
- * öffnet, einen Breakpoint setzt oder nach einer erfolgreichen Eingabe einfach
- * `State.data` aus der Konsole ausliest, kommt an die Klartextdaten — unabhängig
- * davon, wie stark die Verschlüsselung selbst ist. AES-GCM + PBKDF2 verhindern
- * hier nur, dass jemand *ohne* Passwort die Rohdatei öffnet oder sie manipuliert,
- * nicht dass ein technisch versierter Besucher *nach* Eingabe an die Daten kommt.
- * Für "Zufallsbesucher draußen halten" reicht das. Für wirklich vertrauliche
- * Daten bräuchte es eine serverseitige Prüfung.
+ *AES-GCM + PBKDF2
  * ─────────────────────────────────────────────────────────────────────────────
  */
 
@@ -50,7 +38,12 @@ async function deriveKey(password, salt) {
  * Expected binary layout (produced by tools/encrypt-data.js):
  *   [0 .. 16)   salt
  *   [16 .. 28)  iv
- *   [28 .. end) ciphertext || 16-byte GCM authentication tag
+ *   [28 .. end) ciphertext(gzip(json)) || 16-byte GCM authentication tag
+ *
+ * The plaintext recovered by AES-GCM is gzip-compressed, not raw JSON text —
+ * encrypt-data.js compresses before encrypting, since encrypted bytes have
+ * no exploitable patterns left for gzip to work with. We reverse that order
+ * here: decrypt, then decompress.
  *
  * A wrong password almost always throws here rather than returning garbage:
  * GCM's authentication tag check fails before any plaintext is released.
@@ -73,14 +66,29 @@ export async function decryptModuleData(fileBuffer, password) {
 
     const key = await deriveKey(password, salt);
 
-    let plainBuffer;
+    let compressedBuffer;
     try {
-        plainBuffer = await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, ciphertext);
+        compressedBuffer = await crypto.subtle.decrypt({ name: 'AES-GCM', iv }, key, ciphertext);
     } catch {
         // SubtleCrypto throws a generic OperationError on tag-verification failure
         // (i.e. wrong password) — we translate that into a clear sentinel here.
         throw new Error('WRONG_PASSWORD');
     }
 
-    return JSON.parse(new TextDecoder().decode(plainBuffer));
+    const jsonBuffer = await gunzip(compressedBuffer);
+    return JSON.parse(new TextDecoder().decode(jsonBuffer));
+}
+
+/**
+ * Decompresses gzip-compressed bytes using the built-in DecompressionStream
+ * API (no external library — supported in all current browsers).
+ * @param {ArrayBuffer} compressedBuffer
+ * @returns {Promise<ArrayBuffer>}
+ */
+async function gunzip(compressedBuffer) {
+    if (typeof DecompressionStream === 'undefined') {
+        throw new Error('Dieser Browser unterstützt keine eingebaute Dekomprimierung. Bitte Browser aktualisieren.');
+    }
+    const stream = new Blob([compressedBuffer]).stream().pipeThrough(new DecompressionStream('gzip'));
+    return new Response(stream).arrayBuffer();
 }
