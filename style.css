@@ -1338,6 +1338,7 @@ input:checked+.slider::before {
     :root, body {
         --primary: #f5f7fa !important;
         --danger: #f3afaf !important;
+        --text-main: #000000 !important;
     }
     /* Override dark-mode variables so prints are always light. */
     [data-theme="dark"] {
@@ -1348,7 +1349,7 @@ input:checked+.slider::before {
         --accent-hover: #008f88 !important;
         --danger: #f3afaf !important;
         --danger-hover: #dc2626 !important;
-        --text-main: #334155 !important;
+        --text-main: #000000 !important;
         --text-muted: #64748b !important;
         --text-light: #ffffff !important;
         --bg-main: #f1f5f9 !important;
